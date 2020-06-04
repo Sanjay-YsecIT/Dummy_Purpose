@@ -48,7 +48,7 @@ public class SkinfiriMysterious_Web_Gamble_SuitWinAmount_AddedTo_Balance {
 		Pattern SKULL=new Pattern("./Images/Skinfiri_Mysterious/SKULL.PNG");
 		Pattern CROW=new Pattern("./Images/Skinfiri_Mysterious/CROW.PNG");
 		//	Pattern WIN_PATTERN=new Pattern("./Images/10Spins/WIN_PATTERN.PNG");
-		Pattern DENO_4=new Pattern("./Images/Skinfiri_Mysterious/deno_4.PNG");
+		Pattern DENO_4=new Pattern("./Images/Skinfiri_Mysterious/betvalue1_5.PNG");
 		Pattern WIN_AMT=new Pattern("./Images/Skinfiri_Mysterious/win_amt_8.PNG");
 		Pattern SUIT_REDHEART_ICON=new Pattern("./Images/Skinfiri_Mysterious/heart_gamble.PNG");
 		//	Pattern BLACK_GAMBLE_BTN=new Pattern("./Images/GAMBLE_WIN_AMT/black_gamble_button.PNG");
@@ -225,7 +225,7 @@ public class SkinfiriMysterious_Web_Gamble_SuitWinAmount_AddedTo_Balance {
 						System.out.println("Comparision failed. Test case failed");         
 					}
 					System.out.println("Balance comparision after lose: "+" "+score11 +"%");
-					Assert.assertTrue(score1 > 97);
+					Assert.assertTrue(score11 > 97);
 				}
 
 

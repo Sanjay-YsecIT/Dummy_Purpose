@@ -45,7 +45,7 @@ public class SkinfiriMysterious_Web_Gamble_WinAmount_SameAs_GambleAmount {
 		Pattern SKULL=new Pattern("./Images/Skinfiri_Mysterious/SKULL.PNG");
 		Pattern CROW=new Pattern("./Images/Skinfiri_Mysterious/CROW.PNG");
 		//	Pattern WIN_PATTERN=new Pattern("./Images/10Spins/WIN_PATTERN.PNG");
-		Pattern DENO_4=new Pattern("./Images/Skinfiri_Mysterious/deno_4.PNG");
+		Pattern DENO_4=new Pattern("./Images/Skinfiri_Mysterious/betvalue1_5.PNG");
 		Pattern WIN_AMT=new Pattern("./Images/Skinfiri_Mysterious/win_amt_8.PNG");
 		Pattern GAMBLE_COLLECT=new Pattern("./Images/Skinfiri_Mysterious/win_gamble.PNG");
 		Pattern GAMBLE_BTN=new Pattern("./Images/Skinfiri_Mysterious/gamble_icon.PNG");
@@ -103,7 +103,7 @@ public class SkinfiriMysterious_Web_Gamble_WinAmount_SameAs_GambleAmount {
 			Match m2=finder2.next();
 			System.out.println("Match Found with: "+(m2.getScore())*100+"%");
 			score2=(m2.getScore())*100;
-			System.out.println("Win amount comparision completed successfully. Win amount is 16.00 YSI");
+			System.out.println("Win amount comparision completed successfully. Win amount is 8 YSI");
 			finder2.destroy();  
 		}         
 		else    
@@ -141,15 +141,14 @@ public class SkinfiriMysterious_Web_Gamble_WinAmount_SameAs_GambleAmount {
 		Thread.sleep(3000);
 
 		screen.click(GAMBLE_COLLECT);
-
-
 	}
 
-	@Then("^Win amount should be displayed as Gamble amount in the gamble page of the Golden Crown slot game on web$")
+	@Then("^Win amount should be displayed as Gamble amount in the gamble page of the Skinfiri Mysterious slot game on web$")
 	public void win_amount_should_be_displayed_as_Gamble_amount_in_the_gamble_page_of_the_Golden_Crown_slot_game_on_web() throws Throwable {
 
 
-
+		Thread.sleep(3000);
+		driver.quit();
 	}
 
 

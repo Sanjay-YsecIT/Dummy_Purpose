@@ -16,12 +16,11 @@ Feature: Test all the functionalities of Skinfiri Mysterious SLOT Game
     
 #                       Auto spin option with 10spin feature testing
 
-#Scenario: Check whether system performing ten spins after selecting ten option in the auto spin drop down of the Skinfiri Mysterious slot game
+#    Scenario: Check whether system performing ten spins after selecting ten option in the auto spin drop down of the Skinfiri Mysterious slot game
 #    Given Chrome browser, valid URL, valid login details, Skinfiri Mysterious  slot game, balance, spin button, auto spin button, ten spins option and number of spins left message
 #    When Open the Skinfiri Mysterious  slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on ten spin option under auto spin drop down and check the number of spins left message
 #    Then Number of spin left should start from 9 to 1 after clicking ten spins option and should perform 10 spins from 9 to 1 Skinfiri Mysterious slot game
-#    
-#    
+   
     
     #                  Auto spin option with 20spin feature testing
     
@@ -55,11 +54,12 @@ Feature: Test all the functionalities of Skinfiri Mysterious SLOT Game
 #	
 #	                         Check whether accepts zero amount input
 #
-#Scenario: Check whether balance field is accepting amount as Zero SRD in the transfer amount page of Skinfiri Mysterious game
+#	Scenario: Check whether balance field is accepting amount as Zero SRD in the transfer amount page of Skinfiri Mysterious game
 #    Given Chrome browser, valid URL, valid login details, Skinfiri Mysterious game, zero balance, text field to transfer balance, Ok button and validation message
 #    When Open the Skinfiri Mysterious slot game by entering the valid URL in browser, enter the valid login details, enter the amount as zero SRD and click on Ok butotn
 #    Then An error should be displayed if balance entered was zero and player should be blocked from loading the Skinfiri Mysterious game
-#    
+    
+
 #                                   Maximize and Minimize Button Validation
     
 #    Scenario: Check the functionality of maximize and minimize button in Skinfiri Mysterious slot game
@@ -249,27 +249,27 @@ Feature: Test all the functionalities of Skinfiri Mysterious SLOT Game
 #              WIN AMT TO CREDIT FORM AND VICE VERSA VALIDATION	            
 
 #	Scenario: Convert win amount into credits and check whether win amount in credits * denomination is equals to win amount in currency
-#    Given Chrome browser, valid URL, valid login details, Skinfiri Mysteriousslot game, balance, spin button, win amount in currency, credits and win amount in credits
-#    When Open the 40 Glowing hot slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on Skinfiri Mysteriousslot game, click on spin button till player wins, click on balance, check the win amount and click on balance
-#    Then Win amount in credit multiplied by denomination is equal to win amount in currency in Skinfiri Mysteriousslot game
+#    Given Chrome browser, valid URL, valid login details, Skinfiri Mysterious slot game, balance, spin button, win amount in currency, credits and win amount in credits
+#    When Open the 40 Skinfiri Mysterious slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on Skinfiri Mysterious slot game, click on spin button till player wins, click on balance, check the win amount and click on balance
+#    Then Win amount in credit multiplied by denomination is equal to win amount in currency in Skinfiri Mysterious slot game
 #	
 #	
-#	Scenario: Convert win amount into credits and check whether win amount in credits * denomination is equals to win amount in currency for denomination drop down value two in Skinfiri Mysteriousslot game
-#    Given Chrome browser, valid URL, valid login details, Skinfiri Mysteriousslot game, balance, spin button, win amount in currency, credits and win amount in credits for denomination drop down value two 
-#    When Open the Skinfiri Mysteriousslot game by entering the valid URL in browser, enter the valid login details, transfer the balance, select the dinomination drop down value two, click on spin button till player wins, click on balance, check the win amount and click on balance 
-#    Then Win amount in credit multiplied by denomination drop down value two is equal to win amount in currency in Skinfiri Mysteriousslot game
+#	Scenario: Convert win amount into credits and check whether win amount in credits * denomination is equals to win amount in currency for denomination drop down value two in Skinfiri Mysterious slot game
+#    Given Chrome browser, valid URL, valid login details, Skinfiri Mysterious slot game, balance, spin button, win amount in currency, credits and win amount in credits for denomination drop down value two 
+#    When Open the Skinfiri Mysterious slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, select the dinomination drop down value two, click on spin button till player wins, click on balance, check the win amount and click on balance 
+#    Then Win amount in credit multiplied by denomination drop down value two is equal to win amount in currency in Skinfiri Mysterious slot game
 #	
 #	
-#	Scenario: Convert win amount into credits and check whether win amount in credits * denomination is equals to win amount in currency for denomination drop down value three in Skinfiri Mysteriousslot game
-#    Given Chrome browser, valid URL, valid login details, Skinfiri Mysteriousslot game, balance, spin button, win amount in currency, credits and win amount in credits for denomination drop down value three 
-#    When Open the Skinfiri Mysteriousslot game by entering the valid URL in browser, enter the valid login details, transfer the balance, select the dinomination drop down value three, click on spin button till player wins, click on balance, check the win amount and click on balance 
-#    Then Win amount in credit multiplied by denomination drop down value three is equal to win amount in currency in Skinfiri Mysteriousslot game
+#	Scenario: Convert win amount into credits and check whether win amount in credits * denomination is equals to win amount in currency for denomination drop down value three in Skinfiri Mysterious slot game
+#    Given Chrome browser, valid URL, valid login details, Skinfiri Mysterious slot game, balance, spin button, win amount in currency, credits and win amount in credits for denomination drop down value three 
+#    When Open the Skinfiri Mysterious slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, select the dinomination drop down value three, click on spin button till player wins, click on balance, check the win amount and click on balance 
+#    Then Win amount in credit multiplied by denomination drop down value three is equal to win amount in currency in Skinfiri Mysterious slot game
 #	
 #	
-#	Scenario: Convert win amount into credits and check whether win amount in credits * denomination is equals to win amount in currency for denomination drop down value four in Skinfiri Mysteriousslot game
-#    Given Chrome browser, valid URL, valid login details, Skinfiri Mysteriousslot game, balance, spin button, win amount in currency, credits and win amount in credits for denomination drop down value four 
-#    When Open the Skinfiri Mysteriousslot game by entering the valid URL in browser, enter the valid login details, transfer the balance, select the dinomination drop down value four, click on spin button till player wins, click on balance, check the win amount and click on balance 
-#    Then Win amount in credit multiplied by denomination drop down value four is equal to win amount in currency in Skinfiri Mysteriousslot game
+#	Scenario: Convert win amount into credits and check whether win amount in credits * denomination is equals to win amount in currency for denomination drop down value four in Skinfiri Mysterious slot game
+#    Given Chrome browser, valid URL, valid login details, Skinfiri Mysterious slot game, balance, spin button, win amount in currency, credits and win amount in credits for denomination drop down value four 
+#    When Open the Skinfiri Mysterious slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, select the dinomination drop down value four, click on spin button till player wins, click on balance, check the win amount and click on balance 
+#    Then Win amount in credit multiplied by denomination drop down value four is equal to win amount in currency in Skinfiri Mysterious slot game
 #	
 	
 	
@@ -476,12 +476,11 @@ Feature: Test all the functionalities of Skinfiri Mysterious SLOT Game
 	
 #	              Big Win validation on triggering 7 symbol on all the Reels 
 
-#	Scenario: Check whether Big win is triggering on, when 5 seven symbol appears on the screen in Skinfiri Myserious game
+#	Scenario: Check whether Big win is triggering on, when 5 seven symbol appears on the screen in Skinfiri Mysterious game
 #	Given Chrome browser, valid URL, valid login details, Skinfiri Mysterious slot game, bet type, denomination, balance, seven symbols, spin button, Big win window and win amount
 #	When Open the Skinfiri Mysterious slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, select bet type & denomination, click on spin button till the seven appears on all the five reels and big win screen appears and big win amount added to the balance
 #	Then  Big Win screen should appear when five seven symbols appears on the screen in Skinfiri Mysterious game
-#	
-#	
+	
 	
 	
 #	        User Instruction Validation displayed when landed on Skinfiri Msterious Slot game
@@ -494,7 +493,7 @@ Feature: Test all the functionalities of Skinfiri Mysterious SLOT Game
 #	
 #	
 #	
-#	         Vslidate feature with the balance credited into the balance field in Try now game option
+#	         Validate feature with the balance credited into the balance field in Try now game option
 #	
 #		Scenario: Check whether system is providing balance in try now feature of Skinfiri Mysterious slot game
 #    Given Chrome browser, valid URL, valid login details, Skinfiri Mysterious slot game, try now button and balance to play
@@ -508,7 +507,7 @@ Feature: Test all the functionalities of Skinfiri Mysterious SLOT Game
 #	Scenario: Check whether amount is deducting from the balance after clicking on spin button in try now page of Skinfiri Mysterious slot game
 #    Given Chrome browser, valid URL, valid login details, Skinfiri Mysterious slot game, try now button, balance to play and spin button
 #    When Open the Skinfiri Mysterious slot game by entering the valid URL in browser, click on try now button and click on spin button
-#    Then Amount should get deducted from balance on click on spin button in try now page of Skinfiri Mysteriousslot game
+#    Then Amount should get deducted from balance on click on spin button in try now page of Skinfiri Mysterious slot game
 #	
 #	
 #	             Validate feature for Win amount added to balance in Try now game option
@@ -543,41 +542,43 @@ Feature: Test all the functionalities of Skinfiri Mysterious SLOT Game
 #    When Open the Skinfiri Mysterious slot game by entering the valid URL in browser, enter the valid login details, select the bet type as 0.5 from drop down and check the bet value should be 10,20,50,100,200
 #    Then Bet value should get changed to 10,20,50,100,200 if the bet type selected as 0.5 from the drop down three in Skinfiri Mysterious slot game
 
-	
-#	      PAYOUT TABLE TYPE WIN AMOUNT VALIDATION FOR ALL THE SYMBOLS WITH ALL DENOMINATIONS
 
-		Scenario: Check whether the max payout amount for each symbol as per the bet type 0.01 and all the denominations in Skinfiri Mysterious slot game on Web
-    Given Chrome browser, valid URL, valid login details, Skinfiri Mysterious slot game, icon to open payout table, all symbols, max amount on each symbol, back button, bet type 0.01 and all denomination values 
-    When Open the Skinfiri Mysterious slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on icon to open payout table, check payout amount on each symbol, click on back button, select bet type as 0.01 & all denomination  values and check payout amount
-    Then System should display the Payout max amount on each symbol and payout max amount should get changed whenever player changes the bet type to 0.01 and denomination values in Skinfiri Mysterious slot game on Web
+
+#      PAYOUT TABLE TYPE WIN AMOUNT VALIDATION FOR ALL THE SYMBOLS WITH ALL DENOMINATIONS
+
+#		Scenario: Check whether the max payout amount for each symbol as per the bet type 0.01 and all the denominations in Skinfiri Mysterious slot game on Web
+#    Given Chrome browser, valid URL, valid login details, Skinfiri Mysterious slot game, icon to open payout table, all symbols, max amount on each symbol, back button, bet type 0.01 and all denomination values 
+#    When Open the Skinfiri Mysterious slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on icon to open payout table, check payout amount on each symbol, click on back button, select bet type as 0.01 & all denomination  values and check payout amount
+#    Then System should display the Payout max amount on each symbol and payout max amount should get changed whenever player changes the bet type to 0.01 and denomination values in Skinfiri Mysterious slot game on Web
+#	
+#	
+#	Scenario: Check whether the max payout amount for each symbol as per the bet type 0.02 and all the denominations in Skinfiri Mysterious slot game on Web
+#    Given Chrome browser, valid URL, valid login details, Skinfiri Mysterious slot game, icon to open payout table, all symbols, max amount on each symbol, back button, bet type 0.02 and  denomination values like 0.4, 0.8, 2, 4 & 8
+#    When Open the Skinfiri Mysterious slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on icon to open payout table, check payout amount on each symbol, click on back button, select bet type as 0.02 & denomination  values like 0.4, 0.8, 2, 4 & 8 and check payout amount
+#    Then System should display the Payout max amount on each symbol and payout max amount should get changed whenever player changes the bet type to 0.02 and denomination values like 0.4, 0.8, 2, 4 & 8 in Skinfiri Mysterious slot game on Web
+#	
+#	Scenario: Check whether the max payout amount for each symbol like cross, owl as per the bet type 0.05 and all denomination values in Skinfiri Mysterious slot game on Web
+#    Given Chrome browser, valid URL, valid login details, Skinfiri Mysterious slot game, icon to open payout table, all symbols, max amount on each symbol like orange, cherry n etc, back button, bet type 0.05 and all denomination values  on web
+#    When Open the Skinfiri Mysterious slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on icon to open payout table, check payout amount on each symbol like eye, seven n etc, click on back button, select bet type as 0.05 & all denomination  values and check payout amount on web
+#    Then System should display the Payout max amount on each symbol like cross, owl n etc and payout max amount should get changed whenever player changes the bet type to 0.05 and all denomination values in Skinfiri Mysterious slot game on web
+#	
+#	Scenario: Check whether the max payout amount for each symbol like ten,, crow as per the bet type 0.5 and all denomination values in Skinfiri Mysterious slot game on Web
+#    Given Chrome browser, valid URL, valid login details, Skinfiri Mysterious slot game, icon to open payout table, all symbols, max amount on each symbol like ten, crow n etc, back button, bet type 0.5 and denomination values like 10, 20, 50, 100 & 200 on web
+#    When Open the Skinfiri Mysterious slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on icon to open payout table, check payout amount on each symbol like ten, crow n etc, click on back button, select bet type as 0.5 & denomination  values like 10, 20, 50, 100 & 200 and check payout amount on web
+#    Then System should display the Payout max amount on each symbol like ten, crow n etc and payout max amount should get changed whenever player changes the bet type to 0.5 and denomination values like 10, 20, 50, 100 & 200 in Skinfiri Mysterious slot game on web
+
+
+#	              Info Page Navigation and exit button validation
+     
+#    Scenario: Check whether info page is navigating forward and backward, exit button for the Skinfiri Mysterious slot game
+#    Given Chrome browser, valid URL, valid login details, Skinfiri Mysterious slot game, balance, settings, info icon, navigation icon, exit icon, payout, paylines, scatter, wild, gamble, freespin and jackpot window
+#    When Open the Skinfiri Mysterious slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on settings and info icon and validate the forward and backward button.
+#    Then forward ,backward and exit button of info page should perform in Skinfiri Mysterious slot game
 	
 	
-	Scenario: Check whether the max payout amount for each symbol as per the bet type 0.02 and all the denominations in Skinfiri Mysterious slot game on Web
-    Given Chrome browser, valid URL, valid login details, Skinfiri Mysterious slot game, icon to open payout table, all symbols, max amount on each symbol, back button, bet type 0.02 and  denomination values like 0.4, 0.8, 2, 4 & 8
-    When Open the Skinfiri Mysterious slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on icon to open payout table, check payout amount on each symbol, click on back button, select bet type as 0.02 & denomination  values like 0.4, 0.8, 2, 4 & 8 and check payout amount
-    Then System should display the Payout max amount on each symbol and payout max amount should get changed whenever player changes the bet type to 0.02 and denomination values like 0.4, 0.8, 2, 4 & 8 in Skinfiri Mysterious slot game on Web
-	
-	Scenario: Check whether the max payout amount for each symbol like orange, cherry as per the bet type 0.05 and all denomination values in Skinfiri Mysterious slot game on Web
-    Given Chrome browser, valid URL, valid login details, Skinfiri Mysterious slot game, icon to open payout table, all symbols, max amount on each symbol like orange, cherry n etc, back button, bet type 0.05 and all denomination values  on web
-    When Open the Skinfiri Mysterious slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on icon to open payout table, check payout amount on each symbol like orange, cherry n etc, click on back button, select bet type as 0.05 & all denomination  values and check payout amount on web
-    Then System should display the Payout max amount on each symbol like orange, cherry n etc and payout max amount should get changed whenever player changes the bet type to 0.05 and all denomination values in Skinfiri Mysterious slot game on web
-	
-	Scenario: Check whether the max payout amount for each symbol like bell,, lemon as per the bet type 0.5 and all denomination values in Skinfiri Mysterious slot game on Web
-    Given Chrome browser, valid URL, valid login details, Skinfiri Mysterious slot game, icon to open payout table, all symbols, max amount on each symbol like bell, lemon n etc, back button, bet type 0.5 and denomination values like 10, 20, 50, 100 & 200 on web
-    When Open the Skinfiri Mysterious slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on icon to open payout table, check payout amount on each symbol like bell, lemon n etc, click on back button, select bet type as 0.5 & denomination  values like 10, 20, 50, 100 & 200 and check payout amount on web
-    Then System should display the Payout max amount on each symbol like bell, lemon n etc and payout max amount should get changed whenever player changes the bet type to 0.5 and denomination values like 10, 20, 50, 100 & 200 in Skinfiri Mysterious slot game on web
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+			#	           Validation on Suit win to win amount is double than win amount
+
+	Scenario: Checking Suit win to Win amount should be quadruple than gamble amount in gamble page of Skinfiri Mysterious game 
+    Given Chrome browser, valid URL, valid login details, Skinfiri Mysterious game, balance, spin button, win amount, Suit win dice options, gamble amount and suit to win amount
+    When Open the Skinfiri Mysterious game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on Skinfiri Mysterious slot game, click on spin button till player wins, click on suit win dice button and check the suit to win amount
+    Then suit To Win amount should be quadruple than win amount in the gamble page of the Skinfiri Mysterious game

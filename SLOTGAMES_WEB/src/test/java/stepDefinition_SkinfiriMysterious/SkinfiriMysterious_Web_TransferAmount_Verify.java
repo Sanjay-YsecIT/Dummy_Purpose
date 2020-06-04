@@ -1,11 +1,11 @@
 package stepDefinition_SkinfiriMysterious;
 
-import java.io.File;
+//import java.io.File;
 
-import org.apache.commons.io.FileUtils;
+//import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
+//import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.sikuli.script.Finder;
@@ -34,8 +34,6 @@ public class SkinfiriMysterious_Web_TransferAmount_Verify {
 		balT.clear();
 		Thread.sleep(1000);
 		balT.sendKeys("300");
-		Thread.sleep(3000);
-		
 		
 //		images before and after transfer
 		Pattern Beforetransfer=new Pattern("./Images/Skinfiri_Mysterious/Beforetransfer_300.PNG");
@@ -64,11 +62,11 @@ public class SkinfiriMysterious_Web_TransferAmount_Verify {
 		  System.out.println("Transfering the amount to the slot game and comparision value equals to: "+" "+score +"%");
 		  Assert.assertTrue(score > 90);
 		  
-		  
-		  
-		  
+		  driver.findElement(By.className("Transfer_Ok_but")).click();
 		  screen.wait("./Images/Skinfiri_Mysterious/Bet_place.PNG", 10);
-			//	Thread.sleep(15000);
+			//	Thread.sleep(15000);  
+		  
+		  
 			 
 			 //Taking ScreenShot of the game at the initial condition
 //			 

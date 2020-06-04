@@ -1,11 +1,11 @@
 package stepDefinition_SkinfiriMysterious;
 
-import java.io.File;
+//import java.io.File;
 
-import org.apache.commons.io.FileUtils;
+//import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
+//import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.sikuli.script.Finder;
@@ -55,7 +55,7 @@ public class SkinfiriMysterious_Web_Gamble_GambleAmount_DoubleThan_WinAmount {
 		Pattern SKULL=new Pattern("./Images/Skinfiri_Mysterious/SKULL.PNG");
 		Pattern CROW=new Pattern("./Images/Skinfiri_Mysterious/CROW.PNG");
 		
-		Pattern DENO_4=new Pattern("./Images/Skinfiri_Mysterious/deno_4.PNG");
+		Pattern DENO_4=new Pattern("./Images/Skinfiri_Mysterious/betvalue1_5.PNG");
 		Pattern WIN_AMT=new Pattern("./Images/Skinfiri_Mysterious/win_amt_8.PNG");
 	
 		Pattern GAMBLE_BTN=new Pattern("./Images/Skinfiri_Mysterious/gamble_icon.PNG");
@@ -121,7 +121,7 @@ public class SkinfiriMysterious_Web_Gamble_GambleAmount_DoubleThan_WinAmount {
 				Match m2=finder2.next();
 				System.out.println("Match Found with: "+(m2.getScore())*100+"%");
 				score2=(m2.getScore())*100;
-				System.out.println("Win amount comparision completed successfully. Win amount is 16.00 YSI");
+				System.out.println("Win amount comparision completed successfully. Win amount is 8 YSI");
 				finder2.destroy();  
 			}         
 			else    
@@ -168,6 +168,7 @@ public class SkinfiriMysterious_Web_Gamble_GambleAmount_DoubleThan_WinAmount {
 	@Then("^Gamble To Win amount should be double than Gamble amount in the gamble page of the Skinfiri Mysterious game$")
 	public void gamble_To_Win_amount_should_be_double_than_Gamble_amount_in_the_gamble_page_of_the_Skinfiri_Mysterious_game() throws Throwable {
 	   
-		
+		Thread.sleep(3000);
+		 driver.quit();
 	}
 }

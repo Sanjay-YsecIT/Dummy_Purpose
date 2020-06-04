@@ -1,11 +1,11 @@
 package stepDefinition_SkinfiriMysterious;
 
-import java.io.File;
+//import java.io.File;
 
-import org.apache.commons.io.FileUtils;
+//import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
+//import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.sikuli.script.Finder;
@@ -149,10 +149,10 @@ public class SkinfiriMysterious_Web_AutoSpin_TwentySpins {
 				 Assert.assertTrue(score2 > 90);
 				 
 				 //comparing the number of 13spins left message
-		         Pattern pat44=new Pattern("E:/Sikuli Images/Tiki Isle/16spins.png");
+		        // Pattern pat44=new Pattern("E:/Sikuli Images/Tiki Isle/16spins.png");
 		         screen.wait(pat5, 5);
 		         Finder finder3 =new Finder(screen.capture().getImage());
-		         String ht3 = finder3.find(pat44);
+		         String ht3 = finder3.find(pat5);
 		         double score3=20;                
 		         System.out.println("the value of ht"+" "+ht3);
 		         if(finder3.hasNext())

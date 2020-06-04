@@ -1,11 +1,11 @@
 package stepDefinition_SkinfiriMysterious;
 
-import java.io.File;
+//import java.io.File;
 
-import org.apache.commons.io.FileUtils;
+//import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
+//import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.sikuli.script.Finder;
@@ -55,7 +55,7 @@ public class SkinfiriMysterious_Web_Balance_To_Credits_CreditWinAmountEqualsCurr
 		Pattern EYE=new Pattern("./Images/Skinfiri_Mysterious/EYE.PNG");
 		Pattern SKULL=new Pattern("./Images/Skinfiri_Mysterious/SKULL.PNG");
 		Pattern CROW=new Pattern("./Images/Skinfiri_Mysterious/CROW.PNG");
-		Pattern WIN_PATTERN=new Pattern("./Images/Skinfiri_Mysterious/WIN_PATTERN.PNG");
+//		Pattern WIN_PATTERN=new Pattern("./Images/Skinfiri_Mysterious/WIN_PATTERN.PNG");
 		Pattern CREDIT_INC = new Pattern("./Images/Skinfiri_Mysterious/credit_incremental.PNG");
 		Pattern CREDIT = new Pattern("./Images/Skinfiri_Mysterious/0.02_credit.PNG");
 		Pattern COLLECT = new Pattern("./Images/Skinfiri_Mysterious/collect_image.PNG");

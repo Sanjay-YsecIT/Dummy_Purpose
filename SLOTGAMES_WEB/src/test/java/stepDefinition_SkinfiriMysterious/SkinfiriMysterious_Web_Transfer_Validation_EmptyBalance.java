@@ -38,7 +38,7 @@ public class SkinfiriMysterious_Web_Transfer_Validation_EmptyBalance {
 		 
 		 
 		 //Comparing the amount which is transferring to the slot game
-	      Pattern credit1=new Pattern("./Images/Skinfiri_Mysterious/Amount_greater_msg.PNG");
+	      Pattern credit1=new Pattern("./Images/Skinfiri_Mysterious/null_msg.PNG");
 	      Finder finder =new Finder(screen.capture().getImage());
 	      String ht = finder.find(credit1);
 	      double score=20;                

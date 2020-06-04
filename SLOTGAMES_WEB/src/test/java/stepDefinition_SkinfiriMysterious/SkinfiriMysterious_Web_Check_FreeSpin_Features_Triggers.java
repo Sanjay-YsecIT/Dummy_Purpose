@@ -296,7 +296,7 @@ public class SkinfiriMysterious_Web_Check_FreeSpin_Features_Triggers {
 			  Match m22=finder22.next();
 			  System.out.println("Match Found with: "+(m22.getScore())*100+"%");
 			  score22=(m22.getScore())*100;
-			  System.out.println("On appearance of 3 scatters, bonus game should be triggered and Free spin attempts should be 10.");
+			  System.out.println("On appearance of 4 scatters, Free spin attempts should be 10.");
 			  finder22.destroy();  
 			  }         
 			  else    
@@ -315,7 +315,7 @@ public class SkinfiriMysterious_Web_Check_FreeSpin_Features_Triggers {
 			  Match m23=finder23.next();
 			  System.out.println("Match Found with: "+(m23.getScore())*100+"%");
 			  score23=(m23.getScore())*100;
-			  System.out.println("On appearance of 4 scatters, bonus game should be triggered and Free spin attempts should be 0.");
+			  System.out.println("On appearance of 4 scatters, Free spin attempts should be 0.");
 			  finder23.destroy();  
 			  }         
 			  else    

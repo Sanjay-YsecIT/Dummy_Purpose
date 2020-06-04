@@ -1,11 +1,11 @@
 package stepDefinition_SkinfiriMysterious;
 
-import java.io.File;
+//import java.io.File;
 
-import org.apache.commons.io.FileUtils;
+//import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
+//import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.sikuli.script.Finder;
@@ -85,9 +85,9 @@ public class SkinfiriMysterious_Web_Check_MaximizeAndMinimize_Buttons {
 		  System.out.println("If the screen is maximized, url bar should not be visible and comparisin value equals to: "+" "+score +"%");
 		  Assert.assertFalse(score > 97);
 		  
-		 //Clicking on manimize icon 
-		 screen.click(settings);
-		 Thread.sleep(3000);
+		 //Clicking on minimize icon 
+//		 screen.click(settings);
+//		 Thread.sleep(3000);
 		 screen.click(min);
 		 Thread.sleep(3000);
 		 

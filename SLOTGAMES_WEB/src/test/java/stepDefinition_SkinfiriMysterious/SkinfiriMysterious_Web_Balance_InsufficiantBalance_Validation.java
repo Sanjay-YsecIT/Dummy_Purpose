@@ -1,11 +1,11 @@
 package stepDefinition_SkinfiriMysterious;
 
-import java.io.File;
+//import java.io.File;
 
-import org.apache.commons.io.FileUtils;
+//import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
+//import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.sikuli.script.Finder;
@@ -51,7 +51,7 @@ public class SkinfiriMysterious_Web_Balance_InsufficiantBalance_Validation {
 		
 		//Pattern Insuffbalance=new Pattern("./Images/10Spins/Insufficent_bal10.PNG");
 		Pattern spin=new Pattern("./Images/Skinfiri_Mysterious/Spin.PNG");
-		Pattern creditValue=new Pattern("./Images/Skinfiri_Mysterious/deno_4.PNG");
+		Pattern creditValue=new Pattern("./Images/Skinfiri_Mysterious/betvalue1_5.PNG");
 		Pattern Insufficient_info=new Pattern("./Images/Skinfiri_Mysterious/Insufficient_info.PNG");
 		
 		
