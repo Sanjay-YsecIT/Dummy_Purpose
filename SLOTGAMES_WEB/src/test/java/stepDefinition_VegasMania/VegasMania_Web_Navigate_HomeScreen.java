@@ -42,7 +42,7 @@ public class VegasMania_Web_Navigate_HomeScreen {
 
 
 
-		//Comparing whether Amazon_Clash  game is loaded and home button is visible
+		//Comparing whether Vegas Mania game is loaded and home button is visible
 
 		// Pattern credit1=new Pattern("E:/Sikuli Images/others/goldenhot.png");
 

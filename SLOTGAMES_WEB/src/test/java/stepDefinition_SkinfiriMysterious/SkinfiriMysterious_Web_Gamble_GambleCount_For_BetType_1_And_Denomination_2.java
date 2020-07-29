@@ -39,9 +39,6 @@ public class SkinfiriMysterious_Web_Gamble_GambleCount_For_BetType_1_And_Denomin
 		screen.wait("./Images/Skinfiri_Mysterious/Bet_place.PNG", 10);
 		//	Thread.sleep(15000);
 
-
-
-
 		Pattern SPIN=new Pattern("./Images/Skinfiri_Mysterious/Spin.PNG");                         // SPIN BUTTON
 	//	Pattern BALANCE=new Pattern("./Images/10Spins/bal_300.PNG");                   // BAL AT INITIAL STAGE
 		Pattern GAMBLE_COLLECT=new Pattern("./Images/Skinfiri_Mysterious/collect_image_gamble.PNG");  // AMOUNT COLLECT ICON ON GAMBLE WINDOW

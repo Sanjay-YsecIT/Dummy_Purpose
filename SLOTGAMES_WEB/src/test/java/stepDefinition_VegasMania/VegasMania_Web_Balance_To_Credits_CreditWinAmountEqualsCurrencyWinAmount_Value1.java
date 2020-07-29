@@ -37,11 +37,11 @@ public class VegasMania_Web_Balance_To_Credits_CreditWinAmountEqualsCurrencyWinA
 		//	Thread.sleep(15000);
 
 		Pattern credit=new Pattern("./Images/Vegas_Mania/credit_0.01.PNG");
-	//	Pattern betval=new Pattern("./Images/Vegas_Mania/betval1_1.PNG");
+		//	Pattern betval=new Pattern("./Images/Vegas_Mania/betval1_1.PNG");
 		Pattern spin=new Pattern("./Images/Vegas_Mania/spin.PNG");
 		Pattern balance=new Pattern("./Images/Vegas_Mania/Reminingbal_299.90.PNG");
 		Pattern win_amt = new Pattern("./Images/Vegas_Mania/winamt_0.4.PNG");
-	//	Pattern collect=new Pattern("./Images/Vegas_Mania/collect.PNG")
+		//	Pattern collect=new Pattern("./Images/Vegas_Mania/collect.PNG")
 
 		// credit values
 		Pattern win_cr = new Pattern("./Images/Vegas_Mania/cr_winamt1.PNG");
@@ -75,8 +75,8 @@ public class VegasMania_Web_Balance_To_Credits_CreditWinAmountEqualsCurrencyWinA
 		// WIN PATTERN COMBINATION 
 		screen.click(cherry);
 		Thread.sleep(2000);
-//		screen.click(betval);
-//		Thread.sleep(2000);
+		//		screen.click(betval);
+		//		Thread.sleep(2000);
 		screen.click(spin);
 		Thread.sleep(2000);
 
@@ -178,7 +178,7 @@ public class VegasMania_Web_Balance_To_Credits_CreditWinAmountEqualsCurrencyWinA
 		System.out.println("Win amount comparision in currency value equal to: "+" "+score6 +"%");
 		Assert.assertTrue(score6 > 80);
 		Thread.sleep(2000);
-		
+
 		//screen.click(collect);
 	}
 

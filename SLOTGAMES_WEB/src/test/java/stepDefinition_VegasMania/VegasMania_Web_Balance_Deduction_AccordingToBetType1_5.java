@@ -50,6 +50,7 @@ public class VegasMania_Web_Balance_Deduction_AccordingToBetType1_5 {
 		//CLICKING ON Spin button
 		screen.click(spin);
 		Thread.sleep(1000);
+		
 		//comparing the credit value should be 0.01
 		//   Pattern credit1=new Pattern("E:/Sikuli Images/Bet Values/creditvalue1.png");
 

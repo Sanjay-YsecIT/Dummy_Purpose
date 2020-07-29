@@ -34,7 +34,6 @@ public class VegasMania_Web_Transfer_Validation_MoreThanAvailableBalance {
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
 
-
 		// Validating for the greater amount transfer
 
 		Pattern credit1=new Pattern("./Images/Vegas_Mania/Amount_greater_msg.PNG");

@@ -105,7 +105,7 @@ public class VegasMania_Web_Gamble_GambleCount_For_BetType_1_And_Denomination_1 
 		Thread.sleep(6000);
 
 
-		//comparing gamble count based on win amount
+		//win amount comparision
 		//    Pattern balance=new Pattern("E:/Sikuli Images/gamble/Win_1_1_1.PNG");
 		Finder finder1 =new Finder(screen.capture().getImage());
 		String ht1 = finder1.find(WIN_AMT1);

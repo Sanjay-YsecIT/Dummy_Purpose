@@ -45,8 +45,8 @@ public class VegasMania_Web_Balance_Deduction_AccordingToBetType2_1 {
 		screen.click(credit_inc);
 		Thread.sleep(3000);
 		//clicking on Bet VALUE
-//		screen.click(betval);
-//		Thread.sleep(3000);
+		//		screen.click(betval);
+		//		Thread.sleep(3000);
 		//CLICKING ON Spin button
 		screen.click(spin);
 		Thread.sleep(4000);

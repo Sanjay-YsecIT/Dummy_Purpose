@@ -76,8 +76,6 @@ public class SapphireHeart_Web_Check_MaximizeAndMinimize_Buttons {
 		screen.click(min);
 		Thread.sleep(3000);
 
-
-
 		//if the screen is minimized, comparing URL bar should  be visible
 
 		// Pattern winA=new Pattern("E:/Sikuli Images/others/url.PNG");

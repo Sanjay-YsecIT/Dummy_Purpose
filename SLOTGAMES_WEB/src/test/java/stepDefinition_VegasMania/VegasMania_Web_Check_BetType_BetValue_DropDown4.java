@@ -37,10 +37,10 @@ public class VegasMania_Web_Check_BetType_BetValue_DropDown4 {
 		//	Thread.sleep(15000);
 
 
-		Pattern credit=new Pattern("./Images/Amazon_Clash/credit_0.5.PNG");
+		Pattern credit=new Pattern("./Images/Vegas_Mania/credit_0.5.PNG");
 		Pattern bet4=new Pattern("./Images/Vegas_Mania/bet4.PNG");
-		Pattern bet_val=new Pattern("./Images/Amazon_Clash/betvalues_0.5.PNG");
-		Pattern credit_inc = new Pattern("./Images/Amazon_Clash/credit_inc.PNG");
+		Pattern bet_val=new Pattern("./Images/Vegas_Mania/betvalues_0.5.PNG");
+		Pattern credit_inc = new Pattern("./Images/Vegas_Mania/credit_inc.PNG");
 
 		screen.click(credit_inc);
 		Thread.sleep(2000);

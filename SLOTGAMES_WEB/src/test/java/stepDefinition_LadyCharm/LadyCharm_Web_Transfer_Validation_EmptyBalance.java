@@ -33,7 +33,6 @@ public class LadyCharm_Web_Transfer_Validation_EmptyBalance {
 		 driver.findElement(By.className("Transfer_Ok_but")).click();
 		 Thread.sleep(2000);
 		
-		
 		 //Comparing the amount which is transferring to the slot game
 	      Pattern credit1=new Pattern("./Images/Lady_Charm/null_msg.PNG");
 	      Finder finder =new Finder(screen.capture().getImage());

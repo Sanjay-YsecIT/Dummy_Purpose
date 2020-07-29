@@ -287,7 +287,6 @@ public class VegasMania_Web_AutoSpin_TenSpins {
 	@Then("^Number of spin left should start from (\\d+) to (\\d+) after clicking ten spins option and should perform (\\d+) spins from (\\d+) to (\\d+) Vegas Mania slot game$")
 	public void number_of_spin_left_should_start_from_to_after_clicking_ten_spins_option_and_should_perform_spins_from_to_Vegas_Mania_slot_game(int arg1, int arg2, int arg3, int arg4, int arg5) throws Throwable {
 
-
 		Thread.sleep(3000);
 		driver.quit();
 	}

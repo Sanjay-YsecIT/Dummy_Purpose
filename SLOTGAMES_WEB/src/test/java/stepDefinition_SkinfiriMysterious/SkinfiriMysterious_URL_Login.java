@@ -18,11 +18,10 @@ import cucumber.api.java.Before;
 public class SkinfiriMysterious_URL_Login {
 	
 	private static WebDriver driver;
-	
-	@Before
+
 	public static void main(String[] args) throws InterruptedException, MalformedURLException, FindFailed {
 
-		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver_win32/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://demo.ysecit.in:82/slotgames/slotsgame");
 		driver.manage().window().maximize();
@@ -40,7 +39,7 @@ public class SkinfiriMysterious_URL_Login {
 		System.out.println("Login to the game with valid credentials");
 
 
-		WebElement sub = driver.findElement(By.xpath("/html[1]/body[1]/div[3]/div[1]/ui-view[1]/section[1]/section[1]/div[1]/div[1]/div[2]/div[3]/ul[1]/li[6]/div[1]/div[1]"));
+		WebElement sub = driver.findElement(By.xpath("/html[1]/body[1]/div[3]/div[1]/ui-view[1]/section[1]/section[1]/div[1]/div[1]/div[2]/div[3]/ul[1]/li[12]/div[1]/div[1]"));
 		JavascriptExecutor jse=(JavascriptExecutor)driver;
 		jse.executeScript("arguments[0].click();", sub);
 		Thread.sleep(5000);

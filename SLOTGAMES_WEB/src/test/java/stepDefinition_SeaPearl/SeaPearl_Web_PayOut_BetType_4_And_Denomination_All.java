@@ -36,7 +36,6 @@ public class SeaPearl_Web_PayOut_BetType_4_And_Denomination_All {
 		screen.wait("./Images/Sea_Pearl/Bet_place.PNG", 10);
 		//	Thread.sleep(15000);
 
-
 		Pattern credit1=new Pattern("./Images/Sea_Pearl/credit_0.5.PNG");
 		Pattern settings=new Pattern("./Images/Sea_Pearl/settings_icon.PNG");
 		Pattern info=new Pattern("./Images/Sea_Pearl/info_icon.PNG");

@@ -37,8 +37,6 @@ public class LadyFortune_Web_TransferAmount_Verify {
 		Pattern Beforetransfer=new Pattern("./Images/Lady_Fortune/beforetransfer_300.PNG");
 		Pattern Aftertransfer=new Pattern("./Images/Lady_Fortune/aftertransfer_300.PNG");
 
-
-
 		//Comparing the amount which is transferring to the slot game
 		//  Pattern credit1=new Pattern("E:/Sikuli Images/others/beforetransfer.png");
 		Finder finder =new Finder(screen.capture().getImage());
@@ -65,7 +63,6 @@ public class LadyFortune_Web_TransferAmount_Verify {
 		//	Thread.sleep(15000); 
 
 		//Comparing the same amount is displayed on the slot game balance after loading
-
 		//    Pattern winA=new Pattern("E:/Sikuli Images/others/aftertransfer.PNG");
 		Finder finder2 =new Finder(screen.capture().getImage());
 		String ht2 = finder2.find(Aftertransfer);

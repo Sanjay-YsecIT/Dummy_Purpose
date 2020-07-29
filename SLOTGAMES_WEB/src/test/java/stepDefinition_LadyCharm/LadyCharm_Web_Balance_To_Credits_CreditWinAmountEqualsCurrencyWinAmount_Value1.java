@@ -51,7 +51,7 @@ public class LadyCharm_Web_Balance_To_Credits_CreditWinAmountEqualsCurrencyWinAm
 		// win symbols
 		Pattern J=new Pattern("./Images/Lady_Charm/1R_j.PNG");
 		
-		//comparing the credit value should be 0.02
+		//comparing the credit value should be 0.01
 		// Pattern credit1=new Pattern("E:/Sikuli Images/Win/creditvalue1.png");
 		Finder finder =new Finder(screen.capture().getImage());
 		String ht = finder.find(credit);

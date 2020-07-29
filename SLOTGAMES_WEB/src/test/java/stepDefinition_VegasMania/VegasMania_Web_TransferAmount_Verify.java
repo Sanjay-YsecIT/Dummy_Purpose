@@ -37,8 +37,6 @@ public class VegasMania_Web_TransferAmount_Verify {
 		Pattern Beforetransfer=new Pattern("./Images/Vegas_Mania/beforetransfer_300.PNG");
 		Pattern Aftertransfer=new Pattern("./Images/Vegas_Mania/aftertransfer_300.PNG");
 
-
-
 		//Comparing the amount which is transferring to the slot game
 		// Pattern credit1=new Pattern("E:/Sikuli Images/others/beforetransfer.png");
 		Finder finder =new Finder(screen.capture().getImage());

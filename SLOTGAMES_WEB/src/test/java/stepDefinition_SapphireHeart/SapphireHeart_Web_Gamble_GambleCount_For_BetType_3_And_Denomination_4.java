@@ -71,7 +71,7 @@ public class SapphireHeart_Web_Gamble_GambleCount_For_BetType_3_And_Denomination
 		Pattern K3=new Pattern("./Images/Sapphire_Heart/3R_k.PNG");
 		Pattern IMG3=new Pattern("./Images/Sapphire_Heart/3R_img.PNG");
 		Pattern purple3=new Pattern("./Images/Sapphire_Heart/3R_purple.PNG");
-		Pattern men3=new Pattern("./Images/Sapphire_Heart/3R_k.PNG");
+		Pattern men3=new Pattern("./Images/Sapphire_Heart/3R_men.PNG");
 		Pattern J3=new Pattern("./Images/Sapphire_Heart/3R_j.PNG");
 		
 

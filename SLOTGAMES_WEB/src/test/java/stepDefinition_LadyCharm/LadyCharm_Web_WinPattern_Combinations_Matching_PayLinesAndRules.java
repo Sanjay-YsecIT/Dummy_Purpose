@@ -40,8 +40,8 @@ public class LadyCharm_Web_WinPattern_Combinations_Matching_PayLinesAndRules {
 		Pattern spin=new Pattern("./Images/Lady_Charm/spin.PNG");
 		Pattern betval=new Pattern("./Images/Lady_Charm/betval1_1.PNG");
 		Pattern collect = new Pattern("./Images/Lady_Charm/collect.PNG");
-		
-		
+
+
 		Pattern win_pattern=new Pattern("./Images/Lady_Charm/payline_win_pattern.PNG");
 		Pattern win1=new Pattern("./Images/Lady_Charm/pattern_win1.PNG");
 		Pattern win2=new Pattern("./Images/Lady_Charm/pattern_win2.PNG");
@@ -51,7 +51,7 @@ public class LadyCharm_Web_WinPattern_Combinations_Matching_PayLinesAndRules {
 		Pattern win6=new Pattern("./Images/Lady_Charm/pattern_win6.PNG");
 		Pattern win7=new Pattern("./Images/Lady_Charm/pattern_win7.PNG");
 		Pattern win8=new Pattern("./Images/Lady_Charm/pattern_win8.PNG");
-		
+
 
 		// IMAGES IN 2nd REELS
 		Pattern ten2=new Pattern("./Images/Lady_Charm/2R_10.PNG");
@@ -74,7 +74,7 @@ public class LadyCharm_Web_WinPattern_Combinations_Matching_PayLinesAndRules {
 		screen.click(spin);
 		Thread.sleep(2000);
 
-//		 win pattern combination with win amount
+		//		 win pattern combination with win amount
 		Finder finder2 =new Finder(screen.capture().getImage());
 		String ht2 = finder2.find(win1);
 		double score2=20;                
@@ -94,7 +94,7 @@ public class LadyCharm_Web_WinPattern_Combinations_Matching_PayLinesAndRules {
 		System.out.println("Gamble count comparision after Win: "+" "+score2 +"%");
 		Assert.assertTrue(score2 > 95);
 
-//		 win pattern combination with win amount
+		//		 win pattern combination with win amount
 		Finder finder22 =new Finder(screen.capture().getImage());
 		String ht22 = finder22.find(win2);
 		double score22=20;                
@@ -113,9 +113,9 @@ public class LadyCharm_Web_WinPattern_Combinations_Matching_PayLinesAndRules {
 		}
 		System.out.println("Gamble count comparision after Win: "+" "+score22 +"%");
 		Assert.assertTrue(score22 > 95);
-		
-		
-//		 win pattern combination with win amount
+
+
+		//		 win pattern combination with win amount
 		Finder finder23 =new Finder(screen.capture().getImage());
 		String ht23 = finder23.find(win3);
 		double score23=20;                
@@ -134,10 +134,10 @@ public class LadyCharm_Web_WinPattern_Combinations_Matching_PayLinesAndRules {
 		}
 		System.out.println("Gamble count comparision after Win: "+" "+score23+"%");
 		Assert.assertTrue(score23 > 95);
-		
-		
-		
-//		 win pattern combination with win amount
+
+
+
+		//		 win pattern combination with win amount
 		Finder finder24 =new Finder(screen.capture().getImage());
 		String ht24 = finder24.find(win4);
 		double score24=20;                
@@ -156,12 +156,12 @@ public class LadyCharm_Web_WinPattern_Combinations_Matching_PayLinesAndRules {
 		}
 		System.out.println("Gamble count comparision after Win: "+" "+score24 +"%");
 		Assert.assertTrue(score24 > 95);
-		
-		
-		
-		
-		
-//		 win pattern combination with win amount
+
+
+
+
+
+		//		 win pattern combination with win amount
 		Finder finder25 =new Finder(screen.capture().getImage());
 		String ht25 = finder25.find(win5);
 		double score25=20;                
@@ -180,11 +180,11 @@ public class LadyCharm_Web_WinPattern_Combinations_Matching_PayLinesAndRules {
 		}
 		System.out.println("Gamble count comparision after Win: "+" "+score25 +"%");
 		Assert.assertTrue(score25 > 95);
-		
-		
-		
-		
-//		 win pattern combination with win amount
+
+
+
+
+		//		 win pattern combination with win amount
 		Finder finder26 =new Finder(screen.capture().getImage());
 		String ht26 = finder26.find(win6);
 		double score26=20;                
@@ -203,10 +203,10 @@ public class LadyCharm_Web_WinPattern_Combinations_Matching_PayLinesAndRules {
 		}
 		System.out.println("Gamble count comparision after Win: "+" "+score26 +"%");
 		Assert.assertTrue(score26> 95);
-		
-		
-		
-//		 win pattern combination with win amount
+
+
+
+		//		 win pattern combination with win amount
 		Finder finder27 =new Finder(screen.capture().getImage());
 		String ht27 = finder27.find(win7);
 		double score27=20;                
@@ -225,11 +225,9 @@ public class LadyCharm_Web_WinPattern_Combinations_Matching_PayLinesAndRules {
 		}
 		System.out.println("Gamble count comparision after Win: "+" "+score27 +"%");
 		Assert.assertTrue(score27 > 95);
-		
-		
-		
-		
-//		 win pattern combination with win amount
+
+
+		//		 win pattern combination with win amount
 		Finder finder28 =new Finder(screen.capture().getImage());
 		String ht28 = finder28.find(win8);
 		double score28=20;                
@@ -248,10 +246,10 @@ public class LadyCharm_Web_WinPattern_Combinations_Matching_PayLinesAndRules {
 		}
 		System.out.println("Gamble count comparision after Win: "+" "+score28 +"%");
 		Assert.assertTrue(score28 > 95);
-		
+
 		screen.click(collect);
 		Thread.sleep(2000);
-		
+
 		//comparing the win patterns for the above pattern wins
 		//    Pattern balance=new Pattern("E:/Sikuli Images/gamble/Win_1_1_1.PNG");
 		Finder finder1 =new Finder(screen.capture().getImage());

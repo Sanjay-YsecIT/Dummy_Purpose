@@ -38,14 +38,15 @@ WebDriver driver;
 		balT.sendKeys("2");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		Thread.sleep(15000);
+		Screen screen=new Screen();
+		Pattern spin1=new Pattern("E:/Sikuli Images/SkinfiriJungle/spin.png");
+		screen.wait(spin1, 80);
 		TakesScreenshot tsc=(TakesScreenshot)driver;
 		
 		File sct = driver.findElement(By.xpath("//*[@id='iframeSlotGame']")).getScreenshotAs(OutputType.FILE);
 		String path = System.getProperty("user.dir")+"E:\\Sikuli Images\\Win\\balance_beforeSpin_1_1.PNG";
-		Screen screen=new Screen();
 		Pattern Insuffbalance=new Pattern("E:/Sikuli Images/SkinfiriJungle/insufficiant.png");
-		Pattern betvalue_1_5=new Pattern("E:/Sikuli Images/SkinfiriJungle/betvalue_1_5.png");
+		Pattern betvalue_1_5=new Pattern("E:/Sikuli Images/SkinfiriJungle/betvalue1_5.png");
 		Pattern spin=new Pattern("E:/Sikuli Images/SkinfiriJungle/spin.png");
 		
 	    // Clicking the denomination and spin button

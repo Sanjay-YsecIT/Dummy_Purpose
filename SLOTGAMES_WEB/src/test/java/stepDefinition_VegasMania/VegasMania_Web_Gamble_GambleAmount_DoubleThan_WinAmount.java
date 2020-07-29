@@ -38,12 +38,12 @@ public class VegasMania_Web_Gamble_GambleAmount_DoubleThan_WinAmount {
 
 
 		//Pattern credit=new Pattern("./Images/Emerald_Dice/credit_0.01.PNG");
-		Pattern spin=new Pattern("./Images/Amazon_Clash/spin.PNG");
-		Pattern balance=new Pattern("./Images/Amazon_Clash/bal_300.PNG");
-		Pattern win_amt = new Pattern("./Images/Amazon_Clash/winamt_0.4.PNG");
-		Pattern gamble_btn=new Pattern("./Images/Amazon_Clash/gb_button.PNG");
-		Pattern gb_collect=new Pattern("./Images/Amazon_Clash/gb_collect.PNG");
-		Pattern gb_colorwin_amt=new Pattern("./Images/Amazon_Clash/gb_colorwin.PNG");
+		Pattern spin=new Pattern("./Images/Vegas_Mania/spin.PNG");
+		Pattern balance=new Pattern("./Images/Vegas_Mania/bal_300.PNG");
+		Pattern win_amt = new Pattern("./Images/Vegas_Mania/winamt_0.4.PNG");
+		Pattern gamble_btn=new Pattern("./Images/Vegas_Mania/gb_button.PNG");
+		Pattern gb_collect=new Pattern("./Images/Vegas_Mania/gb_collect.PNG");
+		Pattern gb_colorwin_amt=new Pattern("./Images/Vegas_Mania/gb_colorwin.PNG");
 
 		// win symbols
 		Pattern cherry=new Pattern("./Images/Vegas_Mania/2R_cherry.PNG");
