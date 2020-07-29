@@ -7,10 +7,10 @@ Feature: Test all the functionalities of Skinfiri Mysterious SLOT Game
 #                      Auto Spin option feature testing.
 
 #
-#	Scenario: Check whether system performing continues spins after selecting auto option in the auto spin drop down of the Skinfiri Mysterious slot game
-#    Given Chrome browser, valid URL, valid login details, Skinfiri Mysterious slot game, balance, spin button, auto spin button, auto spins option and number of spins left message
-#    When Open the Skinfiri Mysterious slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on auto spin option under auto spin drop down and check the player instruction message
-#    Then System should keep performing the spins in Skinfiri Mysterious slot game
+	Scenario: Check whether system performing continues spins after selecting auto option in the auto spin drop down of the Skinfiri Mysterious slot game
+    Given Chrome browser, valid URL, valid login details, Skinfiri Mysterious slot game, balance, spin button, auto spin button, auto spins option and number of spins left message
+    When Open the Skinfiri Mysterious slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on auto spin option under auto spin drop down and check the player instruction message
+    Then System should keep performing the spins in Skinfiri Mysterious slot game
 #
 #    
     
@@ -578,7 +578,18 @@ Feature: Test all the functionalities of Skinfiri Mysterious SLOT Game
 	
 			#	           Validation on Suit win to win amount is double than win amount
 
-	Scenario: Checking Suit win to Win amount should be quadruple than gamble amount in gamble page of Skinfiri Mysterious game 
-    Given Chrome browser, valid URL, valid login details, Skinfiri Mysterious game, balance, spin button, win amount, Suit win dice options, gamble amount and suit to win amount
-    When Open the Skinfiri Mysterious game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on Skinfiri Mysterious slot game, click on spin button till player wins, click on suit win dice button and check the suit to win amount
-    Then suit To Win amount should be quadruple than win amount in the gamble page of the Skinfiri Mysterious game
+#	Scenario: Checking Suit win to Win amount should be quadruple than gamble amount in gamble page of Skinfiri Mysterious game 
+#    Given Chrome browser, valid URL, valid login details, Skinfiri Mysterious game, balance, spin button, win amount, Suit win dice options, gamble amount and suit to win amount
+#    When Open the Skinfiri Mysterious game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on Skinfiri Mysterious slot game, click on spin button till player wins, click on suit win dice button and check the suit to win amount
+#    Then suit To Win amount should be quadruple than win amount in the gamble page of the Skinfiri Mysterious game
+    
+    
+    
+    
+        #             win symbols pattern validation has to match with paylines win patterns	
+	
+#	Scenario: check whether the win patterns combinations matches with the paylines and rules table of the Skinfiri Mysterious Slot game
+#	Given Chrome browser, valid URL, valid login details, Skinfiri Mysterious slot game, bet type, denomination, balance, available symbols, spin button, win pattern combinations and line Combinations win amount
+#	 When  Open the Skinfiri Mysterious slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, select bet type & denomination, click on spin button till reels win appears on the screen and respective win combination lines with win amount appear on the goodluck frame
+#    Then  Win pattern should highlight on the symbols and according to win patterns, line combinations with win amount should display for each pattern wins on the goodluck frame of Skinfiri Mysterious slot game
+ 

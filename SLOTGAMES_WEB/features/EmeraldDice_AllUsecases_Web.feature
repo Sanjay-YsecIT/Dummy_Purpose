@@ -546,3 +546,11 @@ Feature: Test all the functionalities of Emerald Dice SLOT Game
     Then Amount should get deducted from balance on click on spin button in try now page of Emerald Dice slot game
 	
 	
+	
+	        #             win symbols pattern validation has to match with paylines win patterns	
+	
+	Scenario: check whether the win patterns combinations matches with the paylines and rules table of the Emerald Dice Slot game
+	Given Chrome browser, valid URL, valid login details, Emerald Dice slot game, bet type, denomination, balance, available symbols, spin button, win pattern combinations and line Combinations win amount
+	 When  Open the Emerald Dice slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, select bet type & denomination, click on spin button till reels win appears on the screen and respective win combination lines with win amount appear on the goodluck frame
+    Then  Win pattern should highlight on the symbols and according to win patterns, line combinations with win amount should display for each pattern wins on the goodluck frame of Emerald Dice slot game
+ 

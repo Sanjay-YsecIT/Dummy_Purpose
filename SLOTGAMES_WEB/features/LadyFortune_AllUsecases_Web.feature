@@ -536,19 +536,19 @@ Feature: Test all the functionalities of Lady Fortune SLOT Game
 	
  #	     Validate feature with the balance credited into the balance field in Try now game option
 	
-	 Scenario: Check whether system is providing balance in try now feature of Lady Fortune slot game
-    Given Chrome browser, valid URL, valid login details, Lady Fortune slot game, try now button and balance to play
-    When Open the Lady Fortune slot game by entering the valid URL in browser, click on try now button
-    Then System should provide five thousand as balance on click on try now button in Lady Fortune slot game
+#	 Scenario: Check whether system is providing balance in try now feature of Lady Fortune slot game
+#    Given Chrome browser, valid URL, valid login details, Lady Fortune slot game, try now button and balance to play
+#    When Open the Lady Fortune slot game by entering the valid URL in browser, click on try now button
+#    Then System should provide five thousand as balance on click on try now button in Lady Fortune slot game
 		
 	
 	
 #	        Validate feature for amount is deducted on spin button click try now game
 	
-	Scenario: Check whether amount is deducting from the balance after clicking on spin button in try now page of Lady Fortune slot game
-    Given Chrome browser, valid URL, valid login details, Lady Fortune slot game, try now button, balance to play and spin button
-    When Open the Lady Fortune slot game by entering the valid URL in browser, click on try now button and click on spin button
-    Then Amount should get deducted from balance on click on spin button in try now page of Lady Fortune slot game
+#	Scenario: Check whether amount is deducting from the balance after clicking on spin button in try now page of Lady Fortune slot game
+#    Given Chrome browser, valid URL, valid login details, Lady Fortune slot game, try now button, balance to play and spin button
+#    When Open the Lady Fortune slot game by entering the valid URL in browser, click on try now button and click on spin button
+#    Then Amount should get deducted from balance on click on spin button in try now page of Lady Fortune slot game
 	
 	  
     

@@ -55,21 +55,21 @@ Feature: Test all the functionalities of Sapphire Heart SLOT Game
     
 #    Scenario: To check the transferred amount is added to Sapphire Heart game
 #    Given Chrome browser, valid URL, valid login details, Sapphire Heart game, balance, text field to transfer balance and Ok button
-#    When Open the Sapphire Heart slot game by entering the valid URL in browser, enter the valid login details, click on Play button, enter the valid amount to transfer and click on Ok butotn
+#    When Open the Sapphire Heart slot game by entering the valid URL in browser, enter the valid login details, click on Play button, enter the valid amount to transfer and click on Ok button
 #    Then The exact amount entered in the transfer page should transfer to Sapphire Heart game and same amount should get displayed on the balance section
    
 #                      Amount transfer greater than the Available balance
     
 #    Scenario: Check whether the player is able to transfer the amount more than the available balance
 #    Given Chrome browser, valid URL, valid login details, Sapphire Heart game, balance greater than available balance, text field to transfer balance, Ok button and validation message
-#    When Open the Sapphire Heart slot game by entering the valid URL in browser, enter the valid login details, enter the amount greater than available balance and click on Ok butotn
+#    When Open the Sapphire Heart slot game by entering the valid URL in browser, enter the valid login details, enter the amount greater than available balance and click on Ok button
 #    Then Player should be blocked from loading the Sapphire Heart game when the amount entered in the transfer page is more than the available balance
     
 #                       Null  value and check for valid result
 
 #    Scenario: Check whether balance field is accepting null valuess in the transfer page of Sapphire Heart game
 #    Given Chrome browser, valid URL, valid login details, Sapphire Heart game, empty balance, text field to transfer balance, Ok button and validation message
-#    When Open the Sapphire Heart slot game by entering the valid URL in browser, enter the valid login details,  do not enter the amount in the balance field and click on Ok butotn
+#    When Open the Sapphire Heart slot game by entering the valid URL in browser, enter the valid login details, do not enter the amount in the balance field and click on Ok button
 #    Then An error should be displayed if the balance field is empty and player should be blocked from loading the Sapphire Heart game
 	
 	
@@ -77,7 +77,7 @@ Feature: Test all the functionalities of Sapphire Heart SLOT Game
 
 #	Scenario: Check whether balance field is accepting amount as Zero SRD in the transfer amount page of Sapphire Heart game
 #    Given Chrome browser, valid URL, valid login details, Sapphire Heart game, zero balance, text field to transfer balance, Ok button and validation message
-#    When Open the Sapphire Heart slot game by entering the valid URL in browser, enter the valid login details, enter the amount as zero SRD and click on Ok butotn
+#    When Open the Sapphire Heart slot game by entering the valid URL in browser, enter the valid login details, enter the amount as zero SRD and click on Ok button
 #    Then An error should be displayed if balance entered was zero and player should be blocked from loading the Sapphire Heart game
 
 
@@ -485,55 +485,60 @@ Feature: Test all the functionalities of Sapphire Heart SLOT Game
  
  	        #      PAYOUT TABLE TYPE WIN AMOUNT VALIDATION FOR ALL THE SYMBOLS WITH ALL DENOMINATIONS
 
-	 Scenario: Check whether the max payout amount for each symbol as per the bet type 0.01 and all the denominations in Sapphire Heart slot game on Web
-    Given Chrome browser, valid URL, valid login details, Sapphire Heart slot game, icon to open payout table, all symbols, max amount on each symbol, back button, bet type 0.01 and all denomination values 
-    When Open the Sapphire Heart slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on icon to open payout table, check payout amount on each symbol, click on back button, select bet type as 0.01 & all denomination  values and check payout amount
-    Then System should display the Payout max amount on each symbol and payout max amount should get changed whenever player changes the bet type to 0.01 and denomination values in Sapphire Heart slot game on Web
-	
-	
-	Scenario: Check whether the max payout amount for each symbol as per the bet type 0.04 and all the denominations in Sapphire Heart slot game on Web
-    Given Chrome browser, valid URL, valid login details, Sapphire Heart slot game, icon to open payout table, all symbols, max amount on each symbol, back button, bet type 0.04 and  denomination values like 4, 8, 12, 16 & 20
-    When Open the Sapphire Heart slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on icon to open payout table, check payout amount on each symbol, click on back button, select bet type as 0.04 & denomination  values like 4, 8, 12, 16 & 20 and check payout amount
-    Then System should display the Payout max amount on each symbol and payout max amount should get changed whenever player changes the bet type to 0.04 and denomination values like 4, 8, 12, 16 & 20 in Sapphire Heart slot game on Web
-	
-	 Scenario: Check whether the max payout amount for each symbol like bug, nine as per the bet type 0.06 and all denomination values in Sapphire Heart slot game on Web
-    Given Chrome browser, valid URL, valid login details, Sapphire Heart slot game, icon to open payout table, all symbols, max amount on each symbol like J, lady n etc, back button, bet type 0.06 and all denomination values  on web
-    When Open the Sapphire Heart slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on icon to open payout table, check payout amount on each symbol like  J, lady n etc, click on back button, select bet type as 0.06 & all denomination  values and check payout amount on web
-    Then System should display the Payout max amount on each symbol like J, lady etc and payout max amount should get changed whenever player changes the bet type to 0.06 and all denomination values in Sapphire Heart slot game on web
-	
-	Scenario: Check whether the max payout amount for each symbol like yellowstone, diamond as per the bet type 0.4 and all denomination values in Sapphire Heart slot game on Web
-    Given Chrome browser, valid URL, valid login details, Sapphire Heart slot game, icon to open payout table, all symbols, max amount on each symbol like yellowstone, diamond n etc, back button, bet type 0.4 and denomination values like 40, 80, 120, 160 & 200 on web
-    When Open the Sapphire Heart slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on icon to open payout table, check payout amount on each symbol like yellowstone, diamond n etc, click on back button, select bet type as 0.4 & denomination  values like 40, 80, 120, 160 & 200 and check payout amount on web
-    Then System should display the Payout max amount on each symbol like yellowstone, diamond n etc and payout max amount should get changed whenever player changes the bet type to 0.4 and denomination values like 40, 80, 120, 160 & 200 in Sapphire Heart slot game on web
+#	 Scenario: Check whether the max payout amount for each symbol as per the bet type 0.01 and all the denominations in Sapphire Heart slot game on Web
+#    Given Chrome browser, valid URL, valid login details, Sapphire Heart slot game, icon to open payout table, all symbols, max amount on each symbol, back button, bet type 0.01 and all denomination values 
+#    When Open the Sapphire Heart slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on icon to open payout table, check payout amount on each symbol, click on back button, select bet type as 0.01 & all denomination  values and check payout amount
+#    Then System should display the Payout max amount on each symbol and payout max amount should get changed whenever player changes the bet type to 0.01 and denomination values in Sapphire Heart slot game on Web
+#	
+#	
+#	Scenario: Check whether the max payout amount for each symbol as per the bet type 0.04 and all the denominations in Sapphire Heart slot game on Web
+#    Given Chrome browser, valid URL, valid login details, Sapphire Heart slot game, icon to open payout table, all symbols, max amount on each symbol, back button, bet type 0.04 and  denomination values like 4, 8, 12, 16 & 20
+#    When Open the Sapphire Heart slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on icon to open payout table, check payout amount on each symbol, click on back button, select bet type as 0.04 & denomination  values like 4, 8, 12, 16 & 20 and check payout amount
+#    Then System should display the Payout max amount on each symbol and payout max amount should get changed whenever player changes the bet type to 0.04 and denomination values like 4, 8, 12, 16 & 20 in Sapphire Heart slot game on Web
+#	
+#	 Scenario: Check whether the max payout amount for each symbol like bug, nine as per the bet type 0.06 and all denomination values in Sapphire Heart slot game on Web
+#    Given Chrome browser, valid URL, valid login details, Sapphire Heart slot game, icon to open payout table, all symbols, max amount on each symbol like J, lady n etc, back button, bet type 0.06 and all denomination values  on web
+#    When Open the Sapphire Heart slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on icon to open payout table, check payout amount on each symbol like  J, lady n etc, click on back button, select bet type as 0.06 & all denomination  values and check payout amount on web
+#    Then System should display the Payout max amount on each symbol like J, lady etc and payout max amount should get changed whenever player changes the bet type to 0.06 and all denomination values in Sapphire Heart slot game on web
+#	
+#	Scenario: Check whether the max payout amount for each symbol like yellowstone, diamond as per the bet type 0.4 and all denomination values in Sapphire Heart slot game on Web
+#    Given Chrome browser, valid URL, valid login details, Sapphire Heart slot game, icon to open payout table, all symbols, max amount on each symbol like yellowstone, diamond n etc, back button, bet type 0.4 and denomination values like 40, 80, 120, 160 & 200 on web
+#    When Open the Sapphire Heart slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on icon to open payout table, check payout amount on each symbol like yellowstone, diamond n etc, click on back button, select bet type as 0.4 & denomination  values like 40, 80, 120, 160 & 200 and check payout amount on web
+#    Then System should display the Payout max amount on each symbol like yellowstone, diamond n etc and payout max amount should get changed whenever player changes the bet type to 0.4 and denomination values like 40, 80, 120, 160 & 200 in Sapphire Heart slot game on web
  
  
- 
- 	
 	#	              Info Page Navigation and exit button validation
      
-    Scenario: Check whether info page is navigating forward and backward, exit button for the Sapphire Heart slot game
-    Given Chrome browser, valid URL, valid login details, Sapphire Heart slot game, balance, settings, info icon, navigation icon, exit icon, payout, paylines, scatter, free spin,  wild, gamble and jackpot window
-    When Open the Sapphire Heart slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on settings and info icon and validate the forward and backward button.
-    Then forward ,backward and exit button of info page should perform in Sapphire Heart slot game
-	
+#    Scenario: Check whether info page is navigating forward and backward, exit button for the Sapphire Heart slot game
+#    Given Chrome browser, valid URL, valid login details, Sapphire Heart slot game, balance, settings, info icon, navigation icon, exit icon, payout, paylines, scatter, free spin,  wild, gamble and jackpot window
+#    When Open the Sapphire Heart slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on settings and info icon and validate the forward and backward button.
+#    Then forward ,backward and exit button of info page should perform in Sapphire Heart slot game
 	
 	
 	
 #	               Free spin Validation of triggering of Scatter in the Reels
 	
-#	Scenario: Check whether Fifteen free spin feature is triggering on when 3 or more than 3 scatters appears on the screen in Sapphire Heart game
-#    Given Chrome browser, valid URL, valid login details, Sapphire Heart slot game, bet type, denomination, balance, scatter symbols, spin button, free spin screen and big win animation.
-#    When Open the Sapphire Heart slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, select bet type & denomination, click on spin button till Three or more than Three scatter symbols appears on the screen wins and Free Spin Activates and spin amount added to the win amount 
-#    Then Fifteen Free Spin screen should appear when Three or more than Three scatter symbols appears on the screen in Sapphire Heart game
+#	Scenario: Check whether Ten free spin feature is triggering on when 3  scatters appears on the screen in Sapphire Heart game
+#    Given Chrome browser, valid URL, valid login details, Sapphire Heart slot game, bet type, denomination, balance, scatter symbols, spin button, free spin screen
+#    When Open the Sapphire Heart slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, select bet type & denomination, click on spin button till Three scatter symbols appears on the screen wins and Free Spin Activates and spin amount added to the win amount 
+#    Then Ten Free Spin screen should appear when Three scatter symbols appears on the screen in Sapphire Heart game
  
  
      	#	   Big Win validation on triggering wild symbol on all the Reels, as wild acts as joker all the reels are wild and the big win triggered
 
-#	Scenario: Check whether Big win is triggering on, when 5 wild or Scatter symbol appears on the screen in Sapphire Heart game
-#	Given Chrome browser, valid URL, valid login details, Sapphire Heart slot game, bet type, denomination, balance, wild symbols,Scatter Symbols spin button, Big win window and win amount
-#	When Open the Sapphire Heart slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, select bet type & denomination, click on spin button till wild or Scatter appears on all the five reels and big win screen appears and big win amount added to the balance
-#	Then  Big Win screen should appear when five wild or scatter symbols appears on the screen in Sapphire Heart game
+#	Scenario: Check whether Big win is triggering on, when 5 wild  symbol appears on the screen in Sapphire Heart game
+#	Given Chrome browser, valid URL, valid login details, Sapphire Heart slot game, bet type, denomination, balance, wild symbols, spin button, Big win window and win amount
+#	When Open the Sapphire Heart slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, select bet type & denomination, click on spin button till wild appears on all the five reels and big win screen appears and big win amount added to the balance
+#	Then  Big Win screen should appear when five wild symbols appears on the screen in Sapphire Heart game
+   
     
     
-    
+    #             win symbols pattern validation has to match with paylines win patterns	
+	
+#	Scenario: check whether the win patterns combinations matches with the paylines and rules table of the Sapphire Heart Slot game
+#	Given Chrome browser, valid URL, valid login details, Sapphire Heart slot game, bet type, denomination, balance, available symbols, spin button, win pattern combinations and line Combinations win amount
+#	 When  Open the Sapphire Heart slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, select bet type & denomination, click on spin button till reels win appears on the screen and respective win combination lines with win amount appear on the goodluck frame
+#    Then  Win pattern should highlight on the symbols and according to win patterns, line combinations with win amount should display for each pattern wins on the goodluck frame of Sapphire Heart slot game
+ 
+  
     
