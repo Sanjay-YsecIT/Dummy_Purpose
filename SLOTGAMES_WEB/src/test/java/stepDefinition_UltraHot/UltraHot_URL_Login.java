@@ -12,7 +12,7 @@ public class UltraHot_URL_Login {
 	
 	public static void main(String[] args) throws InterruptedException {
 	
-		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "Driver/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://demo.ysecit.in:82/slotgames/slotsgame");
 		driver.manage().window().maximize();

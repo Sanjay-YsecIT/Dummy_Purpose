@@ -2,8 +2,10 @@ package stepDefinition_UltraHot;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.sikuli.script.Finder;
 import org.sikuli.script.Match;
 import org.sikuli.script.Pattern;
@@ -20,8 +22,27 @@ public class UltraHot_Web_AutoSpin_TenSpins {
 
 	@Given("^Chrome browser, valid URL, valid login details, Ultra Hot  slot game, balance, spin button, auto spin button, ten spins option and number of spins left message$")
 	public void chrome_browser_valid_URL_valid_login_details_Ultra_Hot_slot_game_balance_spin_button_auto_spin_button_ten_spins_option_and_number_of_spins_left_message() throws Throwable {
+		System.setProperty("webdriver.chrome.driver", "Driver/chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get("http://demo.ysecit.in:82/slotgames/slotsgame");
+		driver.manage().window().maximize();
+		Thread.sleep(3000);
+		
+		driver.findElement(By.id("txtUserName")).sendKeys("5273290266");
+		Thread.sleep(2000);
 
-		this.driver = UltraHot_URL_Login.getDriver();
+		driver.findElement(By.xpath("//input[@placeholder='Password / Card Pin']")).sendKeys("mans@123");
+		Thread.sleep(2000);
+
+		driver.findElement(By.className("loginActive")).click();
+		Thread.sleep(2000);
+		System.out.println("Login to the game with valid credentials");
+		
+		WebElement sub = driver.findElement(By.xpath("/html[1]/body[1]/div[3]/div[1]/ui-view[1]/section[1]/section[1]/div[1]/div[1]/div[2]/div[3]/ul[1]/li[36]/div[1]/div[1]"));
+		JavascriptExecutor jse=(JavascriptExecutor)driver;
+		jse.executeScript("arguments[0].click();", sub);
+		Thread.sleep(5000);
+
 	}
 
 	@When("^Open the Ultra Hot  slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on ten spin option under auto spin drop down and check the number of spins left message$")
@@ -33,22 +54,22 @@ public class UltraHot_Web_AutoSpin_TenSpins {
 		balT.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("./Images/Ultra_Hot/Bet_place.PNG", 10);
+		screen.wait("/Images/Ultra_Hot/Bet_place.PNG", 10);
 		//	Thread.sleep(15000);
 
-		Pattern autoicon=new Pattern("./Images/Ultra_Hot/autoplay.PNG");
-		Pattern autospin_10=new Pattern("./Images/Ultra_Hot/10spin.PNG");
+		Pattern autoicon=new Pattern("Images/Ultra_Hot/autoplay.PNG");
+		Pattern autospin_10=new Pattern("Images/Ultra_Hot/10spin.PNG");
 
-		Pattern pat2=new Pattern("./Images/Ultra_Hot/9spin_left.PNG");
-		Pattern pat3=new Pattern("./Images/Ultra_Hot/8spin_left.PNG");
-		Pattern pat4=new Pattern("./Images/Ultra_Hot/7spin_left.PNG");
-		Pattern pat5=new Pattern("./Images/Ultra_Hot/6spin_left.PNG");
-		Pattern pat6=new Pattern("./Images/Ultra_Hot/5spin_left.PNG");
-		Pattern pat7=new Pattern("./Images/Ultra_Hot/4spin_left.PNG");
-		Pattern pat8=new Pattern("./Images/Ultra_Hot/3spin_left.PNG");
-		Pattern pat9=new Pattern("./Images/Ultra_Hot/2spin_left.PNG");
-		Pattern pat10=new Pattern("./Images/Ultra_Hot/1spin_left.PNG");
-		Pattern pat11=new Pattern("./Images/Ultra_Hot/last_spin.PNG");
+		Pattern pat2=new Pattern("Images/Ultra_Hot/9spin_left.PNG");
+		Pattern pat3=new Pattern("Images/Ultra_Hot/8spin_left.PNG");
+		Pattern pat4=new Pattern("Images/Ultra_Hot/7spin_left.PNG");
+		Pattern pat5=new Pattern("Images/Ultra_Hot/6spin_left.PNG");
+		Pattern pat6=new Pattern("Images/Ultra_Hot/5spin_left.PNG");
+		Pattern pat7=new Pattern("Images/Ultra_Hot/4spin_left.PNG");
+		Pattern pat8=new Pattern("Images/Ultra_Hot/3spin_left.PNG");
+		Pattern pat9=new Pattern("Images/Ultra_Hot/2spin_left.PNG");
+		Pattern pat10=new Pattern("Images/Ultra_Hot/1spin_left.PNG");
+		Pattern pat11=new Pattern("Images/Ultra_Hot/last_spin.PNG");
 
 		//selecting 10 spins by clicking auto spin icon
 		screen.click(autoicon);

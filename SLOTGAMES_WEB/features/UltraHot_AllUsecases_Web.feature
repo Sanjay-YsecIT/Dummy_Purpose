@@ -13,10 +13,10 @@
     
 #                       Auto spin option with 10spin feature testing
 
-#    Scenario: Check whether system performing ten spins after selecting ten option in the auto spin drop down of the Ultra Hot slot game
-#    Given Chrome browser, valid URL, valid login details, Ultra Hot  slot game, balance, spin button, auto spin button, ten spins option and number of spins left message
-#    When Open the Ultra Hot  slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on ten spin option under auto spin drop down and check the number of spins left message
-#    Then Number of spin left should start from 9 to 1 after clicking ten spins option and should perform 10 spins from 9 to 1 Ultra Hot slot game
+    Scenario: Check whether system performing ten spins after selecting ten option in the auto spin drop down of the Ultra Hot slot game
+    Given Chrome browser, valid URL, valid login details, Ultra Hot  slot game, balance, spin button, auto spin button, ten spins option and number of spins left message
+    When Open the Ultra Hot  slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on ten spin option under auto spin drop down and check the number of spins left message
+    Then Number of spin left should start from 9 to 1 after clicking ten spins option and should perform 10 spins from 9 to 1 Ultra Hot slot game
     
     
 #                     Auto spin option with 20spin feature testing
@@ -522,10 +522,10 @@
   
   #             win symbols pattern validation has to match with paylines win patterns	
 	
-	Scenario: check whether the win patterns combinations matches with the paylines and rules table of the Ultra_Hot Slot game
-	Given Chrome browser, valid URL, valid login details, Ultra_Hot slot game, bet type, denomination, balance, available symbols, spin button, win pattern combinations and line Combinations win amount
-	 When  Open the Ultra_Hot slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, select bet type & denomination, click on spin button till reels win appears on the screen and respective win combination lines with win amount appear on the goodluck frame
-    Then  Win pattern should highlight on the symbols and according to win patterns, line combinations with win amount should display for each pattern wins on the goodluck frame of Ultra_Hot slot game
+#	Scenario: check whether the win patterns combinations matches with the paylines and rules table of the Ultra_Hot Slot game
+#	Given Chrome browser, valid URL, valid login details, Ultra_Hot slot game, bet type, denomination, balance, available symbols, spin button, win pattern combinations and line Combinations win amount
+#	 When  Open the Ultra_Hot slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, select bet type & denomination, click on spin button till reels win appears on the screen and respective win combination lines with win amount appear on the goodluck frame
+#    Then  Win pattern should highlight on the symbols and according to win patterns, line combinations with win amount should display for each pattern wins on the goodluck frame of Ultra_Hot slot game
  
   
   
