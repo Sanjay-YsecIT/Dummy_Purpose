@@ -38,7 +38,7 @@ public class FortySplendidHot_Web_PayOut_BetType_1_And_Denomination_All {
 		Thread.sleep(2000);
 		System.out.println("Login to the game with valid credentials");
 
-		WebElement sub = driver.findElement(By.xpath("/html[1]/body[1]/div[3]/div[1]/ui-view[1]/section[1]/section[1]/div[1]/div[1]/div[2]/div[3]/ul[1]/li[31]/div[1]/div[1]"));
+		WebElement sub = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[1]/ui-view[1]/section[1]/section[1]/div[1]/div[1]/div[2]/div[3]/ul[1]/li[31]/div[1]/div[1]"));
 		JavascriptExecutor jse=(JavascriptExecutor)driver;
 		jse.executeScript("arguments[0].click();", sub);
 		Thread.sleep(4000);
@@ -52,21 +52,13 @@ public class FortySplendidHot_Web_PayOut_BetType_1_And_Denomination_All {
 		balT.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("./Images/40Splendid_Hot/spin.PNG", 10);
+		screen.wait("./Images/40Splendid_Hot/spin.PNG", 20);
 		//	Thread.sleep(15000);
 
 		Pattern credit1=new Pattern("./Images/40Splendid_Hot/credit_0.01.PNG");
 		Pattern info=new Pattern("./Images/40Splendid_Hot/info_icon.PNG");
 		Pattern bet1=new Pattern("./Images/40Splendid_Hot/bet1.PNG");
-		Pattern bet2=new Pattern("./Images/40Splendid_Hot/bet2.PNG");
-		Pattern bet1_3=new Pattern("./Images/40Splendid_Hot/bet1_3.PNG");
-		Pattern bet1_4=new Pattern("./Images/40Splendid_Hot/bet1_4.PNG");
-		
-		Pattern deno1=new Pattern("./Images/40Splendid_Hot/betval1_1.PNG");
-		Pattern deno2=new Pattern("./Images/40Splendid_Hot/betval1_2.PNG");
-		Pattern deno3=new Pattern("./Images/40Splendid_Hot/betval1_3.PNG");
-		Pattern deno4=new Pattern("./Images/40Splendid_Hot/betval1_4.PNG");
-		Pattern deno5=new Pattern("./Images/40Splendid_Hot/betval1_5.PNG");
+		Pattern bet_inc=new Pattern("./Images/40Splendid_Hot/bet_inc.PNG");
 
 		Pattern pat1=new Pattern("./Images/40Splendid_Hot/PO1_1.PNG");
 		Pattern pat2=new Pattern("./Images/40Splendid_Hot/PO1_2.PNG");
@@ -97,13 +89,7 @@ public class FortySplendidHot_Web_PayOut_BetType_1_And_Denomination_All {
 
 		//Clicking on settings link and navigating to payout screen
 		screen.click(info);
-		Thread.sleep(2000);
-
-		//Selecting the denomination as 0.4
-		screen.click(bet1);
-		Thread.sleep(2000);
-		screen.click(deno1);
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 
 		//Comparing the max payout value for denomination 0.4
 		//   Pattern pat1=new Pattern("E:/Sikuli Images/payout/payout1_1.png");
@@ -125,13 +111,11 @@ public class FortySplendidHot_Web_PayOut_BetType_1_And_Denomination_All {
 		}
 		System.out.println("Comparing the max payout value for 0.4 denomination and comparision value equals to: "+" "+score1 +"%");
 		Assert.assertTrue(score1 > 95);
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 
 		//Selecting the denomination as 0.8
-		screen.click(bet1);
-		Thread.sleep(2000);
-		screen.click(deno2);
-		Thread.sleep(2000);
+		screen.click(bet_inc);
+		Thread.sleep(1000);
 
 		//Comparing the max payout value for denomination 0.8
 		//   Pattern pat2=new Pattern("E:/Sikuli Images/payout/payout1_2.png");
@@ -153,13 +137,11 @@ public class FortySplendidHot_Web_PayOut_BetType_1_And_Denomination_All {
 		}
 		System.out.println("Comparing the max payout value for 0.8 denomination and comparision value equals to: "+" "+score2 +"%");
 		Assert.assertTrue(score2 > 95);
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 
 		//Selecting the denomination as 2
-		screen.click(bet2);
-		Thread.sleep(2000);
-		screen.click(deno3);
-		Thread.sleep(2000);
+		screen.click(bet_inc);
+		Thread.sleep(1000);
 
 		//Comparing the max payout value for denomination 2
 		//  Pattern pat3=new Pattern("E:/Sikuli Images/payout/payout1_3.png");
@@ -181,13 +163,11 @@ public class FortySplendidHot_Web_PayOut_BetType_1_And_Denomination_All {
 		}
 		System.out.println("Comparing the max payout value for 2 denomination and comparision value equals to: "+" "+score3 +"%");
 		Assert.assertTrue(score3 > 95);
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 
 		//Selecting the denomination as 4
-		screen.click(bet1_3);
-		Thread.sleep(2000);
-		screen.click(deno4);
-		Thread.sleep(2000);
+		screen.click(bet_inc);
+		Thread.sleep(1000);
 
 		//Comparing the max payout value for denomination 4
 		//   Pattern pat4=new Pattern("E:/Sikuli Images/payout/payout1_4.png");
@@ -209,13 +189,11 @@ public class FortySplendidHot_Web_PayOut_BetType_1_And_Denomination_All {
 		}
 		System.out.println("Comparing the max payout value for 4 denomination and comparision value equals to: "+" "+score4 +"%");
 		Assert.assertTrue(score4 > 95);
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 
 		//Selecting the denomination as 8
-		screen.click(bet1_4);
-		Thread.sleep(2000);
-		screen.click(deno5);
-		Thread.sleep(2000);
+		screen.click(bet_inc);
+		Thread.sleep(1000);
 
 		//Comparing the max payout value for denomination 8
 		//   Pattern pat5=new Pattern("E:/Sikuli Images/payout/payout1_5.png");
@@ -237,12 +215,12 @@ public class FortySplendidHot_Web_PayOut_BetType_1_And_Denomination_All {
 		}
 		System.out.println("Comparing the max payout value for 8 denomination and comparision value equals to: "+" "+score5 +"%");
 		Assert.assertTrue(score5 > 95);
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 	}
 
 	@Then("^System should display the Payout max amount on each symbol and payout max amount should get changed whenever player changes the bet type to (\\d+)\\.(\\d+) and denomination values like (\\d+)\\.(\\d+), (\\d+)\\.(\\d+), (\\d+), (\\d+) & (\\d+) in FortySplendidHot slot game on Web$")
 	public void system_should_display_the_Payout_max_amount_on_each_symbol_and_payout_max_amount_should_get_changed_whenever_player_changes_the_bet_type_to_and_denomination_values_like_in_FortySplendidHot_slot_game_on_Web(int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9) throws Throwable {
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		driver.quit();
 	}
 

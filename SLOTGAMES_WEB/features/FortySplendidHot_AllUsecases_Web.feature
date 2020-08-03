@@ -3,33 +3,33 @@
 
 	   #	        According to bet type, bet values has to be generated respectively
 	
-#	Scenario: Select the bet type as 0.01 from the drop down and check the bet value should be 0.4,0.8,2,4,8 in FortySplendidHot game
-#    Given Chrome browser, valid URL, valid login details, FortySplendidHot slot game, bet type as 0.01 and bet value as 0.4,0.8,2,4,8
-#    When Open the FortySplendidHot slot game by entering the valid URL in browser, enter the valid login details, select the bet type as 0.01 and check the bet value
-#    Then Bet value should get changed 0.4,0.8,2,4,8 if the bet type selected as 0.01 from the drop down one in FortySplendidHot slot game
+	Scenario: Select the bet type as 0.01 from the drop down and check the bet value should be 0.4,0.8,2,4,8 in FortySplendidHot game
+    Given Chrome browser, valid URL, valid login details, FortySplendidHot slot game, bet type as 0.01 and bet value as 0.4,0.8,2,4,8
+    When Open the FortySplendidHot slot game by entering the valid URL in browser, enter the valid login details, select the bet type as 0.01 and check the bet value
+    Then Bet value should get changed 0.4,0.8,2,4,8 if the bet type selected as 0.01 from the drop down one in FortySplendidHot slot game
 	
-#	Scenario: Select the bet type as 0.02 from the drop down and check the bet value should be 0.8,1.6,4,8,16 in FortySplendidHot slot game
-#    Given Chrome browser, valid URL, valid login details, FortySplendidHot game, bet type as 0.02 and bet value as 0.8,1.6,4,8,16
-#    When Open the FortySplendidHot slot game by entering the valid URL in browser, enter the valid login details, select the bet type as 0.02 and check the bet value should be 0.8,1.6,4,8,16
-#    Then Bet value should get changed 0.8,1.6,4,8,16 if the bet type selected as 0.02 from the drop down two in FortySplendidHot slot game
+	Scenario: Select the bet type as 0.02 from the drop down and check the bet value should be 0.8,1.6,4,8,16 in FortySplendidHot slot game
+    Given Chrome browser, valid URL, valid login details, FortySplendidHot game, bet type as 0.02 and bet value as 0.8,1.6,4,8,16
+    When Open the FortySplendidHot slot game by entering the valid URL in browser, enter the valid login details, select the bet type as 0.02 and check the bet value should be 0.8,1.6,4,8,16
+    Then Bet value should get changed 0.8,1.6,4,8,16 if the bet type selected as 0.02 from the drop down two in FortySplendidHot slot game
 	
-#	Scenario: Select the bet type as 0.03 from the drop down and check the bet value should be 1.2,2.4,6,12,24 in FortySplendidHot slot game
-#    Given Chrome browser, valid URL, valid login details, FortySplendidHot slot game, bet type as 0.03 from down two and bet value as 1.2,2.4,6,12,24
-#    When Open the FortySplendidHot slot game by entering the valid URL in browser, enter the valid login details, select the bet type as 0.03 from down  and check the bet value should be 1.2,2.4,6,12,24
-#    Then Bet value should get changed to 1.2,2.4,6,12,24 if the bet type selected as 0.03 from the drop down three in FortySplendidHot slot game
+	Scenario: Select the bet type as 0.03 from the drop down and check the bet value should be 1.2,2.4,6,12,24 in FortySplendidHot slot game
+    Given Chrome browser, valid URL, valid login details, FortySplendidHot slot game, bet type as 0.03 from down two and bet value as 1.2,2.4,6,12,24
+    When Open the FortySplendidHot slot game by entering the valid URL in browser, enter the valid login details, select the bet type as 0.03 from down  and check the bet value should be 1.2,2.4,6,12,24
+    Then Bet value should get changed to 1.2,2.4,6,12,24 if the bet type selected as 0.03 from the drop down three in FortySplendidHot slot game
 #	
-#	Scenario: Select the bet type as 0.2 from the drop down and check the bet value should be 8,6,40,80,160 in FortySplendidHot slot game
-#    Given Chrome browser, valid URL, valid login details, FortySplendidHot slot game, bet type as 0.2 from drop down and bet value as 8,6,40,80,160
-#    When Open the FortySplendidHot slot game by entering the valid URL in browser, enter the valid login details, select the bet type as 0.2 from drop down and check the bet value should be 8,6,40,80,160
-#    Then Bet value should get changed to 8,6,40,80,160 if the bet type selected as 0.2 from the drop down four in FortySplendidHot slot game
+	Scenario: Select the bet type as 0.2 from the drop down and check the bet value should be 8,6,40,80,160 in FortySplendidHot slot game
+    Given Chrome browser, valid URL, valid login details, FortySplendidHot slot game, bet type as 0.2 from drop down and bet value as 8,6,40,80,160
+    When Open the FortySplendidHot slot game by entering the valid URL in browser, enter the valid login details, select the bet type as 0.2 from drop down and check the bet value should be 8,6,40,80,160
+    Then Bet value should get changed to 8,6,40,80,160 if the bet type selected as 0.2 from the drop down four in FortySplendidHot slot game
    
    
      #      _Balance_Credits_Calculations_Validation
 
-	Scenario: Check whether balance is equals to credit multiplies by denomination 0.01 in FortySplendidHot slot game
-    Given Chrome browser, valid URL, valid login details, FortySplendidHot slot game, balance, credits and denomination as 0.01 
-    When Open the FortySplendidHot slot game by entering the valid URL in browser, enter the valid login details, click on balance, multiply credit by 0.01 and check the balance
-    Then Balance amount should be same as denomination 0.01 multiplies by credit in FortySplendidHot slot game
+#	Scenario: Check whether balance is equals to credit multiplies by denomination 0.01 in FortySplendidHot slot game
+#    Given Chrome browser, valid URL, valid login details, FortySplendidHot slot game, balance, credits and denomination as 0.01 
+#    When Open the FortySplendidHot slot game by entering the valid URL in browser, enter the valid login details, click on balance, multiply credit by 0.01 and check the balance
+#    Then Balance amount should be same as denomination 0.01 multiplies by credit in FortySplendidHot slot game
 #	
 #	Scenario: Check whether balance is equals to credit multiplies by denomination 0.02 in FortySplendidHot game
 #    Given Chrome browser, valid URL, valid login details, FortySplendidHot slot game, balance, credits, denomination drop down and denomination as 0.02 
@@ -184,21 +184,21 @@
 #    Given Chrome browser, valid URL, valid login details, FortySplendidHot slot game, icon to open payout table, all symbols, max amount on each symbol, back button, bet type 0.01 and all denomination values 
 #    When Open the FortySplendidHot slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on icon to open payout table, check payout amount on each symbol, click on back button, select bet type as 0.01 & all denomination values and check payout amount
 #    Then System should display the Payout max amount on each symbol and payout max amount should get changed whenever player changes the bet type to 0.01 and denomination values in FortySplendidHot slot game on Web
-	
+#	
 #	Scenario: Check whether the max payout amount for each symbol as per the bet type 0.02 and all the denominations in FortySplendidHot slot game on Web
 #    Given Chrome browser, valid URL, valid login details, FortySplendidHot slot game, icon to open payout table, all symbols, max amount on each symbol, back button, bet type 0.02 and  denomination values like 0.8, 1.6, 4, 8 & 16
 #    When Open the FortySplendidHot slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on icon to open payout table, check payout amount on each symbol, click on back button, select bet type as 0.02 & denomination  values like 0.8, 1.6, 4, 8 & 16 and check payout amount
 #    Then System should display the Payout max amount on each symbol and payout max amount should get changed whenever player changes the bet type to 0.02 and denomination values like 0.8, 1.6, 4, 8 & 16 in FortySplendidHot slot game on Web
 #	
-#	 Scenario: Check whether the max payout amount for each symbol like bug, nine as per the bet type 0.03 and all denomination values in FortySplendidHot slot game on Web
-#    Given Chrome browser, valid URL, valid login details, FortySplendidHot slot game, icon to open payout table, all symbols, max amount on each symbol like melon, cherry n etc, back button, bet type 0.03 and all denomination values  on web
-#    When Open the FortySplendidHot slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on icon to open payout table, check payout amount on each symbol like melon, cherry n etc, click on back button, select bet type as 0.03 & all denomination  values and check payout amount on web
-#    Then System should display the Payout max amount on each symbol like melon, cherry etc and payout max amount should get changed whenever player changes the bet type to 0.03 and all denomination values in FortySplendidHot slot game on web
+#	 Scenario: Check whether the max payout amount for each symbol like orange, lemon as per the bet type 0.03 and all denomination values in FortySplendidHot slot game on Web
+#    Given Chrome browser, valid URL, valid login details, FortySplendidHot slot game, icon to open payout table, all symbols, max amount on each symbol like orange, lemon n etc, back button, bet type 0.03 and all denomination values  on web
+#    When Open the FortySplendidHot slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on icon to open payout table, check payout amount on each symbol like orange, lemon n etc, click on back button, select bet type as 0.03 & all denomination  values and check payout amount on web
+#    Then System should display the Payout max amount on each symbol like orange, lemon etc and payout max amount should get changed whenever player changes the bet type to 0.03 and all denomination values in FortySplendidHot slot game on web
 #	
-#	Scenario: Check whether the max payout amount for each symbol like lemon, bell as per the bet type 0.2 and all denomination values in FortySplendidHot slot game on Web
-#    Given Chrome browser, valid URL, valid login details, FortySplendidHot slot game, icon to open payout table, all symbols, max amount on each symbol like lemon, bell n etc, back button, bet type 0.2 and denomination values like 8, 16, 40, 80 & 160 on web
-#    When Open the FortySplendidHot slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on icon to open payout table, check payout amount on each symbol like lemon, bell n etc, click on back button, select bet type as 0.2 & denomination  values like 8, 16, 40, 80 & 160 and check payout amount on web
-#    Then System should display the Payout max amount on each symbol like lemon, bell n etc and payout max amount should get changed whenever player changes the bet type to 0.2 and denomination values like 8, 16, 40, 80 & 160in FortySplendidHot slot game on web
+#	Scenario: Check whether the max payout amount for each symbol like star, cherry as per the bet type 0.2 and all denomination values in FortySplendidHot slot game on Web
+#    Given Chrome browser, valid URL, valid login details, FortySplendidHot slot game, icon to open payout table, all symbols, max amount on each symbol like star, cherry n etc, back button, bet type 0.2 and denomination values like 8, 16, 40, 80 & 160 on web
+#    When Open the FortySplendidHot slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on icon to open payout table, check payout amount on each symbol like star, cherry n etc, click on back button, select bet type as 0.2 & denomination  values like 8, 16, 40, 80 & 160 and check payout amount on web
+#    Then System should display the Payout max amount on each symbol like star, cherry n etc and payout max amount should get changed whenever player changes the bet type to 0.2 and denomination values like 8, 16, 40, 80 & 160in FortySplendidHot slot game on web
  
     
          #                      Amount transfer to the game balance
