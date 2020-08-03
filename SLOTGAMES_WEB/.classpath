@@ -23,41 +23,5 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files/javacpp-1.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/sqljdbc4-2.0.jar/sqljdbc4-2.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files (1)/java-ocr-api-15.3.0.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files (2)/javacpp-1.5.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files (2)/openblas-0.3.7-1.5.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files (2)/openblas-0.3.7-1.5.2-android-arm.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files (2)/openblas-0.3.7-1.5.2-android-arm64.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files (2)/openblas-0.3.7-1.5.2-android-x86.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files (2)/openblas-0.3.7-1.5.2-android-x86_64.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files (2)/openblas-0.3.7-1.5.2-ios-arm64.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files (2)/openblas-0.3.7-1.5.2-ios-x86_64.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files (2)/openblas-0.3.7-1.5.2-linux-arm64.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files (2)/openblas-0.3.7-1.5.2-linux-armhf.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files (2)/openblas-0.3.7-1.5.2-linux-ppc64le.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files (2)/openblas-0.3.7-1.5.2-linux-x86.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files (2)/openblas-0.3.7-1.5.2-linux-x86_64.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files (2)/openblas-0.3.7-1.5.2-macosx-x86_64.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files (2)/openblas-0.3.7-1.5.2-windows-x86.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files (2)/openblas-0.3.7-1.5.2-windows-x86_64.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files (2)/openblas-platform-0.3.7-1.5.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files (2)/opencv-4.1.2-1.5.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files (2)/opencv-4.1.2-1.5.2-android-arm.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files (2)/opencv-4.1.2-1.5.2-android-arm64.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files (2)/opencv-4.1.2-1.5.2-android-x86.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files (2)/opencv-4.1.2-1.5.2-android-x86_64.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files (2)/opencv-4.1.2-1.5.2-ios-arm64.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files (2)/opencv-4.1.2-1.5.2-ios-x86_64.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files (2)/opencv-4.1.2-1.5.2-linux-arm64.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files (2)/opencv-4.1.2-1.5.2-linux-armhf.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files (2)/opencv-4.1.2-1.5.2-linux-ppc64le.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files (2)/opencv-4.1.2-1.5.2-linux-x86.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files (2)/opencv-4.1.2-1.5.2-linux-x86_64.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files (2)/opencv-4.1.2-1.5.2-macosx-x86_64.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files (2)/opencv-4.1.2-1.5.2-windows-x86.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files (2)/opencv-4.1.2-1.5.2-windows-x86_64.jar"/>
-	<classpathentry kind="lib" path="C:/Users/st365/Downloads/jar_files (2)/opencv-platform-4.1.2-1.5.2.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

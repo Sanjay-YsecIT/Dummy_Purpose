@@ -22,7 +22,7 @@ public class FortySplendidHot_Web_Gamble_WinAmount_SameAs_GambleAmount {
 
 	@Given("^Chrome browser, valid URL, valid login details, FortySplendidHot slot game, balance, spin button, win amount, gamble button and gamble amount$")
 	public void chrome_browser_valid_URL_valid_login_details_FortySplendidHot_slot_game_balance_spin_button_win_amount_gamble_button_and_gamble_amount() throws Throwable {
-		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "Driver/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://demo.ysecit.in:82/slotgames/slotsgame");
 		driver.manage().window().maximize();
@@ -52,20 +52,20 @@ public class FortySplendidHot_Web_Gamble_WinAmount_SameAs_GambleAmount {
 		balT.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("./Images/40Splendid_Hot/spin.PNG", 10);
+		screen.wait("Images/40Splendid_Hot/spin.PNG", 10);
 		//	Thread.sleep(15000);
 
-		Pattern betval=new Pattern("./Images/40Splendid_Hot/betval1_1.PNG");
-		Pattern bet1 = new Pattern("./Images/40Splendid_Hot/bet1.PNG");
-		Pattern spin=new Pattern("./Images/40Splendid_Hot/spin.PNG");
-		Pattern balance=new Pattern("./Images/40Splendid_Hot/bal_300.PNG");
-		Pattern win_amt = new Pattern("./Images/40Splendid_Hot/win_0.7.PNG");
-		Pattern gamble_btn=new Pattern("./Images/40Splendid_Hot/gb_button.PNG");
-		Pattern gb_collect=new Pattern("./Images/40Splendid_Hot/gb_collect.PNG");
-		Pattern gb_amt_display=new Pattern("./Images/20Glowing_Hot/gb_amt.PNG");
+		Pattern betval=new Pattern("Images/40Splendid_Hot/betval1_1.PNG");
+		Pattern bet1 = new Pattern("Images/40Splendid_Hot/bet1.PNG");
+		Pattern spin=new Pattern("Images/40Splendid_Hot/spin.PNG");
+		Pattern balance=new Pattern("Images/40Splendid_Hot/bal_300.PNG");
+		Pattern win_amt = new Pattern("Images/40Splendid_Hot/win_0.7.PNG");
+		Pattern gamble_btn=new Pattern("Images/40Splendid_Hot/gb_button.PNG");
+		Pattern gb_collect=new Pattern("Images/40Splendid_Hot/gb_collect.PNG");
+		Pattern gb_amt_display=new Pattern("Images/20Glowing_Hot/gb_amt.PNG");
 
 		//win symbols
-		Pattern orange1=new Pattern("./Images/40Splendid_Hot/1R_orange.PNG");
+		Pattern orange1=new Pattern("Images/40Splendid_Hot/1R_orange.PNG");
 
 		//comparing the balance before Win
 		Finder finder1 =new Finder(screen.capture().getImage());
@@ -101,6 +101,7 @@ public class FortySplendidHot_Web_Gamble_WinAmount_SameAs_GambleAmount {
 
 		//comparing the win amount should exists after spin
 		//   Pattern winA=new Pattern("E:/Sikuli Images/gamble/win.PNG");
+		screen.wait(win_amt,5);
 		Finder finder2 =new Finder(screen.capture().getImage());
 		String ht2 = finder2.find(win_amt);
 		double score2=20;                

@@ -38,7 +38,7 @@ public class FortySplendidHot_Web_Gamble_GambleCount_For_BetType_1_And_Denominat
 		Thread.sleep(2000);
 		System.out.println("Login to the game with valid credentials");
 
-		WebElement sub = driver.findElement(By.xpath("/html[1]/body[1]/div[3]/div[1]/ui-view[1]/section[1]/section[1]/div[1]/div[1]/div[2]/div[3]/ul[1]/li[31]/div[1]/div[1]"));
+		WebElement sub = driver.findElement(By.xpath("/html/body/div[2]/div[1]/ui-view/section/section[1]/div/div/div[2]/div[3]/ul/li[31]/div[1]"));
 		JavascriptExecutor jse=(JavascriptExecutor)driver;
 		jse.executeScript("arguments[0].click();", sub);
 		Thread.sleep(4000);
@@ -167,7 +167,7 @@ public class FortySplendidHot_Web_Gamble_GambleCount_For_BetType_1_And_Denominat
 		Finder finder11 =new Finder(screen.capture().getImage());
 		String ht11 = finder11.find(WIN_AMT2);
 		double score11=20;                
-		System.out.println("the value of ht1"+" "+ht11);
+		System.out.println("the value of ht11"+" "+ht11);
 		if(finder11.hasNext())
 		{
 			Match m11=finder11.next();
@@ -191,7 +191,7 @@ public class FortySplendidHot_Web_Gamble_GambleCount_For_BetType_1_And_Denominat
 		Finder finder22 =new Finder(screen.capture().getImage());
 		String ht22 = finder22.find(Attempt_4);
 		double score22=20;                
-		System.out.println("the value of ht2"+" "+ht22);
+		System.out.println("the value of ht22"+" "+ht22);
 		if(finder22.hasNext())
 		{
 			Match m22=finder22.next();
@@ -223,7 +223,7 @@ public class FortySplendidHot_Web_Gamble_GambleCount_For_BetType_1_And_Denominat
 		Finder finder12 =new Finder(screen.capture().getImage());
 		String ht12 = finder12.find(WIN_AMT3);
 		double score12=20;                
-		System.out.println("the value of ht1"+" "+ht12);
+		System.out.println("the value of ht12"+" "+ht12);
 		if(finder12.hasNext())
 		{
 			Match m12=finder12.next();
@@ -247,7 +247,7 @@ public class FortySplendidHot_Web_Gamble_GambleCount_For_BetType_1_And_Denominat
 		Finder finder21 =new Finder(screen.capture().getImage());
 		String ht21 = finder21.find(Attempt_3);
 		double score21=20;                
-		System.out.println("the value of ht2"+" "+ht21);
+		System.out.println("the value of ht21"+" "+ht21);
 		if(finder21.hasNext())
 		{
 			Match m21=finder21.next();
@@ -283,7 +283,7 @@ public class FortySplendidHot_Web_Gamble_GambleCount_For_BetType_1_And_Denominat
 		Finder finder13 =new Finder(screen.capture().getImage());
 		String ht13 = finder13.find(WIN_AMT4);
 		double score13=20;                
-		System.out.println("the value of ht1"+" "+ht13);
+		System.out.println("the value of ht13"+" "+ht13);
 		if(finder13.hasNext())
 		{
 			Match m13=finder13.next();
@@ -307,7 +307,7 @@ public class FortySplendidHot_Web_Gamble_GambleCount_For_BetType_1_And_Denominat
 		Finder finder23 =new Finder(screen.capture().getImage());
 		String ht23 = finder23.find(Attempt_2);
 		double score23=20;                
-		System.out.println("the value of ht2"+" "+ht23);
+		System.out.println("the value of ht23"+" "+ht23);
 		if(finder23.hasNext())
 		{
 			Match m23=finder23.next();
@@ -341,7 +341,7 @@ public class FortySplendidHot_Web_Gamble_GambleCount_For_BetType_1_And_Denominat
 		Finder finder123 =new Finder(screen.capture().getImage());
 		String ht123 = finder123.find(WIN_AMT5);
 		double score123=20;                
-		System.out.println("the value of ht1"+" "+ht123);
+		System.out.println("the value of ht123"+" "+ht123);
 		if(finder123.hasNext())
 		{
 			Match m123=finder123.next();
@@ -365,7 +365,7 @@ public class FortySplendidHot_Web_Gamble_GambleCount_For_BetType_1_And_Denominat
 		Finder finder25 =new Finder(screen.capture().getImage());
 		String ht25 = finder25.find(Attempt_1);
 		double score25=20;                
-		System.out.println("the value of ht2"+" "+ht25);
+		System.out.println("the value of ht25"+" "+ht25);
 		if(finder25.hasNext())
 		{
 			Match m25=finder25.next();
@@ -399,7 +399,7 @@ public class FortySplendidHot_Web_Gamble_GambleCount_For_BetType_1_And_Denominat
 		Finder finder1231 =new Finder(screen.capture().getImage());
 		String ht1231 = finder1231.find(WIN_AMT6);
 		double score1231=20;                
-		System.out.println("the value of ht1"+" "+ht1231);
+		System.out.println("the value of ht1231"+" "+ht1231);
 		if(finder1231.hasNext())
 		{
 			Match m1231=finder1231.next();
@@ -419,7 +419,7 @@ public class FortySplendidHot_Web_Gamble_GambleCount_For_BetType_1_And_Denominat
 		Finder finder26 =new Finder(screen.capture().getImage());
 		String ht26 = finder26.find(winBF);
 		double score26=20;                
-		System.out.println("the value of ht2"+" "+ht26);
+		System.out.println("the value of ht26"+" "+ht26);
 		if(finder26.hasNext())
 		{
 			Match m26=finder26.next();

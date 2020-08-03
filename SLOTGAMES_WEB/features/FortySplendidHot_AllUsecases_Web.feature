@@ -26,10 +26,10 @@
    
      #      _Balance_Credits_Calculations_Validation
 
-#	Scenario: Check whether balance is equals to credit multiplies by denomination 0.01 in FortySplendidHot slot game
-#    Given Chrome browser, valid URL, valid login details, FortySplendidHot slot game, balance, credits and denomination as 0.01 
-#    When Open the FortySplendidHot slot game by entering the valid URL in browser, enter the valid login details, click on balance, multiply credit by 0.01 and check the balance
-#    Then Balance amount should be same as denomination 0.01 multiplies by credit in FortySplendidHot slot game
+	Scenario: Check whether balance is equals to credit multiplies by denomination 0.01 in FortySplendidHot slot game
+    Given Chrome browser, valid URL, valid login details, FortySplendidHot slot game, balance, credits and denomination as 0.01 
+    When Open the FortySplendidHot slot game by entering the valid URL in browser, enter the valid login details, click on balance, multiply credit by 0.01 and check the balance
+    Then Balance amount should be same as denomination 0.01 multiplies by credit in FortySplendidHot slot game
 #	
 #	Scenario: Check whether balance is equals to credit multiplies by denomination 0.02 in FortySplendidHot game
 #    Given Chrome browser, valid URL, valid login details, FortySplendidHot slot game, balance, credits, denomination drop down and denomination as 0.02 
@@ -115,10 +115,10 @@
     
        	 	#	     GAMBLE COUNT AND AMOUNT VALIDATION FOR 0.01 CREDIT   
 	
-	Scenario: Check whether gamble count is displaying as per the max amount configured on the info page for bet type 0.01 & denomination 0.4 in FortySplendidHot game
-    Given Chrome browser, valid URL, valid login details, FortySplendidHot slot game, bet type as 0.01, denomination as 0.4, balance, spin button, win amount, gamble button, gamble amount, game info page and gamble count
-    When Open the FortySplendidHot slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on FortySplendidHot slot game, select bet type as 0.01 & denomination as 0.4, click on spin button till user wins, click on gamble button and check the gamble count
-    Then Gamble count should be displayed based on win amount and gamble max amount configured on the info page for bet type 0.01 & denomination 0.4 in FortySplendidHot game
+#	Scenario: Check whether gamble count is displaying as per the max amount configured on the info page for bet type 0.01 & denomination 0.4 in FortySplendidHot game
+#    Given Chrome browser, valid URL, valid login details, FortySplendidHot slot game, bet type as 0.01, denomination as 0.4, balance, spin button, win amount, gamble button, gamble amount, game info page and gamble count
+#    When Open the FortySplendidHot slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on FortySplendidHot slot game, select bet type as 0.01 & denomination as 0.4, click on spin button till user wins, click on gamble button and check the gamble count
+#    Then Gamble count should be displayed based on win amount and gamble max amount configured on the info page for bet type 0.01 & denomination 0.4 in FortySplendidHot game
 	
 	
 #	Scenario: Check whether gamble count is displaying as per the max amount configured on the info page for bet type 0.01 and denomination 0.8 in FortySplendidHot game

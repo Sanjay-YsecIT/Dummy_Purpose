@@ -39,7 +39,7 @@ public class FortySplendidHot_Web_Balance_Check_WinAmount_AddedToBalance {
 		Thread.sleep(2000);
 		System.out.println("Login to the game with valid credentials");
 		
-		WebElement sub = driver.findElement(By.xpath("/html[1]/body[1]/div[3]/div[1]/ui-view[1]/section[1]/section[1]/div[1]/div[1]/div[2]/div[3]/ul[1]/li[31]/div[1]/div[1]"));
+		WebElement sub = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[1]/ui-view[1]/section[1]/section[1]/div[1]/div[1]/div[2]/div[3]/ul[1]/li[31]/div[1]/div[1]"));
 		JavascriptExecutor jse=(JavascriptExecutor)driver;
 		jse.executeScript("arguments[0].click();", sub);
 		Thread.sleep(4000);
@@ -174,9 +174,9 @@ public class FortySplendidHot_Web_Balance_Check_WinAmount_AddedToBalance {
 		Assert.assertTrue(score3 > 90);
 		Thread.sleep(2000);
 
-		//comparing the Winning wild with heart and clove symbols pattern
+		//comparing the Winning 
 		// Pattern symbol=new Pattern("E:/Sikuli Images/Win/Balance_win_1_1.PNG");
-		screen.wait("./Images/40Splendid_Hot/win_pattern.PNG", 20);
+		screen.wait(win_pattern, 20);
 		Finder finder4 =new Finder(screen.capture().getImage());
 		String ht4 = finder4.find(win_pattern);
 		double score4=20;                
@@ -194,7 +194,7 @@ public class FortySplendidHot_Web_Balance_Check_WinAmount_AddedToBalance {
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Winning symbols comparision: "+" "+score4 +"%");
-		Assert.assertTrue(score4 > 50);
+		Assert.assertTrue(score4 > 90);
 	}
 
 	@Then("^Win amount should get added to the balance after win and balance should get added with win amount$")
