@@ -66,6 +66,8 @@ public class FortySplendidHot_Web_Balance_Check_WinAmount_AddedToBalance {
 		Pattern balance=new Pattern("Images/40Splendid_Hot/bal_300.PNG");
 		Pattern win_bal=new Pattern("Images/40Splendid_Hot/bal_301.30.PNG");
 		Pattern win_pattern=new Pattern("Images/40Splendid_Hot/win_pattern.PNG");
+		Pattern gamble_btn = new Pattern("./Images/40Splendid_Hot/gb_button.PNG");
+		Pattern gb_collect = new Pattern("./Images/40Splendid_Hot/gb_collect.PNG");
 
 		//win symbols
 		Pattern melon3=new Pattern("Images/40Splendid_Hot/3R_melon.PNG");
@@ -148,7 +150,9 @@ public class FortySplendidHot_Web_Balance_Check_WinAmount_AddedToBalance {
 		Thread.sleep(2000);
 
 		//clicking on collect button
-		screen.click(collect);
+		screen.click(gamble_btn);
+		Thread.sleep(2000);
+		screen.click(gb_collect);
 		Thread.sleep(2000);
 
 		//comparing the balance amount after spin

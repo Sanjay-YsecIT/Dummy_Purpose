@@ -22,7 +22,7 @@ public class FortySplendidHot_Web_Balance_InsufficiantBalance_Validation {
 
 	@Given("^Chrome browser, valid URL, valid login details, FortySplendidHot slot game, balance, spin button and validation message$")
 	public void chrome_browser_valid_URL_valid_login_details_FortySplendidHot_slot_game_balance_spin_button_and_validation_message() throws Throwable {
-		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "Driver/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://demo.ysecit.in:82/slotgames/slotsgame");
 		driver.manage().window().maximize();
@@ -38,7 +38,7 @@ public class FortySplendidHot_Web_Balance_InsufficiantBalance_Validation {
 		Thread.sleep(2000);
 		System.out.println("Login to the game with valid credentials");
 
-		WebElement sub = driver.findElement(By.xpath("/html[1]/body[1]/div[3]/div[1]/ui-view[1]/section[1]/section[1]/div[1]/div[1]/div[2]/div[3]/ul[1]/li[31]/div[1]/div[1]"));
+		WebElement sub = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[1]/ui-view[1]/section[1]/section[1]/div[1]/div[1]/div[2]/div[3]/ul[1]/li[31]/div[1]/div[1]"));
 		JavascriptExecutor jse=(JavascriptExecutor)driver;
 		jse.executeScript("arguments[0].click();", sub);
 		Thread.sleep(4000);
@@ -49,7 +49,7 @@ public class FortySplendidHot_Web_Balance_InsufficiantBalance_Validation {
 		WebElement balT = driver.findElement(By.id("transferInput"));
 		balT.clear();
 		Thread.sleep(1000);
-		balT.sendKeys("10");
+		balT.sendKeys("5");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
 		screen.wait("Images/40Splendid_Hot/spin.PNG", 30);
@@ -66,9 +66,7 @@ public class FortySplendidHot_Web_Balance_InsufficiantBalance_Validation {
 		screen.click(creditValue);
 		Thread.sleep(2000);
 		screen.click(spin);
-		Thread.sleep(3000);
-		screen.click(spin);
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 
 		//comparing the insufficiant balance message displayed or not
 		// Pattern bal=new Pattern("E:/Sikuli Images/credits/insufficiant.png");
@@ -89,7 +87,7 @@ public class FortySplendidHot_Web_Balance_InsufficiantBalance_Validation {
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Insufficiant balance message comparision value is equal to: "+" "+score +"%");
-		Assert.assertTrue(score > 97);
+		Assert.assertTrue(score > 90);
 	}
 
 	@Then("^Player should be blocked from playing the game when there is no balance in the account in FortySplendidHot game$")

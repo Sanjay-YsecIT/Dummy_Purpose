@@ -22,7 +22,7 @@ public class FortySplendidHot_Web_Navigate_HomeScreen {
 	
 	@Given("^Chrome browser, valid URL, valid login details, FortySplendidHot slot game and home button$")
 	public void chrome_browser_valid_URL_valid_login_details_FortySplendidHot_slot_game_and_home_button() throws Throwable {
-		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "Driver/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://demo.ysecit.in:82/slotgames/slotsgame");
 		driver.manage().window().maximize();
@@ -38,7 +38,7 @@ public class FortySplendidHot_Web_Navigate_HomeScreen {
 		Thread.sleep(2000);
 		System.out.println("Login to the game with valid credentials");
 
-		WebElement sub = driver.findElement(By.xpath("/html[1]/body[1]/div[3]/div[1]/ui-view[1]/section[1]/section[1]/div[1]/div[1]/div[2]/div[3]/ul[1]/li[31]/div[1]/div[1]"));
+		WebElement sub = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[1]/ui-view[1]/section[1]/section[1]/div[1]/div[1]/div[2]/div[3]/ul[1]/li[31]/div[1]/div[1]"));
 		JavascriptExecutor jse=(JavascriptExecutor)driver;
 		jse.executeScript("arguments[0].click();", sub);
 		Thread.sleep(4000);
@@ -52,7 +52,7 @@ public class FortySplendidHot_Web_Navigate_HomeScreen {
 		balT.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("Images/40Splendid_Hot/spin.PNG", 10);
+		screen.wait("Images/40Splendid_Hot/spin.PNG", 30);
 		//	Thread.sleep(15000);
 
 		Pattern Home_Screen_Logo=new Pattern("Images/40Splendid_Hot/suribet_logo.PNG");
@@ -103,7 +103,7 @@ public class FortySplendidHot_Web_Navigate_HomeScreen {
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Navigate to the home screen of the FortySplendid Hot slot games and comparision value is equal to: "+" "+score2 +"%");
-		Assert.assertFalse(score2 > 95);
+		Assert.assertTrue(score2 > 95);
 	}
 
 	@Then("^System should take the player to Home page after clicking on home button from FortySplendidHot game$")

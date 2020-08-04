@@ -38,7 +38,7 @@ public class FortySplendidHot_Web_Gamble_GambleCount_For_BetType_1_And_Denominat
 		Thread.sleep(2000);
 		System.out.println("Login to the game with valid credentials");
 
-		WebElement sub = driver.findElement(By.xpath("/html[1]/body[1]/div[3]/div[1]/ui-view[1]/section[1]/section[1]/div[1]/div[1]/div[2]/div[3]/ul[1]/li[31]/div[1]/div[1]"));
+		WebElement sub = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[1]/ui-view[1]/section[1]/section[1]/div[1]/div[1]/div[2]/div[3]/ul[1]/li[32]/div[2]/div[2]"));
 		JavascriptExecutor jse=(JavascriptExecutor)driver;
 		jse.executeScript("arguments[0].click();", sub);
 		Thread.sleep(4000);
@@ -52,45 +52,45 @@ public class FortySplendidHot_Web_Gamble_GambleCount_For_BetType_1_And_Denominat
 		balT.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("./Images/40Splendid_Hot/spin.PNG", 10);
+		screen.wait("Images/40Splendid_Hot/spin.PNG", 30);
 		//	Thread.sleep(15000);
 
-		Pattern SPIN=new Pattern("./Images/40Splendid_Hot/spin.PNG");                         // SPIN BUTTON
-		Pattern GAMBLE_COLLECT=new Pattern("./Images/40Splendid_Hot/gb_collect.PNG");  // AMOUNT COLLECT ICON ON GAMBLE WINDOW          
-		Pattern GAMBLE_BTN=new Pattern("./Images/40Splendid_Hot/gb_button.PNG");     // GAMBLE BUTTON TO SWITCH TO GAMBLE WINDOW
-		Pattern winBF=new Pattern("./Images/40Splendid_Hot/gb_disable.PNG");         // GAMBLE DISABLE BUTTON 
-		Pattern betval=new Pattern("./Images/40Splendid_Hot/betval1_1.PNG");
-		Pattern bet1=new Pattern("./Images/40Splendid_Hot/bet1.PNG");
+		Pattern SPIN=new Pattern("Images/40Splendid_Hot/spin.PNG");                         // SPIN BUTTON
+		Pattern GAMBLE_COLLECT=new Pattern("Images/40Splendid_Hot/gb_collect.PNG");  // AMOUNT COLLECT ICON ON GAMBLE WINDOW          
+		Pattern GAMBLE_BTN=new Pattern("Images/40Splendid_Hot/gb_button.PNG");     // GAMBLE BUTTON TO SWITCH TO GAMBLE WINDOW
+		Pattern winBF=new Pattern("Images/40Splendid_Hot/gb_disable.PNG");         // GAMBLE DISABLE BUTTON 
+		Pattern betval=new Pattern("Images/40Splendid_Hot/betval1_5.PNG");
+		Pattern bet1=new Pattern("Images/40Splendid_Hot/bet1.PNG");
 
 		// IMAGES IN 1st REELS
-		Pattern melon1=new Pattern("./Images/40Splendid_Hot/1R_melon.PNG");
-		Pattern orange1=new Pattern("./Images/40Splendid_Hot/1R_orange.PNG");
-		Pattern berry1=new Pattern("./Images/40Splendid_Hot/1R_berry.PNG");
+		Pattern melon1=new Pattern("Images/40Splendid_Hot/1R_melon.PNG");
+		Pattern orange1=new Pattern("Images/40Splendid_Hot/1R_orange.PNG");
+		Pattern berry1=new Pattern("Images/40Splendid_Hot/1R_berry.PNG");
 
 		// IMAGES IN 3rd REELS
-		Pattern melon3=new Pattern("./Images/40Splendid_Hot/3R_melon.PNG");
+		Pattern melon3=new Pattern("Images/40Splendid_Hot/3R_melon.PNG");
 
 		// IMAGES IN 4th REELS
-		Pattern melon4=new Pattern("./Images/40Splendid_Hot/4R_melon.PNG");
-		Pattern star4=new Pattern("./Images/40Splendid_Hot/4R_star.PNG");
+		Pattern melon4=new Pattern("Images/40Splendid_Hot/4R_melon.PNG");
+		Pattern star4=new Pattern("Images/40Splendid_Hot/4R_star.PNG");
 
 		// IMAGES IN 5th REELS
-		Pattern cherry5=new Pattern("./Images/40Splendid_Hot/5R_cherry.PNG");
-		Pattern lemon5=new Pattern("./Images/40Splendid_Hot/5R_lemon.PNG");
+		Pattern cherry5=new Pattern("Images/40Splendid_Hot/5R_cherry.PNG");
+		Pattern lemon5=new Pattern("Images/40Splendid_Hot/5R_lemon.PNG");
 
-		Pattern WIN_AMT1=new Pattern("./Images/40Splendid_Hot/win_14.PNG");    // 1st WIN AMOUNT WITH GAMBLE ATTEMPTS 5
-		Pattern WIN_AMT2=new Pattern("./Images/40Splendid_Hot/win_28.PNG");    // 2st WIN AMOUNT WITH GAMBLE ATTEMPTS 4
-		Pattern WIN_AMT3=new Pattern("./Images/40Splendid_Hot/win_46.PNG");    // 3st WIN AMOUNT WITH GAMBLE ATTEMPTS 3
-		Pattern WIN_AMT4=new Pattern("./Images/40Splendid_Hot/win_72.PNG");    // 4st WIN AMOUNT WITH GAMBLE ATTEMPTS 2
-		Pattern WIN_AMT5=new Pattern("./Images/40Splendid_Hot/win_168.PNG");    // 5st WIN AMOUNT WITH GAMBLE ATTEMPTS 1
-		Pattern WIN_AMT6=new Pattern("./Images/40Splendid_Hot/win_312.PNG");    // 6st WIN AMOUNT WITH GAMBLE ATTEMPTS 0
+		Pattern WIN_AMT1=new Pattern("Images/40Splendid_Hot/win_14.PNG");    // 1st WIN AMOUNT WITH GAMBLE ATTEMPTS 5
+		Pattern WIN_AMT2=new Pattern("Images/40Splendid_Hot/win_28.PNG");    // 2st WIN AMOUNT WITH GAMBLE ATTEMPTS 4
+		Pattern WIN_AMT3=new Pattern("Images/40Splendid_Hot/win_46.PNG");    // 3st WIN AMOUNT WITH GAMBLE ATTEMPTS 3
+		Pattern WIN_AMT4=new Pattern("Images/40Splendid_Hot/win_72.PNG");    // 4st WIN AMOUNT WITH GAMBLE ATTEMPTS 2
+		Pattern WIN_AMT5=new Pattern("Images/40Splendid_Hot/win_168.PNG");    // 5st WIN AMOUNT WITH GAMBLE ATTEMPTS 1
+		Pattern WIN_AMT6=new Pattern("Images/40Splendid_Hot/win_312.PNG");    // 6st WIN AMOUNT WITH GAMBLE ATTEMPTS 0
 
 		// ATTEMPTS LEFT
-		Pattern Attempt_5=new Pattern("./Images/40Splendid_Hot/Attempt5.PNG");
-		Pattern Attempt_4=new Pattern("./Images/40Splendid_Hot/Attempt4.PNG");
-		Pattern Attempt_3=new Pattern("./Images/40Splendid_Hot/Attempt3.PNG");
-		Pattern Attempt_2=new Pattern("./Images/40Splendid_Hot/Attempt2.PNG");
-		Pattern Attempt_1=new Pattern("./Images/40Splendid_Hot/Attempt1.PNG");
+		Pattern Attempt_5=new Pattern("Images/40Splendid_Hot/Attempt5.PNG");
+		Pattern Attempt_4=new Pattern("Images/40Splendid_Hot/Attempt4.PNG");
+		Pattern Attempt_3=new Pattern("Images/40Splendid_Hot/Attempt3.PNG");
+		Pattern Attempt_2=new Pattern("Images/40Splendid_Hot/Attempt2.PNG");
+		Pattern Attempt_1=new Pattern("Images/40Splendid_Hot/Attempt1.PNG");
 
 		// SET THE BET TYPE AS 0.01 AND DENOMIANTION AS 8
 		// WIN PATTERN COMBINATION 
@@ -124,7 +124,7 @@ public class FortySplendidHot_Web_Gamble_GambleCount_For_BetType_1_And_Denominat
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Win amount comparision is successful and value equal to: "+" "+score1 +"%");
-		Assert.assertTrue(score1 > 97);
+		Assert.assertTrue(score1 > 90);
 
 		screen.click(GAMBLE_BTN);
 		Thread.sleep(3000);
@@ -148,7 +148,7 @@ public class FortySplendidHot_Web_Gamble_GambleCount_For_BetType_1_And_Denominat
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Gamble count comparision after Win: "+" "+score2 +"%");
-		Assert.assertTrue(score2 > 95);
+		Assert.assertTrue(score2 > 90);
 		Thread.sleep(5000);
 
 		screen.click(GAMBLE_COLLECT);
@@ -203,7 +203,7 @@ public class FortySplendidHot_Web_Gamble_GambleCount_For_BetType_1_And_Denominat
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Gamble count comparision after Win: "+" "+score22 +"%");
-		Assert.assertTrue(score22 > 95);
+		Assert.assertTrue(score22 > 90);
 		Thread.sleep(5000);
 
 		screen.click(GAMBLE_COLLECT);
@@ -234,7 +234,7 @@ public class FortySplendidHot_Web_Gamble_GambleCount_For_BetType_1_And_Denominat
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Win amount comparision is successful and value equal to: "+" "+score12 +"%");
-		Assert.assertTrue(score12 > 90);
+		Assert.assertTrue(score12 > 85);
 
 		screen.click(GAMBLE_BTN);
 		Thread.sleep(3000);
@@ -258,7 +258,7 @@ public class FortySplendidHot_Web_Gamble_GambleCount_For_BetType_1_And_Denominat
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Gamble count comparision after Win: "+" "+score21 +"%");
-		Assert.assertTrue(score21 > 95);
+		Assert.assertTrue(score21 > 90);
 		Thread.sleep(5000);
 
 		screen.click(GAMBLE_COLLECT);
@@ -293,7 +293,7 @@ public class FortySplendidHot_Web_Gamble_GambleCount_For_BetType_1_And_Denominat
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Win amount comparision is successful and value equal to: "+" "+score13 +"%");
-		Assert.assertTrue(score13 > 90);
+		Assert.assertTrue(score13 > 85);
 
 		screen.click(GAMBLE_BTN);
 		Thread.sleep(3000);
@@ -317,7 +317,7 @@ public class FortySplendidHot_Web_Gamble_GambleCount_For_BetType_1_And_Denominat
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Gamble count comparision after Win: "+" "+score23 +"%");
-		Assert.assertTrue(score23 > 95);
+		Assert.assertTrue(score23 > 90);
 		Thread.sleep(5000);
 
 		screen.click(GAMBLE_COLLECT);
@@ -350,7 +350,7 @@ public class FortySplendidHot_Web_Gamble_GambleCount_For_BetType_1_And_Denominat
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Win amount comparision is successful and value equal to: "+" "+score123 +"%");
-		Assert.assertTrue(score123 > 90);
+		Assert.assertTrue(score123 > 85);
 
 		screen.click(GAMBLE_BTN);
 		Thread.sleep(3000);
@@ -374,7 +374,7 @@ public class FortySplendidHot_Web_Gamble_GambleCount_For_BetType_1_And_Denominat
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Gamble count comparision after Win: "+" "+score25 +"%");
-		Assert.assertTrue(score25 > 95);
+		Assert.assertTrue(score25 > 90);
 		Thread.sleep(5000);
 
 		screen.click(GAMBLE_COLLECT);
@@ -407,7 +407,7 @@ public class FortySplendidHot_Web_Gamble_GambleCount_For_BetType_1_And_Denominat
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Win amount comparision is successful and value equal to: "+" "+score1231 +"%");
-		Assert.assertTrue(score1231 > 90);
+		Assert.assertTrue(score1231 > 85);
 
 		//comparing the gamble count based on the win amount
 		Finder finder26 =new Finder(screen.capture().getImage());
@@ -427,7 +427,7 @@ public class FortySplendidHot_Web_Gamble_GambleCount_For_BetType_1_And_Denominat
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Gamble link comparision after Win: "+" "+score26 +"%");
-		Assert.assertTrue(score26 > 95);
+		Assert.assertTrue(score26 > 90);
 	}
 
 	@Then("^Gamble count should be displayed based on win amount and gamble max amount configured on the game info page for bet type (\\d+)\\.(\\d+) & denomination EIGHT in FortySplendidHot game$")

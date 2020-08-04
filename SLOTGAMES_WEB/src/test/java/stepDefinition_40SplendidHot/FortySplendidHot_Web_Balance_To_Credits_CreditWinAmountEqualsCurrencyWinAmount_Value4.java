@@ -22,7 +22,7 @@ public class FortySplendidHot_Web_Balance_To_Credits_CreditWinAmountEqualsCurren
 
 	@Given("^Chrome browser, valid URL, valid login details, FortySplendidHot slot game, balance, spin button, win amount in currency, credits and win amount in credits for denomination drop down value four$")
 	public void chrome_browser_valid_URL_valid_login_details_FortySplendidHot_slot_game_balance_spin_button_win_amount_in_currency_credits_and_win_amount_in_credits_for_denomination_drop_down_value_four() throws Throwable {
-		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "Driver/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://demo.ysecit.in:82/slotgames/slotsgame");
 		driver.manage().window().maximize();
@@ -38,7 +38,7 @@ public class FortySplendidHot_Web_Balance_To_Credits_CreditWinAmountEqualsCurren
 		Thread.sleep(2000);
 		System.out.println("Login to the game with valid credentials");
 
-		WebElement sub = driver.findElement(By.xpath("/html[1]/body[1]/div[3]/div[1]/ui-view[1]/section[1]/section[1]/div[1]/div[1]/div[2]/div[3]/ul[1]/li[31]/div[1]/div[1]"));
+		WebElement sub = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[1]/ui-view[1]/section[1]/section[1]/div[1]/div[1]/div[2]/div[3]/ul[1]/li[31]/div[1]/div[1]"));
 		JavascriptExecutor jse=(JavascriptExecutor)driver;
 		jse.executeScript("arguments[0].click();", sub);
 		Thread.sleep(4000);
@@ -52,7 +52,7 @@ public class FortySplendidHot_Web_Balance_To_Credits_CreditWinAmountEqualsCurren
 		balT.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("./Images/40Splendid_Hot/spin.PNG", 10);
+		screen.wait("./Images/40Splendid_Hot/spin.PNG", 30);
 		//	Thread.sleep(15000);
 
 		Pattern credit=new Pattern("./Images/40Splendid_Hot/credit_0.2.PNG");
@@ -130,7 +130,7 @@ public class FortySplendidHot_Web_Balance_To_Credits_CreditWinAmountEqualsCurren
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Win amount comparision after spin: "+" "+score2 +"%");
-		Assert.assertTrue(score2 > 95);
+		Assert.assertTrue(score2 > 90);
 		Thread.sleep(2000);
 
 		//clicking on balance button to convert amount into to credits
@@ -156,7 +156,7 @@ public class FortySplendidHot_Web_Balance_To_Credits_CreditWinAmountEqualsCurren
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Win amount in credits comparision value equal to: "+" "+score3 +"%");
-		Assert.assertTrue(score3 > 95);
+		Assert.assertTrue(score3 > 90);
 		Thread.sleep(2000);
 
 		//Balance in credits 
@@ -178,7 +178,7 @@ public class FortySplendidHot_Web_Balance_To_Credits_CreditWinAmountEqualsCurren
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Balance in credits comparision value equal to	: "+" "+score4 +"%");
-		Assert.assertTrue(score4 > 95);
+		Assert.assertTrue(score4 > 90);
 
 		//clicking on balance button to convert credits into to amount in currency
 		screen.click(balance_cr);
@@ -203,7 +203,7 @@ public class FortySplendidHot_Web_Balance_To_Credits_CreditWinAmountEqualsCurren
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Win amount comparision in currency value equal to: "+" "+score6 +"%");
-		Assert.assertTrue(score6 > 95);
+		Assert.assertTrue(score6 > 90);
 		Thread.sleep(2000);
 
 		screen.click(collect);

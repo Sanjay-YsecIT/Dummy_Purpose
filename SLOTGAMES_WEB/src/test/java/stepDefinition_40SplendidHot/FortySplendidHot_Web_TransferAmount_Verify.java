@@ -20,8 +20,8 @@ public class FortySplendidHot_Web_TransferAmount_Verify {
 	WebDriver driver;
 	Screen screen=new Screen();
 
-	@Given("^Chrome browser, valid URL, valid login details, FortySplendidHot game, balance, text field to transfer balance and Ok button$")
-	public void chrome_browser_valid_URL_valid_login_details_FortySplendidHot_game_balance_text_field_to_transfer_balance_and_Ok_button() throws Throwable {
+	@Given("^Chrome browser, valid URL, valid login details, (\\d+) Splendid Hot slot game, try now button and balance to play$")
+	public void chrome_browser_valid_URL_valid_login_details_Splendid_Hot_slot_game_try_now_button_and_balance_to_play(int arg1) throws Throwable {
 		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://demo.ysecit.in:82/slotgames/slotsgame");
@@ -44,8 +44,8 @@ public class FortySplendidHot_Web_TransferAmount_Verify {
 		Thread.sleep(4000);
 	}
 
-	@When("^Open the FortySplendidHot slot game by entering the valid URL in browser, enter the valid login details, click on Play button, enter the valid amount to transfer and click on Ok button$")
-	public void open_the_FortySplendidHot_slot_game_by_entering_the_valid_URL_in_browser_enter_the_valid_login_details_click_on_Play_button_enter_the_valid_amount_to_transfer_and_click_on_Ok_button() throws Throwable {
+	@When("^Open the (\\d+) Splendid Hot slot game by entering the valid URL in browser, click on try now button$")
+	public void open_the_Splendid_Hot_slot_game_by_entering_the_valid_URL_in_browser_click_on_try_now_button(int arg1) throws Throwable {
 		WebElement balT = driver.findElement(By.id("transferInput"));
 		balT.clear();
 		Thread.sleep(1000);
@@ -103,8 +103,8 @@ public class FortySplendidHot_Web_TransferAmount_Verify {
 		Assert.assertTrue(score2 > 90);
 	}
 
-	@Then("^The exact amount entered in the transfer page should transfer to FortySplendidHot game and same amount should get displayed on the balance section$")
-	public void the_exact_amount_entered_in_the_transfer_page_should_transfer_to_FortySplendidHot_game_and_same_amount_should_get_displayed_on_the_balance_section() throws Throwable {
+	@Then("^System should provide five thousand as balance on click on try now button in (\\d+) Splendid Hot slot game$")
+	public void system_should_provide_five_thousand_as_balance_on_click_on_try_now_button_in_Splendid_Hot_slot_game(int arg1) throws Throwable {
 		Thread.sleep(3000);
 		driver.quit();
 	}

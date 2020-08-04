@@ -38,7 +38,7 @@ public class FortySplendidHot_Web_Gamble_WinAmount_SameAs_GambleAmount {
 		Thread.sleep(2000);
 		System.out.println("Login to the game with valid credentials");
 
-		WebElement sub = driver.findElement(By.xpath("/html[1]/body[1]/div[3]/div[1]/ui-view[1]/section[1]/section[1]/div[1]/div[1]/div[2]/div[3]/ul[1]/li[31]/div[1]/div[1]"));
+		WebElement sub = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[1]/ui-view[1]/section[1]/section[1]/div[1]/div[1]/div[2]/div[3]/ul[1]/li[32]/div[2]/div[2]"));
 		JavascriptExecutor jse=(JavascriptExecutor)driver;
 		jse.executeScript("arguments[0].click();", sub);
 		Thread.sleep(4000);
@@ -52,7 +52,7 @@ public class FortySplendidHot_Web_Gamble_WinAmount_SameAs_GambleAmount {
 		balT.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("Images/40Splendid_Hot/spin.PNG", 10);
+		screen.wait("Images/40Splendid_Hot/spin.PNG", 30);
 		//	Thread.sleep(15000);
 
 		Pattern betval=new Pattern("Images/40Splendid_Hot/betval1_1.PNG");
@@ -62,7 +62,7 @@ public class FortySplendidHot_Web_Gamble_WinAmount_SameAs_GambleAmount {
 		Pattern win_amt = new Pattern("Images/40Splendid_Hot/win_0.7.PNG");
 		Pattern gamble_btn=new Pattern("Images/40Splendid_Hot/gb_button.PNG");
 		Pattern gb_collect=new Pattern("Images/40Splendid_Hot/gb_collect.PNG");
-		Pattern gb_amt_display=new Pattern("Images/20Glowing_Hot/gb_amt.PNG");
+		Pattern gb_amt_display=new Pattern("Images/40Splendid_Hot/gb_amt.PNG");
 
 		//win symbols
 		Pattern orange1=new Pattern("Images/40Splendid_Hot/1R_orange.PNG");
@@ -85,7 +85,7 @@ public class FortySplendidHot_Web_Gamble_WinAmount_SameAs_GambleAmount {
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Balance comparision before spin: "+" "+score1 +"%");
-		Assert.assertTrue(score1 > 97);
+		Assert.assertTrue(score1 > 90);
 
 		// WIN PATTERN COMBINATION 
 		screen.click(orange1);
@@ -119,7 +119,7 @@ public class FortySplendidHot_Web_Gamble_WinAmount_SameAs_GambleAmount {
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Win amount comparision after spin: "+" "+score2 +"%");
-		Assert.assertTrue(score2 > 97);
+		Assert.assertTrue(score2 > 90);
 		Thread.sleep(5000);
 
 		//Clicking on gamble button
@@ -145,7 +145,7 @@ public class FortySplendidHot_Web_Gamble_WinAmount_SameAs_GambleAmount {
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Gamble Win amount comparision value equals to: "+" "+score3 +"%");
-		Assert.assertTrue(score3 > 97);
+		Assert.assertTrue(score3 > 90);
 		Thread.sleep(3000);
 
 		screen.click(gb_collect);

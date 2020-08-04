@@ -3,7 +3,9 @@ package stepDefinition_40SplendidHot;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.sikuli.script.Finder;
 import org.sikuli.script.Match;
@@ -21,14 +23,17 @@ public class FortySplendidHot_Web_TryNow_CheckBalance {
 	
 	@Given("^Chrome browser, valid URL, valid login details, FortySplendidHot slot game, try now button and balance to play$")
 	public void chrome_browser_valid_URL_valid_login_details_FortySplendidHot_slot_game_try_now_button_and_balance_to_play() throws Throwable {
-		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "Driver/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://demo.ysecit.in:82/slotgames/slotsgame");
 		driver.manage().window().maximize();
 		Thread.sleep(5000);
-		driver.findElement(By.xpath("/html[1]/body[1]/div[3]/div[1]/ui-view[1]/section[1]/section[1]/div[1]/div[1]/div[2]/div[3]/ul[1]/li[31]/div[2]/div[2]")).click();
-		screen.wait("Images/40Splendid_Hot/trynow_betplace.PNG", 30);
-		//	Thread.sleep(15000);
+		WebElement sub = driver.findElement(By.xpath("/html[1]/body[1]/div[3]/div[1]/ui-view[1]/section[1]/section[1]/div[1]/div[1]/div[2]/div[3]/ul[1]/li[32]/div[2]/div[2]"));
+		JavascriptExecutor jse=(JavascriptExecutor)driver;
+		jse.executeScript("arguments[0].click();", sub);
+		Thread.sleep(4000);
+		Pattern betplace=new Pattern("Images/40Splendid_Hot/trynow_betplace.PNG");
+		screen.wait(betplace, 30);
 	}
 
 	@When("^Open the FortySplendidHot slot game by entering the valid URL in browser, click on try now button$")

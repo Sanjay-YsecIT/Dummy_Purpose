@@ -2,7 +2,9 @@ package stepDefinition_40SplendidHot;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.sikuli.script.Finder;
 import org.sikuli.script.Match;
@@ -20,21 +22,24 @@ public class FortySplendidHot_Web_TryNow_Spin_Deduct_Balance {
 
 	@Given("^Chrome browser, valid URL, valid login details, FortySplendidHot slot game, try now button, balance to play and spin button$")
 	public void chrome_browser_valid_URL_valid_login_details_FortySplendidHot_slot_game_try_now_button_balance_to_play_and_spin_button() throws Throwable {
-		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "Driver/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://demo.ysecit.in:82/slotgames/slotsgame");
 		driver.manage().window().maximize();
 		Thread.sleep(5000);
-		driver.findElement(By.xpath("/html[1]/body[1]/div[3]/div[1]/ui-view[1]/section[1]/section[1]/div[1]/div[1]/div[2]/div[3]/ul[1]/li[31]/div[2]/div[2]")).click();
-		screen.wait("Images/40Splendid_Hot/trynow_betplace.PNG", 30);
-		//	Thread.sleep(15000);
+		WebElement sub = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[1]/ui-view[1]/section[1]/section[1]/div[1]/div[1]/div[2]/div[3]/ul[1]/li[32]/div[2]/div[2]"));
+		JavascriptExecutor jse=(JavascriptExecutor)driver;
+		jse.executeScript("arguments[0].click();", sub);
+		Thread.sleep(4000);
+		Pattern betplace=new Pattern("Images/40Splendid_Hot/trynow_betplace.PNG");
+		screen.wait(betplace, 30);
 	}
 
 	@When("^Open the FortySplendidHot slot game by entering the valid URL in browser, click on try now button and click on spin button$")
 	public void open_the_FortySplendidHot_slot_game_by_entering_the_valid_URL_in_browser_click_on_try_now_button_and_click_on_spin_button() throws Throwable {
-		Pattern Trynow_bal=new Pattern("./Images/40Splendid_Hot/Try_now_bal.PNG");
-		Pattern BalAfterSpin=new Pattern("./Images/40Splendid_Hot/TN_BalAfterspin.PNG");
-		Pattern Spin=new Pattern("./Images/40Splendid_Hot/TN_Spin.PNG");
+		Pattern Trynow_bal=new Pattern("Images/40Splendid_Hot/Try_now_bal.PNG");
+		Pattern BalAfterSpin=new Pattern("Images/40Splendid_Hot/TN_BalAfterspin.PNG");
+		Pattern Spin=new Pattern("Images/40Splendid_Hot/TN_Spin.PNG");
 
 		// Balance before spin
 		//  Pattern credit1=new Pattern("E:/Sikuli Images/others/zerobalance.png");

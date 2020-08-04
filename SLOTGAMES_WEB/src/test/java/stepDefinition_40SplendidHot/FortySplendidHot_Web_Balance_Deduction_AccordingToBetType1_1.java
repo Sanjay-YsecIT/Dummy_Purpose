@@ -22,7 +22,7 @@ public class FortySplendidHot_Web_Balance_Deduction_AccordingToBetType1_1 {
 
 	@Given("^Chrome browser, valid URL, valid login details, FortySplendidHot slot game, bet type as (\\d+)\\.(\\d+), bet value as (\\d+)\\.(\\d+), balance and spin button$")
 	public void chrome_browser_valid_URL_valid_login_details_FortySplendidHot_slot_game_bet_type_as_bet_value_as_balance_and_spin_button(int arg1, int arg2, int arg3, int arg4) throws Throwable {
-		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "Driver/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://demo.ysecit.in:82/slotgames/slotsgame");
 		driver.manage().window().maximize();
