@@ -34,21 +34,19 @@ public class AmazonClash_Web_AutoSpin_AutoSpinOption {
 		balT.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("./Images/Amazon_Clash/Bet_place.PNG", 10);
-		//	Thread.sleep(15000);
-		
-		
-		Pattern autospin=new Pattern("./Images/Amazon_Clash/autospin.PNG");
-		Pattern credit1=new Pattern("./Images/Amazon_Clash/goodluck.PNG");
-		Pattern pat=new Pattern("./Images/Amazon_Clash/goodluck.PNG");
+		screen.wait("Images/Amazon_Clash/Bet_place.PNG", 30);
+	
+		Pattern autoplay=new Pattern("Images/Amazon_Clash/autoplay.PNG");
+		Pattern autospin=new Pattern("Images/Amazon_Clash/autospin.PNG");
+		Pattern credit1=new Pattern("Images/Amazon_Clash/goodluck.PNG");
+		Pattern pat=new Pattern("Images/Amazon_Clash/goodluck.PNG");
 
-       // click on autospin icon
+		screen.click(autoplay);
+		Thread.sleep(1000);
 		screen.click(autospin);
 		Thread.sleep(1000);
 
-
 		//comparing the good luck message after clicking on auto button
-		//	Pattern credit1=new Pattern("./Images/Skinfiri_Mysterious/GoodLuck.PNG");
 		Finder finder =new Finder(screen.capture().getImage());
 		String ht = finder.find(credit1);
 		double score=20;                
@@ -66,13 +64,10 @@ public class AmazonClash_Web_AutoSpin_AutoSpinOption {
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Comparision value equals to: "+" "+score +"%");
-		Assert.assertTrue(score > 95);
-
-
-
+		Assert.assertTrue(score > 97);
 		Thread.sleep(5000);
+		
 		//  Wait for some time for some autospin feature is enabled and verify the user interaction message
-		//	Pattern pat=new Pattern("./Images/Skinfiri_Mysterious/GoodLuck.PNG");
 		Finder finder1 =new Finder(screen.capture().getImage());
 		String ht1 = finder1.find(pat);
 		double score1=20;                
@@ -90,16 +85,13 @@ public class AmazonClash_Web_AutoSpin_AutoSpinOption {
 			System.out.println("Comparision failes. Test case failed");         
 		}
 		System.out.println("Comparision value equals to: "+" "+score1 +"%");
-		//Assert.assertEquals(100.0,score );
-		Assert.assertTrue(score1 > 95);
-		
-		
+		Assert.assertTrue(score1 > 97);
 	}
 
 	@Then("^System should keep performing the spins in Amazon Clash slot game$")
 	public void system_should_keep_performing_the_spins_in_Amazon_Clash_slot_game() throws Throwable {
 	   
-		Pattern autospin_cancel=new Pattern("./Images/Amazon_Clash/autospin.PNG");
+		Pattern autospin_cancel=new Pattern("Images/Amazon_Clash/autocancel.PNG");
 		screen.click(autospin_cancel);
 		Thread.sleep(3000);
 		driver.quit();

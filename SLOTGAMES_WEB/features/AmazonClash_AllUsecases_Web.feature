@@ -33,18 +33,18 @@ Feature: Test all the functionalities of Amazon Clash SLOT Game
 #    Given Chrome browser, valid URL, valid login details, Amazon Clash slot game, bet type as 0.01 and bet value as 0.2,0.4,1,2,4
 #    When Open the Amazon Clash slot game by entering the valid URL in browser, enter the valid login details, select the bet type as 0.01 and check the bet value
 #    Then Bet value should get changed 0.2,0.4,1,2,4 if the bet type selected as 0.01 from the drop down in Amazon Clash slot game
-	
-	
+#	
+#	
 #	Scenario: Select the bet type as 0.02 from the drop down and check the bet value should be 0.4,0.8,2,4,8 in Amazon Clash slot game
 #    Given Chrome browser, valid URL, valid login details, Amazon Clash game, bet type as 0.02 and bet value as 0.4,0.8,2,4,8
 #    When Open the Amazon Clash slot game by entering the valid URL in browser, enter the valid login details, select the bet type as 0.02 and check the bet value should be 0.4,0.8,2,4,8
 #    Then Bet value should get changed 0.4,0.8,2,4,8 if the bet type selected as 0.02 from the drop down 1 in Amazon Clash slot game
-	
+#	
 #	Scenario: Select the bet type as 0.05 from the drop down and check the bet value should be 1,2,5,10,20 in Amazon Clash slot game
 #    Given Chrome browser, valid URL, valid login details, Amazon Clash slot game, bet type as 0.05 from down 2 and bet value as 1,2,5,10,20
 #    When Open the Amazon Clash slot game by entering the valid URL in browser, enter the valid login details, select the bet type as 0.05 from down  and check the bet value should be 1,2,5,10,20
 #    Then Bet value should get changed to 1,2,5,10,20 if the bet type selected as 0.05 from the drop down two in Amazon Clash slot game
-	
+#	
 #	Scenario: Select the bet type as 0.5 from the drop down and check the bet value should be 10,20,50,100,200 in Amazon Clash slot game
 #    Given Chrome browser, valid URL, valid login details, Amazon Clash slot game, bet type as 0.5 from drop down and bet value as 10,20,50,100,200
 #    When Open the Amazon Clash slot game by entering the valid URL in browser, enter the valid login details, select the bet type as 0.5 from drop down and check the bet value should be 10,20,50,100,200
@@ -78,7 +78,7 @@ Feature: Test all the functionalities of Amazon Clash SLOT Game
 #    Given Chrome browser, valid URL, valid login details, Amazon Clash game, zero balance, text field to transfer balance, Ok button and validation message
 #    When Open the Amazon Clash slot game by entering the valid URL in browser, enter the valid login details, enter the amount as zero SRD and click on Ok butotn
 #    Then An error should be displayed if balance entered was zero and player should be blocked from loading the Amazon Clash game
- 
+
    
   #           Bet value validation for 0.1 credit with different bet values, within the transferred balance range.
 
@@ -266,9 +266,13 @@ Feature: Test all the functionalities of Amazon Clash SLOT Game
 #    Given Chrome browser, valid URL, valid login details, Amazon Clash slot game, balance, transfer button, spin button and win amount
 #    When Open the Amazon Clash slot game by entering the valid URL in browser, enter the valid login details, transfer the amount, click on spin button till user win and check the balance after win
 #    Then Win amount should get added to the balance after win and balance should get increased with win amount
+#  
+#  	Scenario: Check whether winning amount is getting added to the main balance in credits
+#    Given Chrome browser, valid URL, valid login details, Amazon Clash slot game, balance, transfer button, credit balance form, spin button and win amount
+#    When Open the Amazon Clash slot game by entering the valid URL in browser, enter the valid login details, transfer the amount, click on  balance window to change to credit form, click on spin button till user win and check the balance after win in credits
+#    Then Win amount should get added to the credit field after win and credit should get increased with win amount
   
-    
-    
+ 
     	#                   Maximize and Minimize Button Validation
     
 #    Scenario: Check the functionality of maximize and minimize button in Amazon Clash slot game
@@ -300,6 +304,12 @@ Feature: Test all the functionalities of Amazon Clash SLOT Game
 #    Given Chrome browser, valid URL, valid login details, Amazon Clash slot game, balance, spin button and validation message
 #    When Open the Amazon Clash slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on spin button till balance turns to zero and check the validation message
 #    Then Player should be blocked from playing the game when there is no balance in the account in Amazon Clash game
+#
+#    Scenario: Check whether user able to play the game when there is insufficiant balance in account, the bet and credit values are decreased to equal or less than available balance which enables player to resume the game in Amazon Clash slot game
+#    Given Chrome browser, valid URL, valid login details, Amazon Clash slot game, balance, spin button, validation message, credit types and bet types
+#    When Open the Amazon Clash slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on spin button till balance turns less than available balance and check the validation message and reduce the bet and credit values to resume the play.
+#    Then Player should be blocked from playing the game when there is less balance in the account and reducing the credit and bet types player is enable to continue slot game in Amazon Clash game
+
 	
  
  	#	        VALIDATION ON GAMBLE WIN 2X AMOUNT IS ADDED TO MAIN BALANCE (black btn)
@@ -336,10 +346,10 @@ Feature: Test all the functionalities of Amazon Clash SLOT Game
 
 #	             Whether Gamble win amount is getting added to the main balance (red btn)
 	
-	Scenario: Check whether gamble win amount is getting added to the balance after win in Amazon Clash slot game 
-    Given Chrome browser, valid URL, valid login details, Amazon Clash slot game, balance, spin button, win amount, gamble button, gamble amount, red button, black button and gamble status
-    When Open the Amazon Clash slot game by entering the valid URL in browser, enter the valid login details, click on spin button till player wins, click on gamble button, click on red or black button and check the balance after win
-    Then Gamble Win amount should get added to main balance after status displayed as WIN and gamble page should get closed in Amazon Clash slot game 
+#	Scenario: Check whether gamble win amount is getting added to the balance after win in Amazon Clash slot game 
+#    Given Chrome browser, valid URL, valid login details, Amazon Clash slot game, balance, spin button, win amount, gamble button, gamble amount, red button, black button and gamble status
+#    When Open the Amazon Clash slot game by entering the valid URL in browser, enter the valid login details, click on spin button till player wins, click on gamble button, click on red or black button and check the balance after win
+#    Then Gamble Win amount should get added to main balance after status displayed as WIN and gamble page should get closed in Amazon Clash slot game 
 	
 	
 	#	        VALIDATION OF WIN AMOUNT AND GAMBLE AMOUNT FOR THE SAME VALUE DISPLAYED AND THE WIN AMOUNT ADDED TO BALANCE
@@ -369,14 +379,14 @@ Feature: Test all the functionalities of Amazon Clash SLOT Game
 #    Given Amazon Clash slot game, bet type as 0.01, denomination as ONE, balance, spin button, win amount, gamble button, gamble amount, game info page and gamble count in gamble page of slot game
 #    When Open the Amazon Clash slot game by entering the valid URL in browser, enter the valid login details, enter the amount, transfer the balance, click on Amazon Clash slot game, select bet type as 0.01 & denomination as ONE, click on spin button till player wins, click on gamble button and check the gamble count in gamble page of slot game
 #    Then Gamble count should be displayed  on gamble page of Amazon Clash slot game based on win amount and gamble max amount configured on the game info page for bet type 0.01 & denomination ONE in Amazon Clash game
-#	
-#	
+	
+	
 #	Scenario: Check whether gamble count is displaying as per the max amount configured on the info page for bet type 0.01 & denomination TWO in Amazon Clash game
 #    Given Chrome browser, valid URL, valid login details, Amazon Clash slot game, amount to transfer, transfer button, bet type as 0.01, denomination as TWO, balance, spin button, win amount, gamble button, gamble amount, game info page and gamble count
 #    When Open the Amazon Clash slot game by entering the valid URL in browser, enter the valid login details, enter the amount, transfer the balance, click on Amazon Clash slot game, transfer the amount, select bet type as 0.01 & denomination as TWO, click on spin button till player wins, click on gamble button and check the gamble count
 #    Then Gamble count should be displayed based on win amount and max amount of the gamble configured on the game info page for bet type 0.01 and denomination TWO in Amazon Clash game
-#	
-#	
+	
+	
 #	Scenario: Check whether gamble count is displaying as per the max amount configured on the info page for bet type 0.01 & denomination FOUR in Amazon Clash game
 #    Given Chrome browser, valid URL, valid login details, Amazon Clash slot game, bet type as 0.01, denomination as FOUR, balance, spin button, win amount, gamble button, gamble amount, game info page and gamble count
 #    When Open the Amazon Clash slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on Amazon Clash slot game, select bet type as 0.01 & denomination as FOUR, click on spin button till player wins, click on gamble button and check the gamble count
@@ -540,14 +550,60 @@ Feature: Test all the functionalities of Amazon Clash SLOT Game
 #    Then Seven, Fifteen and Thirty Free Spin screen should appear when Seven or more than Seven scatter symbols appears on the screen in Amazon Clash game
 	
 	
-	
 	#	              Info Page Navigation and exit button validation
      
-    Scenario: Check whether info page is navigating forward and backward, exit button for the Amazon Clash slot game
-    Given Chrome browser, valid URL, valid login details, Amazon Clash slot game, balance, settings, info icon, navigation icon, exit icon, payout, paylines, scatter, wild, gamble and jackpot window
-    When Open the Amazon Clash slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on settings and info icon and validate the forward and backward button.
-    Then forward ,backward and exit button of info page should perform in Amazon Clash slot game
+#    Scenario: Check whether info page is navigating forward and backward, exit button for the Amazon Clash slot game
+#    Given Chrome browser, valid URL, valid login details, Amazon Clash slot game, balance, settings, info icon, navigation icon, exit icon, payout, paylines, scatter, wild, gamble and jackpot window
+#    When Open the Amazon Clash slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on settings and info icon and validate the forward and backward button.
+#    Then forward ,backward and exit button of info page should perform in Amazon Clash slot game
 	
 	
+#	Scenario: Check whether resume feature is enabled in Gamble screen of Amazon Clash slot game
+#	Given Chrome browser, valid URL, valid login details, Amazon Clash slot slot game, bet type, denomination, balance, win symbols, spin button, Gamble screen, new browser.
+#	When Open the Amazon Clash slot slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, select bet type & denomination, click on spin button till win appears and gamble screen in switched and click on red button and close the browser and again login to the game with new browser
+#	Then  Resume feature should enabled and land on the gamble screen of Amazon Clash slot game
+   
+   
+#   	Scenario: Check whether resume feature is enabled in freespin screen of Amazon Clash slot game
+#	Given Chrome browser, valid URL, valid login details, Amazon Clash slot slot game, bet type, denomination, balance, win symbols, spin button, freespin screen, new browser.
+#	When Open the Amazon Clash slot slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, select bet type & denomination, click on spin button till scatter win appears and freespin screen is switched and close the browser and again login to the game with new browser
+#	Then  Resume feature should enabled and land on the freespin screen of Amazon Clash slot game
+   
+ 
+    #	        According to credit type, credit values has to be generated respectively
 	
+#	Scenario: Select the credit type as 0.01 and incremental the credit type from the drop down and check the credit balance value should be 30000, 15000, 6000, 600 respectively and decremental the credit type and verify the credit balance in Amazon Clash slot game
+#    Given Chrome browser, valid URL, valid login details, Amazon Clash slot game, credit type as 0.01, 0.02, 0.05, 0.5  and credit balance generated respectively to credit types
+#    When Open the Amazon Clash slot game by entering the valid URL in browser, enter the valid login details, select the bet type as 0.01 and increment and decrement the credit types and check the credit balance respectively
+#    Then credit balance value should get changed according to credit type from the drop down in Amazon Clash slot game
+	
+	 #	        According to maxbet button balance deduction has to perform
+	 
+#    Scenario: Select the max bet option, do the spin and check whether balance is deducting according to the changed bet type in Amazon Clash slot game
+#    Given Chrome browser, valid URL, valid login details, Amazon Clash slot game, max bet option, balance and spin button
+#    When Open the Amazon Clash slot game by entering the valid URL in browser, enter the valid login details, select the bet type as maxbet, click on spin button and check the balance
+#    Then Balance should get deducted by max credit and betvalue combinationas per the game specification in Amazon Clash game
+
+ 
+ 	 #	       Using Play now button launching the Amazon Clash Slot game
+	 
+   	
+	 Scenario: Check whether PlayNow button is enabling to launch the game in a seperate browser tab and balance is added to the Amazon Clash slot game 
+    Given Chrome browser, valid URL, valid login details, Amazon Clash slot game, Play Now button and balance to play
+    When Open the Amazon Clash slot game by entering the valid URL in browser, click on Play Now button
+    Then System should enable to launch the game in seperate browser tab and balance is added to the game in Amazon Clash slot game
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  

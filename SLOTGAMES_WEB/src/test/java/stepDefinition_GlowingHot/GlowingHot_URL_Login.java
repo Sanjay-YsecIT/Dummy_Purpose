@@ -10,7 +10,7 @@ public class GlowingHot_URL_Login {
 
 	private static WebDriver driver;
 	
-	public static void main(String[] args) throws Exception {
+	public static void GlowingHot_URL_Login() throws Exception {
 		
 		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
 		driver = new ChromeDriver();

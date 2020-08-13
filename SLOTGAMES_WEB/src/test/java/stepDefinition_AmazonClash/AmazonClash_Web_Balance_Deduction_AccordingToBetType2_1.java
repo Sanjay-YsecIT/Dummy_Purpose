@@ -20,9 +20,7 @@ public class AmazonClash_Web_Balance_Deduction_AccordingToBetType2_1 {
 
 	@Given("^Chrome browser, valid URL, valid login details, Amazon Clash game, (\\d+)\\.(\\d+) as bet type , (\\d+)\\.(\\d+) as bet value, balance, spin button , win amount and balance amount$")
 	public void chrome_browser_valid_URL_valid_login_details_Amazon_Clash_game_as_bet_type_as_bet_value_balance_spin_button_win_amount_and_balance_amount(int arg1, int arg2, int arg3, int arg4) throws Throwable {
-
 		this.driver = AmazonClash_URL_Login.getDriver();
-
 	}
 
 	@When("^Open the Amazon Clash slot game by entering the valid URL in browser, enter the valid login details, select the bet value to (\\d+)\\.(\\d+), click on spin button and check the balance$")
@@ -34,29 +32,25 @@ public class AmazonClash_Web_Balance_Deduction_AccordingToBetType2_1 {
 		balT.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("./Images/Amazon_Clash/Bet_place.PNG", 10);
-		//	Thread.sleep(15000);
-
-
-		Pattern credit=new Pattern("./Images/Amazon_Clash/credit_0.02.PNG");
-		Pattern betval=new Pattern("./Images/Amazon_Clash/betval2_1.PNG");
-		Pattern spin=new Pattern("./Images/Amazon_Clash/spin.PNG");
-		Pattern Afterspin_bal=new Pattern("./Images/Amazon_Clash/Reminingbal_299.60.PNG");
-		Pattern credit_inc=new Pattern("./Images/Amazon_Clash/credit_inc.PNG");
+		screen.wait("Images/Amazon_Clash/Bet_place.PNG", 30);
+		
+		Pattern credit=new Pattern("Images/Amazon_Clash/credit_0.02.PNG");
+		Pattern bet=new Pattern("Images/Amazon_Clash/bet2.PNG");
+		Pattern betval=new Pattern("Images/Amazon_Clash/betval2_1.PNG");
+		Pattern spin=new Pattern("Images/Amazon_Clash/spin.PNG");
+		Pattern Afterspin_bal=new Pattern("Images/Amazon_Clash/Reminingbal_299.60.PNG");
+		Pattern credit_inc=new Pattern("Images/Amazon_Clash/credit_inc.PNG");
 
 		screen.click(credit_inc);
-		Thread.sleep(3000);
-		//clicking on Bet VALUE
+		Thread.sleep(1000);
+		screen.click(bet);
+		Thread.sleep(1000);
 		screen.click(betval);
-		Thread.sleep(3000);
-		//CLICKING ON Spin button
+		Thread.sleep(1000);
 		screen.click(spin);
 		Thread.sleep(4000);
 
-
 		//comparing the credit value should be 0.02
-		//   Pattern credit1=new Pattern("E:/Sikuli Images/Bet Values/creditvalue1.png");
-
 		Finder finder =new Finder(screen.capture().getImage());
 		String ht = finder.find(credit);
 		double score=20;                
@@ -76,10 +70,7 @@ public class AmazonClash_Web_Balance_Deduction_AccordingToBetType2_1 {
 		System.out.println("Credit comparision value equals to: "+" "+score +"%");
 		Assert.assertTrue(score > 97); 
 
-
 		//comparing the balance after spinning should be deducted by 0.4 value
-		//  Pattern pat=new Pattern("E:/Sikuli Images/Bet Values/balance.png");
-
 		Finder finder1 =new Finder(screen.capture().getImage());
 		String ht1 = finder1.find(Afterspin_bal);
 		double score1=20;                
@@ -97,13 +88,11 @@ public class AmazonClash_Web_Balance_Deduction_AccordingToBetType2_1 {
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Comparision value equals to: "+" "+score1 +"%");
-		//Assert.assertEquals(100.0,score );
 		Assert.assertTrue(score1 > 97);
 	}
 
 	@Then("^Balance should get deducted by (\\d+)\\.(\\d+) as bet type is selected as (\\d+)\\.(\\d+) in Amazon Clash slot game$")
 	public void balance_should_get_deducted_by_as_bet_type_is_selected_as_in_Amazon_Clash_slot_game(int arg1, int arg2, int arg3, int arg4) throws Throwable {
-
 		Thread.sleep(3000);
 		driver.quit();
 	}

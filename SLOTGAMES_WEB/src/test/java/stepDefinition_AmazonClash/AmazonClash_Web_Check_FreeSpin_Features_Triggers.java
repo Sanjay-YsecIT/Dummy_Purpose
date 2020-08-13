@@ -33,35 +33,33 @@ public class AmazonClash_Web_Check_FreeSpin_Features_Triggers {
 		balT.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("./Images/Amazon_Clash/Bet_place.PNG", 10);
+		screen.wait("Images/Amazon_Clash/Bet_place.PNG", 30);
 		//	Thread.sleep(15000);
 
-		Pattern spin=new Pattern("./Images/Amazon_Clash/spin.PNG"); 
-		Pattern collect =new Pattern("./Images/Amazon_Clash/collect.PNG");
+		Pattern spin=new Pattern("Images/Amazon_Clash/spin.PNG"); 
+		Pattern collect =new Pattern("Images/Amazon_Clash/collect.PNG");
 
 		// IMAGES IN 2nd REEL
-		Pattern clove2=new Pattern("./Images/Amazon_Clash/2R_leaf1.PNG");
-		Pattern wild2=new Pattern("./Images/Amazon_Clash/2R_wild.PNG");
-		Pattern blue2=new Pattern("./Images/Amazon_Clash/2R_blue.PNG");
-		Pattern lady21=new Pattern("./Images/Amazon_Clash/2R_lady1.PNG");
+		Pattern clove2=new Pattern("Images/Amazon_Clash/2R_leaf1.PNG");
+		Pattern wild2=new Pattern("Images/Amazon_Clash/2R_wild.PNG");
+		Pattern blue2=new Pattern("Images/Amazon_Clash/2R_blue.PNG");
+		Pattern lady21=new Pattern("Images/Amazon_Clash/2R_lady1.PNG");
 
 		// IMAGES IN 4th REEL
-		Pattern lady41=new Pattern("./Images/Amazon_Clash/4R_lady11.PNG");
-		Pattern lady42=new Pattern("./Images/Amazon_Clash/4R_lady21.PNG");
-		Pattern leaf4=new Pattern("./Images/Amazon_Clash/4R_leaf1.PNG");
-		Pattern blue4=new Pattern("./Images/Amazon_Clash/4R_blue1.PNG");
-		Pattern lady43=new Pattern("./Images/Amazon_Clash/4R_lady31.PNG");
+		Pattern lady41=new Pattern("Images/Amazon_Clash/4R_lady11.PNG");
+		Pattern lady42=new Pattern("Images/Amazon_Clash/4R_lady21.PNG");
+		Pattern leaf4=new Pattern("Images/Amazon_Clash/4R_leaf1.PNG");
+		Pattern blue4=new Pattern("Images/Amazon_Clash/4R_blue1.PNG");
+		Pattern lady43=new Pattern("Images/Amazon_Clash/4R_lady31.PNG");
 
 
 		// Congrulation and Win window pop-up and free spin left 
-		Pattern Cong_msg_7 =new Pattern("./Images/Amazon_Clash/free_spin_7.PNG");
-		Pattern Cong_msg_15 =new Pattern("./Images/Amazon_Clash/free_spin_15.PNG");
-		Pattern Cong_msg_30 =new Pattern("./Images/Amazon_Clash/free_spin_30.PNG");
-		Pattern win_msg =new Pattern("./Images/Amazon_Clash/win_msg.PNG");
-		Pattern FreeSpin0 =new Pattern("./Images/Amazon_Clash/FreeSpin0.PNG");
-		Pattern FreeSpin7 =new Pattern("./Images/Amazon_Clash/FreeSpin7.PNG");
-		Pattern FreeSpin15 =new Pattern("./Images/Amazon_Clash/FreeSpin15.PNG");
-		Pattern FreeSpin30 =new Pattern("./Images/Amazon_Clash/FreeSpin30.PNG");
+		Pattern Cong_msg_7 =new Pattern("Images/Amazon_Clash/free_spin_7.PNG");
+		Pattern Cong_msg_15 =new Pattern("Images/Amazon_Clash/free_spin_15.PNG");
+		Pattern Cong_msg_30 =new Pattern("Images/Amazon_Clash/free_spin_30.PNG");
+		Pattern FreeSpin7 =new Pattern("Images/Amazon_Clash/FreeSpin7.PNG");
+		Pattern FreeSpin15 =new Pattern("Images/Amazon_Clash/FreeSpin15.PNG");
+		Pattern FreeSpin30 =new Pattern("Images/Amazon_Clash/FreeSpin30.PNG");
 
 		//Arranging the symbols to generate 7 Scatter
 		// Arranging the 2nd Reel
@@ -97,18 +95,15 @@ public class AmazonClash_Web_Check_FreeSpin_Features_Triggers {
 		Thread.sleep(1000);
 		screen.click(leaf4);
 		Thread.sleep(1000); 
-
-		// Spin the reels
 		screen.click(spin);
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 
-		// Congrulation message displays on the 7 scatters and 7 free spin triggers
-		screen.wait(Cong_msg_7, 10);
+		// Congratulations message displays on the 7 scatters and 7 free spin triggers
+		screen.wait(Cong_msg_7, 30);
 		Thread.sleep(1000);
 
 		//Comparing the Free Spins once the scatter  symbol triggers
-
-		// Pattern balance=new Pattern("E:/Sikuli Images/TreasureBonanza/attempts_freespin.PNG");
+		screen.wait(FreeSpin7, 30);
 		Finder finder1 =new Finder(screen.capture().getImage());
 		String ht1 = finder1.find(FreeSpin7);
 		double score1=20;                
@@ -126,51 +121,26 @@ public class AmazonClash_Web_Check_FreeSpin_Features_Triggers {
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Free spin attempts comparision: "+" "+score1 +"%");
-		Assert.assertTrue(score1 > 97);
+		Assert.assertTrue(score1 > 96);
+		Thread.sleep(60000);
 
-
-		Finder finder11 =new Finder(screen.capture().getImage());
-		String ht11 = finder11.find(FreeSpin0);
-		double score11=20;                
-		System.out.println("the value of ht11"+" "+ht11);
-		if(finder11.hasNext())
-		{
-			Match m11=finder11.next();
-			System.out.println("Match Found with: "+(m11.getScore())*100+"%");
-			score1=(m11.getScore())*100;
-			System.out.println("On appearance of 7 scatters, bonus game should be triggered and Free spin attempts should be 0.");
-			finder11.destroy();  
-		}         
-		else    
-		{ 
-			System.out.println("Comparision failed. Test case failed");         
-		}
-		System.out.println("Free spin attempts comparision: "+" "+score11 +"%");
-		Assert.assertTrue(score1 > 97);
-
-
-		//win amount from the free spin is displayed
-		screen.wait(win_msg, 5);
-		Thread.sleep(1000);
 		//collect the amount won by the 7 scattered symbol
+		screen.wait(collect, 120);
 		screen.click(collect);
-		Thread.sleep(1000);
-
+		Thread.sleep(2000);
 
 		//Arranging the 4th Reel for scatter to appear
 		screen.click(leaf4);
 		Thread.sleep(1000);
 		screen.click(spin);
-		Thread.sleep(1000);
+		Thread.sleep(4000);
 
 		// free spin window
-		screen.wait(Cong_msg_15, 10);
+		screen.wait(Cong_msg_15, 30);
 		Thread.sleep(1000);
 
-
 		//Comparing the Free Spins once the 8 scatter symbol triggers
-
-		// Pattern balance=new Pattern("E:/Sikuli Images/TreasureBonanza/attempts_freespin.PNG");
+		screen.wait(FreeSpin15, 30);
 		Finder finder21 =new Finder(screen.capture().getImage());
 		String ht21 = finder21.find(FreeSpin15);
 		double score21=20;                
@@ -188,54 +158,13 @@ public class AmazonClash_Web_Check_FreeSpin_Features_Triggers {
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Free spin attempts comparision: "+" "+score21 +"%");
-		Assert.assertTrue(score1 > 97);
-
-
-		Finder finder22 =new Finder(screen.capture().getImage());
-		String ht22 = finder22.find(FreeSpin7);
-		double score22=20;                
-		System.out.println("the value of ht22"+" "+ht22);
-		if(finder22.hasNext())
-		{
-			Match m22=finder22.next();
-			System.out.println("Match Found with: "+(m22.getScore())*100+"%");
-			score22=(m22.getScore())*100;
-			System.out.println("On appearance of 8 scatters, bonus game should be triggered and Free spin attempts should be 7.");
-			finder22.destroy();  
-		}         
-		else    
-		{ 
-			System.out.println("Comparision failed. Test case failed");         
-		}
-		System.out.println("Free spin attempts comparision: "+" "+score22 +"%");
-		Assert.assertTrue(score1 > 97);
-
-		Finder finder23 =new Finder(screen.capture().getImage());
-		String ht23 = finder23.find(FreeSpin0);
-		double score23=20;                
-		System.out.println("the value of ht23"+" "+ht23);
-		if(finder23.hasNext())
-		{
-			Match m23=finder23.next();
-			System.out.println("Match Found with: "+(m23.getScore())*100+"%");
-			score23=(m23.getScore())*100;
-			System.out.println("On appearance of 8 scatters, bonus game should be triggered and Free spin attempts should be 0.");
-			finder23.destroy();  
-		}         
-		else    
-		{ 
-			System.out.println("Comparision failed. Test case failed");         
-		}
-		System.out.println("Free spin attempts comparision: "+" "+score23 +"%");
-		Assert.assertTrue(score1 > 97);
-
-		//win amount from the free spin is displayed
-		screen.wait(win_msg, 5);
-		Thread.sleep(1000);
+		Assert.assertTrue(score21 > 95);
+		Thread.sleep(60000);
+		
 		//collect the amount won by the 8 scattered symbol
+		screen.wait(collect, 240);
 		screen.click(collect);
-		Thread.sleep(1000);
-
+		Thread.sleep(2000);
 
 		//Arrange the 4th Reel for 9 scatter symbol to appear on the screen
 		screen.click(leaf4);
@@ -244,12 +173,11 @@ public class AmazonClash_Web_Check_FreeSpin_Features_Triggers {
 		Thread.sleep(1000);
 
 		// free spin window
-		screen.wait(Cong_msg_30, 10);
+		screen.wait(Cong_msg_30, 30);
 		Thread.sleep(1000);
 
 		//Comparing the Free Spins once the 9 scatter  symbol triggers
-
-		// Pattern balance=new Pattern("E:/Sikuli Images/TreasureBonanza/attempts_freespin.PNG");
+		screen.wait(FreeSpin30, 30);
 		Finder finder31 =new Finder(screen.capture().getImage());
 		String ht31 = finder31.find(FreeSpin30);
 		double score31=20;                
@@ -267,73 +195,12 @@ public class AmazonClash_Web_Check_FreeSpin_Features_Triggers {
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Free spin attempts comparision: "+" "+score31 +"%");
-		Assert.assertTrue(score1 > 97);
-
-
-		Finder finder32 =new Finder(screen.capture().getImage());
-		String ht32 = finder32.find(FreeSpin15);
-		double score32=20;                
-		System.out.println("the value of ht32"+" "+ht32);
-		if(finder32.hasNext())
-		{
-			Match m32=finder32.next();
-			System.out.println("Match Found with: "+(m32.getScore())*100+"%");
-			score32=(m32.getScore())*100;
-			System.out.println("On appearance of 9 scatters, bonus game should be triggered and Free spin attempts should be 15.");
-			finder32.destroy();  
-		}         
-		else    
-		{ 
-			System.out.println("Comparision failed. Test case failed");         
-		}
-		System.out.println("Free spin attempts comparision: "+" "+score32 +"%");
-		Assert.assertTrue(score1 > 97);
-
-		Finder finder33 =new Finder(screen.capture().getImage());
-		String ht33 = finder33.find(FreeSpin7);
-		double score33=20;                
-		System.out.println("the value of ht33"+" "+ht33);
-		if(finder33.hasNext())
-		{
-			Match m33=finder33.next();
-			System.out.println("Match Found with: "+(m33.getScore())*100+"%");
-			score33=(m33.getScore())*100;
-			System.out.println("On appearance of 9 scatters, bonus game should be triggered and Free spin attempts should be 7.");
-			finder33.destroy();  
-		}         
-		else    
-		{ 
-			System.out.println("Comparision failed. Test case failed");         
-		}
-		System.out.println("Free spin attempts comparision: "+" "+score33 +"%");
-		Assert.assertTrue(score1 > 97);
-
-		Finder finder34 =new Finder(screen.capture().getImage());
-		String ht34 = finder34.find(FreeSpin0);
-		double score34=20;                
-		System.out.println("the value of ht34"+" "+ht34);
-		if(finder34.hasNext())
-		{
-			Match m34=finder34.next();
-			System.out.println("Match Found with: "+(m34.getScore())*100+"%");
-			score34=(m34.getScore())*100;
-			System.out.println("On appearance of 9 scatters, bonus game should be triggered and Free spin attempts should be 0.");
-			finder34.destroy();  
-		}         
-		else    
-		{ 
-			System.out.println("Comparision failed. Test case failed");         
-		}
-		System.out.println("Free spin attempts comparision: "+" "+score34 +"%");
-		Assert.assertTrue(score1 > 97);
-
-		//win amount from the free spin is displayed
-		screen.wait(win_msg, 5);
-		Thread.sleep(1000);
-		//collect the amount won by the 5 scattered symbol
+		Assert.assertTrue(score31 > 96);
+		Thread.sleep(60000);
+		//collect the amount won by the 9 scattered symbol
+		screen.wait(collect, 540);
 		screen.click(collect);
-		Thread.sleep(1000);
-
+		Thread.sleep(2000);
 	}
 
 	@Then("^Seven, Fifteen and Thirty Free Spin screen should appear when Seven or more than Seven scatter symbols appears on the screen in Amazon Clash game$")

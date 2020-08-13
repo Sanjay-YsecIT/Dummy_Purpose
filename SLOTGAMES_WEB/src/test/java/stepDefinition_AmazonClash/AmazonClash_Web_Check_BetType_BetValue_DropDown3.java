@@ -33,21 +33,19 @@ public class AmazonClash_Web_Check_BetType_BetValue_DropDown3 {
 		balT.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("./Images/Amazon_Clash/Bet_place.PNG", 10);
-		//	Thread.sleep(15000);
-
-
-		Pattern credit=new Pattern("./Images/Amazon_Clash/credit_0.05.PNG");
-		Pattern bet_val=new Pattern("./Images/Amazon_Clash/betvalues_0.05.PNG");
-		Pattern credit_inc = new Pattern("./Images/Amazon_Clash/credit_inc.PNG");
+		screen.wait("Images/Amazon_Clash/Bet_place.PNG", 40);
+		
+		Pattern credit=new Pattern("Images/Amazon_Clash/credit_0.05.PNG");
+		Pattern bet=new Pattern("Images/Amazon_Clash/bet3.PNG");
+		Pattern bet_val=new Pattern("Images/Amazon_Clash/betvalues_0.05.PNG");
+		Pattern credit_inc = new Pattern("Images/Amazon_Clash/credit_inc.PNG");
 
 		screen.click(credit_inc);
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		screen.click(credit_inc);
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 
 		//comparing the credit value should be 0.05
-		// Pattern credit1=new Pattern("E:/Sikuli Images/Bet Values/creditvalue1.png");
 		Finder finder =new Finder(screen.capture().getImage());
 		String ht = finder.find(credit);
 		double score=20;                
@@ -67,10 +65,10 @@ public class AmazonClash_Web_Check_BetType_BetValue_DropDown3 {
 		System.out.println("Credit comparision value equals to: "+" "+score +"%");
 		Assert.assertTrue(score > 97);
 
-
+		screen.click(bet);
+		Thread.sleep(2000);
 
 		//comparing the available denomination values
-		//	 Pattern pat=new Pattern("E:/Sikuli Images/Bet Values/dropdown1.png");
 		Finder finder1 =new Finder(screen.capture().getImage());
 		String ht1 = finder1.find(bet_val);
 		double score1=20;                
@@ -88,8 +86,7 @@ public class AmazonClash_Web_Check_BetType_BetValue_DropDown3 {
 			System.out.println("Comparision failes. Test case failed");         
 		}
 		System.out.println("Comparision value equals to: "+" "+score1 +"%");
-		Assert.assertTrue(score1 > 95);
-
+		Assert.assertTrue(score1 > 97);
 	}
 
 	@Then("^Bet value should get changed to (\\d+),(\\d+),(\\d+),(\\d+),(\\d+) if the bet type selected as (\\d+)\\.(\\d+) from the drop down two in Amazon Clash slot game$")

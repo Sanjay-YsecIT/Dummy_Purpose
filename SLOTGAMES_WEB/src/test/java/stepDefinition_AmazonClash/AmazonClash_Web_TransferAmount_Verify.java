@@ -34,13 +34,10 @@ public class AmazonClash_Web_TransferAmount_Verify {
 		Thread.sleep(2000);
 
 		//	images before and after transfer
-		Pattern Beforetransfer=new Pattern("./Images/Amazon_Clash/beforetransfer_300.PNG");
-		Pattern Aftertransfer=new Pattern("./Images/Amazon_Clash/aftertransfer_300.PNG");
-
-
+		Pattern Beforetransfer=new Pattern("Images/Amazon_Clash/beforetransfer_300.PNG");
+		Pattern Aftertransfer=new Pattern("Images/Amazon_Clash/aftertransfer_300.PNG");
 
 		//Comparing the amount which is transferring to the slot game
-		//  Pattern credit1=new Pattern("E:/Sikuli Images/others/beforetransfer.png");
 		Finder finder =new Finder(screen.capture().getImage());
 		String ht = finder.find(Beforetransfer);
 		double score=20;                
@@ -58,15 +55,11 @@ public class AmazonClash_Web_TransferAmount_Verify {
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Transfering the amount to the slot game and comparision value equals to: "+" "+score +"%");
-		Assert.assertTrue(score > 90);
+		Assert.assertTrue(score > 86);
 
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("./Images/Amazon_Clash/Bet_place.PNG", 10);
-		//	Thread.sleep(15000); 
+		screen.wait("Images/Amazon_Clash/Bet_place.PNG", 30);
 
-		//Comparing the same amount is displayed on the slot game balance after loading
-
-		//    Pattern winA=new Pattern("E:/Sikuli Images/others/aftertransfer.PNG");
 		Finder finder2 =new Finder(screen.capture().getImage());
 		String ht2 = finder2.find(Aftertransfer);
 		double score2=20;                
@@ -84,7 +77,7 @@ public class AmazonClash_Web_TransferAmount_Verify {
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Same amount is displayed on the balance section and comparision value is equal to: "+" "+score2 +"%");
-		Assert.assertTrue(score2 > 95);
+		Assert.assertTrue(score2 > 97);
 	}
 
 	@Then("^The exact amount entered in the transfer page should transfer to Amazon Clash game and same amount should get displayed on the balance section$")

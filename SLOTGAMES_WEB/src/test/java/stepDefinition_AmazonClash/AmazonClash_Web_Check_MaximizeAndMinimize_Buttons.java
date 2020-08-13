@@ -33,26 +33,17 @@ public class AmazonClash_Web_Check_MaximizeAndMinimize_Buttons {
 		balT.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("./Images/Amazon_Clash/Bet_place.PNG", 10);
-		//	Thread.sleep(15000);
+		screen.wait("Images/Amazon_Clash/Bet_place.PNG", 30);
 
-
-
-		Pattern url=new Pattern("./Images/Amazon_Clash/url.PNG");
-		Pattern settings=new Pattern("./Images/Amazon_Clash/settings_icon.PNG");
-		Pattern min=new Pattern("./Images/Amazon_Clash/minimize_icon.PNG");
-		Pattern max=new Pattern("./Images/Amazon_Clash/maximize_icon.PNG");
+		Pattern url=new Pattern("Images/Amazon_Clash/url.PNG");
+		Pattern min=new Pattern("Images/Amazon_Clash/minimize_icon.PNG");
+		Pattern max=new Pattern("Images/Amazon_Clash/maximize_icon.PNG");
 
 		//Clicking on setting icon and then clicking on maximize icon 
-		screen.click(settings);
-		Thread.sleep(3000);
 		screen.click(max);
 		Thread.sleep(3000);
 
-
 		//if the screen is maximized, comparing URL bar should not be visible
-
-		//  Pattern credit1=new Pattern("E:/Sikuli Images/others/url.png");
 		Finder finder =new Finder(screen.capture().getImage());
 		String ht = finder.find(url);
 		double score=20;                
@@ -72,18 +63,11 @@ public class AmazonClash_Web_Check_MaximizeAndMinimize_Buttons {
 		System.out.println("If the screen is maximized, url bar should not be visible and comparisin value equals to: "+" "+score +"%");
 		Assert.assertFalse(score > 97);
 
-		//Clicking on minimize icon 
-		// screen.click(settings);
-		//Thread.sleep(3000);
+		//Clicking on minimize icon
 		screen.click(min);
 		Thread.sleep(3000);
 
-
-
 		//if the screen is minimized, comparing URL bar should  be visible
-
-		// Pattern winA=new Pattern("E:/Sikuli Images/others/url.PNG");
-
 		Finder finder2 =new Finder(screen.capture().getImage());
 		String ht2 = finder2.find(url);
 		double score2=20;                
@@ -101,7 +85,7 @@ public class AmazonClash_Web_Check_MaximizeAndMinimize_Buttons {
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("URl bar should be visible if the bar is minimized and comparision value is equal to: "+" "+score2 +"%");
-		Assert.assertTrue(score2 > 85);
+		Assert.assertTrue(score2 > 97);
 		Thread.sleep(2000);
 	}
 

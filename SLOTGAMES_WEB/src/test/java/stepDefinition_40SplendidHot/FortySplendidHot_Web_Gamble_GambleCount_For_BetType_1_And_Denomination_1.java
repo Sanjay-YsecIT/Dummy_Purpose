@@ -22,7 +22,7 @@ public class FortySplendidHot_Web_Gamble_GambleCount_For_BetType_1_And_Denominat
 
 	@Given("^Chrome browser, valid URL, valid login details, FortySplendidHot slot game, bet type as (\\d+)\\.(\\d+), denomination as (\\d+)\\.(\\d+), balance, spin button, win amount, gamble button, gamble amount, game info page and gamble count$")
 	public void chrome_browser_valid_URL_valid_login_details_FortySplendidHot_slot_game_bet_type_as_denomination_as_balance_spin_button_win_amount_gamble_button_gamble_amount_game_info_page_and_gamble_count(int arg1, int arg2, int arg3, int arg4) throws Throwable {
-		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "Driver/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://demo.ysecit.in:82/slotgames/slotsgame");
 		driver.manage().window().maximize();
@@ -183,7 +183,8 @@ public class FortySplendidHot_Web_Gamble_GambleCount_For_BetType_1_And_Denominat
 		}
 		System.out.println("Win amount comparision is successful and value equal to: "+" "+score11 +"%");
 		Assert.assertTrue(score11 > 90);
-
+		Thread.sleep(3000);
+		
 		screen.click(GAMBLE_BTN);
 		Thread.sleep(3000);
 
@@ -239,7 +240,8 @@ public class FortySplendidHot_Web_Gamble_GambleCount_For_BetType_1_And_Denominat
 		}
 		System.out.println("Win amount comparision is successful and value equal to: "+" "+score12 +"%");
 		Assert.assertTrue(score12 > 90);
-
+		Thread.sleep(3000);
+		
 		screen.click(GAMBLE_BTN);
 		Thread.sleep(3000);
 
@@ -299,6 +301,7 @@ public class FortySplendidHot_Web_Gamble_GambleCount_For_BetType_1_And_Denominat
 		}
 		System.out.println("Win amount comparision is successful and value equal to: "+" "+score13 +"%");
 		Assert.assertTrue(score13 > 85);
+		Thread.sleep(3000);
 
 		screen.click(GAMBLE_BTN);
 		Thread.sleep(3000);

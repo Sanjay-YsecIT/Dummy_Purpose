@@ -30,14 +30,11 @@ public class AmazonClash_Web_Transfer_Validation_MoreThanAvailableBalance {
 		WebElement balT = driver.findElement(By.id("transferInput"));
 		balT.clear();
 		Thread.sleep(1000);
-		balT.sendKeys("5000000");
+		balT.sendKeys("60000000");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
 
-
-		// Validating for the greater amount transfer
-
-		Pattern credit1=new Pattern("./Images/Amazon_Clash/Amount_greater_msg.PNG");
+		Pattern credit1=new Pattern("Images/Amazon_Clash/Amount_greater_msg.PNG");
 		Finder finder =new Finder(screen.capture().getImage());
 		String ht = finder.find(credit1);
 		double score=20;                

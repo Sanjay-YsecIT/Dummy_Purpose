@@ -33,16 +33,13 @@ public class AmazonClash_Web_Check_UserInstruction_Messages {
 		balT.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("./Images/Amazon_Clash/Bet_place.PNG", 10);
-		//	Thread.sleep(15000);
+		screen.wait("Images/Amazon_Clash/Bet_place.PNG", 30);
 
-
-		Pattern spin=new Pattern("./Images/Amazon_Clash/spin.PNG");
-		Pattern Good_Luck = new Pattern("./Images/Amazon_Clash/goodluck.PNG");
-		Pattern Bet_Place = new Pattern("./Images/Amazon_Clash/Bet_place.PNG");
+		Pattern spin=new Pattern("Images/Amazon_Clash/spin.PNG");
+		Pattern Good_Luck = new Pattern("Images/Amazon_Clash/goodluck.PNG");
+		Pattern Bet_Place = new Pattern("Images/Amazon_Clash/Bet_place.PNG");
 
 		//Comparing Place your bet message is displaying
-		// Pattern credit1=new Pattern("E:/Sikuli Images/Tiki Isle/placebet.png");
 		Finder finder =new Finder(screen.capture().getImage());
 		String ht = finder.find(Bet_Place);
 		double score=20;                
@@ -62,14 +59,11 @@ public class AmazonClash_Web_Check_UserInstruction_Messages {
 		System.out.println("Place your bet message is displayed and comparision value equals to: "+" "+score +"%");
 		Assert.assertTrue(score > 97);
 
-
-
 		//Clicking on spin button
 		screen.click(spin);
 		Thread.sleep(1000);
 
 		// After click on Spin button Good luck is displayed and is validated
-		// Pattern winA=new Pattern("E:/Sikuli Images/others/goodluck.PNG");
 		Finder finder2 =new Finder(screen.capture().getImage());
 		String ht2 = finder2.find(Good_Luck);
 		double score2=20;                
@@ -87,7 +81,7 @@ public class AmazonClash_Web_Check_UserInstruction_Messages {
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Good luck message is displayed and comparision value is equal to: "+" "+score2 +"%");
-		Assert.assertTrue(score2 > 95);
+		Assert.assertTrue(score2 > 97);
 	}
 
 	@Then("^User instruction message 'Please place your bet' should be displayed before spin button is clicked$")

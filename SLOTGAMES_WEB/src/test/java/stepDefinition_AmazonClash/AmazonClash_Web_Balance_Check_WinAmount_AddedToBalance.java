@@ -1,5 +1,8 @@
 package stepDefinition_AmazonClash;
 
+import java.io.FileInputStream;
+import java.util.Properties;
+
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -26,33 +29,28 @@ public class AmazonClash_Web_Balance_Check_WinAmount_AddedToBalance {
 
 	@When("^Open the Amazon Clash slot game by entering the valid URL in browser, enter the valid login details, transfer the amount, click on spin button till user win and check the balance after win$")
 	public void open_the_Amazon_Clash_slot_game_by_entering_the_valid_URL_in_browser_enter_the_valid_login_details_transfer_the_amount_click_on_spin_button_till_user_win_and_check_the_balance_after_win() throws Throwable {
-
+		
 		WebElement balT = driver.findElement(By.id("transferInput"));
 		balT.clear();
 		Thread.sleep(1000);
 		balT.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("./Images/Amazon_Clash/Bet_place.PNG", 10);
-		//	Thread.sleep(15000);
+		screen.wait("Images/Amazon_Clash/Bet_place.PNG", 30);
 
-		Pattern credit=new Pattern("./Images/Amazon_Clash/credit_0.01.PNG");
-		Pattern betval=new Pattern("./Images/Amazon_Clash/betval1_1.PNG");
-		Pattern spin=new Pattern("./Images/Amazon_Clash/spin.PNG");
-		Pattern win_amt = new Pattern("./Images/Amazon_Clash/winamt_0.6.PNG");
-		Pattern collect=new Pattern("./Images/Amazon_Clash/collect.PNG");
-		Pattern balance=new Pattern("./Images/Amazon_Clash/bal_300.PNG");
-		Pattern win_bal=new Pattern("./Images/Amazon_Clash/bal_300.40.PNG");
-		Pattern win_pattern=new Pattern("./Images/Amazon_Clash/win_pattern.PNG");
+		Pattern credit=new Pattern("Images/Amazon_Clash/credit_0.01.PNG");
+		Pattern bet=new Pattern("Images/Amazon_Clash/bet1.PNG");
+		Pattern betval=new Pattern("Images/Amazon_Clash/betval1_1.PNG");
+		Pattern spin=new Pattern("Images/Amazon_Clash/spin.PNG");
+		Pattern win_amt = new Pattern("Images/Amazon_Clash/winamt_0.4.PNG");
+		Pattern collect=new Pattern("Images/Amazon_Clash/collect.PNG");
+		Pattern balance=new Pattern("Images/Amazon_Clash/bal_300.PNG");
+		Pattern win_bal=new Pattern("Images/Amazon_Clash/bal_300.20.PNG");
+		Pattern win_pattern=new Pattern("Images/Amazon_Clash/win_pattern.PNG");
 
-
-		//		win symbols
-		Pattern scatter=new Pattern("./Images/Amazon_Clash/3R_scatter.PNG");
-		Pattern tiger=new Pattern("./Images/Amazon_Clash/1R_tiger.PNG");
-
-
+		Pattern tiger=new Pattern("Images/Amazon_Clash/1R_tiger.PNG");
+		
 		//comparing the credit value should be 0.01
-		// Pattern credit1=new Pattern("E:/Sikuli Images/Win/creditvalue1.png");
 		Finder finder =new Finder(screen.capture().getImage());
 		String ht = finder.find(credit);
 		double score=20;                
@@ -73,7 +71,6 @@ public class AmazonClash_Web_Balance_Check_WinAmount_AddedToBalance {
 		Assert.assertTrue(score > 97);
 
 		//comparing the balance before spin
-		//  Pattern balance=new Pattern("E:/Sikuli Images/Win/balance_beforeSpin_1_1.PNG");
 		Finder finder1 =new Finder(screen.capture().getImage());
 		String ht1 = finder1.find(balance);
 		double score1=20;                
@@ -93,27 +90,17 @@ public class AmazonClash_Web_Balance_Check_WinAmount_AddedToBalance {
 		System.out.println("Balance comparision before spin: "+" "+score1 +"%");
 		Assert.assertTrue(score1 > 97);
 
-
-
 		// WIN PATTERN COMBINATION 
-		screen.click(scatter);
-		Thread.sleep(2000);
-		screen.click(scatter);
-		Thread.sleep(2000);
-		screen.click(scatter);
-		Thread.sleep(2000);
 		screen.click(tiger);
 		Thread.sleep(2000);
-
-		// CLICK ON SPIN BUTTON
+		screen.click(bet);
+		Thread.sleep(1000);
 		screen.click(betval);
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		screen.click(spin);
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 
 		//comparing the win amount should exists after spin
-		//  Pattern winA=new Pattern("E:/Sikuli Images/Win/win_1_1.PNG");
-
 		Finder finder2 =new Finder(screen.capture().getImage());
 		String ht2 = finder2.find(win_amt);
 		double score2=20;                
@@ -134,14 +121,11 @@ public class AmazonClash_Web_Balance_Check_WinAmount_AddedToBalance {
 		Assert.assertTrue(score2 > 97);
 		Thread.sleep(2000);
 
-
 		//clicking on collect button
 		screen.click(collect);
 		Thread.sleep(2000);
 
 		//comparing the balance amount after spin
-		//   Pattern balanceA=new Pattern("E:/Sikuli Images/Win/Balance_win_1_1.PNG");
-
 		Finder finder3 =new Finder(screen.capture().getImage());
 		String ht3 = finder3.find(win_bal);
 		double score3=20;                
@@ -162,9 +146,7 @@ public class AmazonClash_Web_Balance_Check_WinAmount_AddedToBalance {
 		Assert.assertTrue(score3 > 97);
 		Thread.sleep(2000);
 
-
-		//comparing the Winning wild with heart and clove symbols pattern
-		// Pattern symbol=new Pattern("E:/Sikuli Images/Win/Balance_win_1_1.PNG");
+	    //comparing the Winning wild with heart and clove symbols pattern
 		Finder finder4 =new Finder(screen.capture().getImage());
 		String ht4 = finder4.find(win_pattern);
 		double score4=20;                
@@ -182,8 +164,7 @@ public class AmazonClash_Web_Balance_Check_WinAmount_AddedToBalance {
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Winning symbols comparision: "+" "+score4 +"%");
-		Assert.assertTrue(score4 > 50);
-
+		Assert.assertTrue(score4 > 80);
 	}
 
 	@Then("^Win amount should get added to the balance after win and balance should get increased with win amount$")

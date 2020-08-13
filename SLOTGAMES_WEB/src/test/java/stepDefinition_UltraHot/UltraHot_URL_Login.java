@@ -6,13 +6,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import cucumber.api.java.Before;
+
 public class UltraHot_URL_Login {
 
 	private static WebDriver driver;
 	
-	public static void main(String[] args) throws InterruptedException {
+	@Before
+	public static void UltraHot_URL_Login() throws InterruptedException {
 	
-		System.setProperty("webdriver.chrome.driver", "Driver/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://demo.ysecit.in:82/slotgames/slotsgame");
 		driver.manage().window().maximize();
@@ -28,7 +31,7 @@ public class UltraHot_URL_Login {
 		Thread.sleep(2000);
 		System.out.println("Login to the game with valid credentials");
 		
-		WebElement sub = driver.findElement(By.xpath("/html[1]/body[1]/div[3]/div[1]/ui-view[1]/section[1]/section[1]/div[1]/div[1]/div[2]/div[3]/ul[1]/li[34]/div[1]/div[1]"));
+		WebElement sub = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[1]/ui-view[1]/section[1]/section[1]/div[1]/div[1]/div[2]/div[3]/ul[1]/li[37]/div[1]/div[1]"));
 		JavascriptExecutor jse=(JavascriptExecutor)driver;
 		jse.executeScript("arguments[0].click();", sub);
 		Thread.sleep(5000);

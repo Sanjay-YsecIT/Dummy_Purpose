@@ -33,35 +33,30 @@ public class AmazonClash_Web_AutoSpin_TenSpins {
 		balT.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("./Images/Amazon_Clash/Bet_place.PNG", 10);
-		//	Thread.sleep(15000);
+		screen.wait("Images/Amazon_Clash/Bet_place.PNG", 30);
 
-		Pattern autoicon=new Pattern("./Images/Amazon_Clash/autospin_drop.PNG");
-		Pattern autospin_10=new Pattern("./Images/Amazon_Clash/10spin.PNG");
+		Pattern autoplay=new Pattern("Images/Amazon_Clash/autoplay.PNG");
+		Pattern autospin_10=new Pattern("Images/Amazon_Clash/10spin.PNG");
 
-
-		Pattern pat2=new Pattern("./Images/Amazon_Clash/9spin_left.PNG");
-		Pattern pat3=new Pattern("./Images/Amazon_Clash/8spin_left.PNG");
-		Pattern pat4=new Pattern("./Images/Amazon_Clash/7spin_left.PNG");
-		Pattern pat5=new Pattern("./Images/Amazon_Clash/6spin_left.PNG");
-		Pattern pat6=new Pattern("./Images/Amazon_Clash/5spin_left.PNG");
-		Pattern pat7=new Pattern("./Images/Amazon_Clash/4spin_left.PNG");
-		Pattern pat8=new Pattern("./Images/Amazon_Clash/3spin_left.PNG");
-		Pattern pat9=new Pattern("./Images/Amazon_Clash/2spin_left.PNG");
-		Pattern pat10=new Pattern("./Images/Amazon_Clash/1spin_left.PNG");
-		Pattern pat11=new Pattern("./Images/Amazon_Clash/last_spin.PNG");
-
+		Pattern pat2=new Pattern("Images/Amazon_Clash/9spin_left.PNG");
+		Pattern pat3=new Pattern("Images/Amazon_Clash/8spin_left.PNG");
+		Pattern pat4=new Pattern("Images/Amazon_Clash/7spin_left.PNG");
+		Pattern pat5=new Pattern("Images/Amazon_Clash/6spin_left.PNG");
+		Pattern pat6=new Pattern("Images/Amazon_Clash/5spin_left.PNG");
+		Pattern pat7=new Pattern("Images/Amazon_Clash/4spin_left.PNG");
+		Pattern pat8=new Pattern("Images/Amazon_Clash/3spin_left.PNG");
+		Pattern pat9=new Pattern("Images/Amazon_Clash/2spin_left.PNG");
+		Pattern pat10=new Pattern("Images/Amazon_Clash/1spin_left.PNG");
+		Pattern pat11=new Pattern("Images/Amazon_Clash/last_spin.PNG");
 
 		//selecting 10 spins by clicking auto spin icon
-		screen.click(autoicon);
-		Thread.sleep(2000);
+		screen.click(autoplay);
+		Thread.sleep(1000);
 		screen.click(autospin_10);
 		Thread.sleep(1000);
 
-
 		//comparing the number of 9spins left message
-		//    Pattern credit1=new Pattern("E:/Sikuli Images/SkinfiriJungle/9spin_left.png");
-		screen.wait(pat2, 25);
+		screen.wait(pat2, 10);
 		Finder finder =new Finder(screen.capture().getImage());
 		String ht = finder.find(pat2);
 		double score=20;                
@@ -79,11 +74,10 @@ public class AmazonClash_Web_AutoSpin_TenSpins {
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Comparision value equals to: "+" "+score +"%");
-		Assert.assertTrue(score > 95);
+		Assert.assertTrue(score > 97);
 
 		//comparing the number of 8spins left message
-		//   Pattern pat=new Pattern("E:/Sikuli Images/SkinfiriJungle/8spins.png");
-		screen.wait(pat3, 25);
+		screen.wait(pat3, 10);
 		Finder finder1 =new Finder(screen.capture().getImage());
 		String ht1 = finder1.find(pat3);
 		double score1=20;                
@@ -101,12 +95,10 @@ public class AmazonClash_Web_AutoSpin_TenSpins {
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Comparision value equals to: "+" "+score1 +"%");
-		//Assert.assertEquals(100.0,score );
-		Assert.assertTrue(score1 > 95);
+		Assert.assertTrue(score1 > 97);
 
 		//comparing the number of 7spins left message
-		//   Pattern pat33=new Pattern("E:/Sikuli Images/SkinfiriJungle/7spins.png");
-		screen.wait(pat4, 25);
+		screen.wait(pat4, 10);
 		Finder finder2 =new Finder(screen.capture().getImage());
 		String ht2 = finder2.find(pat4);
 		double score2=20;                
@@ -124,11 +116,10 @@ public class AmazonClash_Web_AutoSpin_TenSpins {
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Comparision value equals to: "+" "+score2 +"%");
-		Assert.assertTrue(score2 > 90);
+		Assert.assertTrue(score2 > 97);
 
 		//comparing the number of 6spins left message
-		//   Pattern pat44=new Pattern("E:/Sikuli Images/SkinfiriJungle/6spins.png");
-		screen.wait(pat5, 25);
+		screen.wait(pat5, 10);
 		Finder finder3 =new Finder(screen.capture().getImage());
 		String ht3 = finder3.find(pat5);
 		double score3=20;                
@@ -146,11 +137,10 @@ public class AmazonClash_Web_AutoSpin_TenSpins {
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Comparision value equals to: "+" "+score3 +"%");
-		Assert.assertTrue(score3 > 90);
+		Assert.assertTrue(score3 > 97);
 
 		//comparing the number of 5spins left message
-		//   Pattern pat55=new Pattern("E:/Sikuli Images/SkinfiriJungle/5spins.png");
-		screen.wait(pat6, 25);
+		screen.wait(pat6, 10);
 		Finder finder4 =new Finder(screen.capture().getImage());
 		String ht4 = finder4.find(pat6);
 		double score4=20;                
@@ -168,11 +158,10 @@ public class AmazonClash_Web_AutoSpin_TenSpins {
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Comparision value equals to: "+" "+score4 +"%");
-		Assert.assertTrue(score4 > 90);
+		Assert.assertTrue(score4 > 97);
 
 		//comparing the number of 4spins left message
-		//   Pattern pat66=new Pattern("E:/Sikuli Images/SkinfiriJungle/4spins.png");
-		screen.wait(pat7, 25);
+		screen.wait(pat7, 10);
 		Finder finder5 =new Finder(screen.capture().getImage());
 		String ht5 = finder5.find(pat7);
 		double score5=20;                
@@ -190,11 +179,10 @@ public class AmazonClash_Web_AutoSpin_TenSpins {
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Comparision value equals to: "+" "+score5 +"%");
-		Assert.assertTrue(score5 > 90);
+		Assert.assertTrue(score5 > 97);
 
 		//comparing the number of 3spins left message
-		//  Pattern pat77=new Pattern("E:/Sikuli Images/SkinfiriJungle/3spins.png");
-		screen.wait(pat8, 25);
+		screen.wait(pat8, 10);
 		Finder finder6 =new Finder(screen.capture().getImage());
 		String ht6 = finder6.find(pat8);
 		double score6=20;                
@@ -212,11 +200,10 @@ public class AmazonClash_Web_AutoSpin_TenSpins {
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Comparision value equals to: "+" "+score6 +"%");
-		Assert.assertTrue(score6 > 90);
+		Assert.assertTrue(score6 > 97);
 
 		//comparing the number of 2spins left message
-		//   Pattern pat88=new Pattern("E:/Sikuli Images/SkinfiriJungle/2spins.png");
-		screen.wait(pat9, 25);
+		screen.wait(pat9, 10);
 		Finder finder7 =new Finder(screen.capture().getImage());
 		String ht7 = finder7.find(pat9);
 		double score7=20;                
@@ -234,11 +221,10 @@ public class AmazonClash_Web_AutoSpin_TenSpins {
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Comparision value equals to: "+" "+score7 +"%");
-		Assert.assertTrue(score7 > 90);
+		Assert.assertTrue(score7 > 97);
 
 		//comparing the number of 1spins left message
-		//   Pattern pat99=new Pattern("E:/Sikuli Images/SkinfiriJungle/1spins.png");
-		screen.wait(pat10, 25);
+		screen.wait(pat10, 10);
 		Finder finder8 =new Finder(screen.capture().getImage());
 		String ht8 = finder8.find(pat10);
 		double score8=20;                
@@ -256,11 +242,10 @@ public class AmazonClash_Web_AutoSpin_TenSpins {
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Comparision value equals to: "+" "+score8 +"%");
-		Assert.assertTrue(score8 > 75);
+		Assert.assertTrue(score8 > 97);
 
 		//comparing the number of Last spins left message
-		//  Pattern pat100=new Pattern("E:/Sikuli Images/SkinfiriJungle/lastspin.png");
-		screen.wait(pat11, 25);
+		screen.wait(pat11, 10);
 		Finder finder9 =new Finder(screen.capture().getImage());
 		String ht9 = finder9.find(pat11);
 		double score9=20;                
@@ -278,7 +263,7 @@ public class AmazonClash_Web_AutoSpin_TenSpins {
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Comparision value equals to: "+" "+score9 +"%");
-		Assert.assertTrue(score9 > 75);
+		Assert.assertTrue(score9 > 97);
 	}
 
 	@Then("^Number of spin left should start from (\\d+) to (\\d+) after clicking ten spins option and should perform (\\d+) spins from (\\d+) to (\\d+) Amazon Clash slot game$")

@@ -6,9 +6,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.sikuli.script.FindFailed;
-import org.sikuli.script.Pattern;
-import org.sikuli.script.Screen;
 
 import cucumber.api.java.Before;
 
@@ -17,39 +14,28 @@ public class GoldenCrown_Web_URL_Login {
 private static WebDriver driver;
 	
 	@Before
-	public static void GoldenCrown_Web_URL_Login() throws InterruptedException, MalformedURLException, FindFailed {
+	public static void GoldenCrown_Web_URL_Login() throws InterruptedException {
 		
-		System.setProperty("webdriver.chrome.driver", "E:/New_Selenium/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "Driver/chromedriver.exe");
 	    driver = new ChromeDriver();
 		driver.get("http://demo.ysecit.in:82/slotgames/slotsgame");
 		driver.manage().window().maximize();
 
-		driver.findElement(By.xpath("/html/body/div[3]/div[1]/ui-view/section/section[1]/div/div/div[2]/div[3]/ul/li[7]/div[1]/div")).click();
+		driver.findElement(By.id("txtUserName")).sendKeys("5273290266");
 		Thread.sleep(2000);
-				 
-		driver.findElement(By.name("email")).sendKeys("8017627028");
+
+		driver.findElement(By.xpath("//input[@placeholder='Password / Card Pin']")).sendKeys("mans@123");
 		Thread.sleep(2000);
+
+		driver.findElement(By.className("loginActive")).click();
+		Thread.sleep(2000);
+		System.out.println("Login to the game with valid credentials");
 				
-		driver.findElement(By.xpath("/html/body/div[3]/header/section/div[9]/div/div[2]/form/div[2]/input")).sendKeys("mans@123");
-		Thread.sleep(2000);
-				
-		WebElement sub = driver.findElement(By.xpath("/html/body/div[3]/header/section/div[9]/div/div[2]/form/div[3]"));
+		WebElement sub = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[1]/ui-view[1]/section[1]/section[1]/div[1]/div[1]/div[2]/div[3]/ul[1]/li[21]/div[1]/div[1]"));
 		JavascriptExecutor jse=(JavascriptExecutor)driver;
 		jse.executeScript("arguments[0].click();", sub);
 		Thread.sleep(5000);
 		
-		//driver.findElement(By.xpath("/html/body/div[3]/div[1]/ui-view/section/section[1]/div/div/div[2]/div[3]/ul/li[7]/div[1]/div")).click();
-		//Thread.sleep(5000);
-		
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		WebElement Element = driver.findElement(By.xpath("/html/body/div[3]/div[1]/ui-view/section/section[1]/div/div/div[2]/div[3]/ul/li[7]/div[1]/div"));		
-        js.executeScript("arguments[0].scrollIntoView();", Element);
-        Thread.sleep(4000);
-        
-		Screen screen=new Screen();
-		Pattern game=new Pattern("E:/Sikuli Images/gamble/goldenCrown.png");
-		screen.click(game);
-		Thread.sleep(5000);
 	}
 	
 	public static WebDriver getDriver()

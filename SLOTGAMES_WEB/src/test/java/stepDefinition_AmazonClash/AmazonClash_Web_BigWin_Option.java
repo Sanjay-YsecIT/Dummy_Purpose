@@ -33,50 +33,41 @@ public class AmazonClash_Web_BigWin_Option {
 		balT.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("./Images/Amazon_Clash/Bet_place.PNG", 10);
-		//	Thread.sleep(15000);
+		screen.wait("Images/Amazon_Clash/Bet_place.PNG", 30);
 
-
-		Pattern spin=new Pattern("./Images/Amazon_Clash/spin.PNG"); 
-		Pattern collect =new Pattern("./Images/Amazon_Clash/collect.PNG");
-		Pattern balance=new Pattern("./Images/Amazon_Clash/bal_300.PNG");
-		Pattern BalanceAfter=new Pattern("./Images/Amazon_Clash/BW_bal_afterwin.PNG");
-		Pattern BigWin=new Pattern("./Images/Amazon_Clash/BigWin_200.PNG");
-		Pattern win_amt=new Pattern("./Images/Amazon_Clash/BW_win_amt.PNG");
-
-
+		Pattern spin=new Pattern("Images/Amazon_Clash/spin.PNG"); 
+		Pattern collect =new Pattern("Images/Amazon_Clash/collect.PNG");
+		Pattern balance=new Pattern("Images/Amazon_Clash/bal_300.PNG");
+		Pattern BalanceAfter=new Pattern("Images/Amazon_Clash/BW_bal_afterwin.PNG");
+		Pattern BigWin=new Pattern("Images/Amazon_Clash/BigWin_200.PNG");
+		Pattern win_amt=new Pattern("Images/Amazon_Clash/BW_win_amt.PNG");
 
 		// IMAGES IN 1st REELS
-		Pattern tiger1=new Pattern("./Images/Amazon_Clash/1R_tiger.PNG");
-		Pattern blue1=new Pattern("./Images/Amazon_Clash/1R_blue.PNG");
-
+		Pattern tiger1=new Pattern("Images/Amazon_Clash/1R_tiger.PNG");
+		Pattern blue1=new Pattern("Images/Amazon_Clash/1R_blue.PNG");
 
 		// IMAGES IN 2nd REELS
-		Pattern leaf2=new Pattern("./Images/Amazon_Clash/2R_leaf.PNG");
+		Pattern leaf2=new Pattern("Images/Amazon_Clash/2R_leaf.PNG");
 
 		// IMAGES IN 3rd REELS
-		Pattern scatter3=new Pattern("./Images/Amazon_Clash/3R_str.PNG");
-		Pattern clove3=new Pattern("./Images/Amazon_Clash/3R_clove.PNG");
-		Pattern lady31=new Pattern("./Images/Amazon_Clash/3R_lady1.PNG");
-		Pattern lady32=new Pattern("./Images/Amazon_Clash/3R_lady2.PNG");
-		Pattern leaf3=new Pattern("./Images/Amazon_Clash/3R_leafs.PNG");
-		Pattern heart3=new Pattern("./Images/Amazon_Clash/3R_heart.PNG");
-
+		Pattern scatter3=new Pattern("Images/Amazon_Clash/3R_str.PNG");
+		Pattern clove3=new Pattern("Images/Amazon_Clash/3R_clove.PNG");
+		Pattern lady31=new Pattern("Images/Amazon_Clash/3R_lady1.PNG");
+		Pattern lady32=new Pattern("Images/Amazon_Clash/3R_lady2.PNG");
+		Pattern leaf3=new Pattern("Images/Amazon_Clash/3R_leafs.PNG");
 
 		// IMAGES IN 4th REELS
-		Pattern lady41=new Pattern("./Images/Amazon_Clash/4R_lady1.PNG");
-		Pattern lady42=new Pattern("./Images/Amazon_Clash/4R_lady2.PNG");
-		Pattern leaf4=new Pattern("./Images/Amazon_Clash/4R_leaf.PNG");
+		Pattern lady41=new Pattern("Images/Amazon_Clash/4R_lady1.PNG");
+		Pattern lady42=new Pattern("Images/Amazon_Clash/4R_lady2.PNG");
+		Pattern leaf4=new Pattern("Images/Amazon_Clash/4R_leaf.PNG");
 
 		// IMAGES IN 5th REELS
-		Pattern blue5=new Pattern("./Images/Amazon_Clash/5R_blue1.PNG");
-		Pattern lady51=new Pattern("./Images/Amazon_Clash/5R_lady11.PNG");
-		Pattern lady52=new Pattern("./Images/Amazon_Clash/5R_lady21.PNG");
-		Pattern heart5=new Pattern("./Images/Amazon_Clash/5R_heart1.PNG");
-
+		Pattern blue5=new Pattern("Images/Amazon_Clash/5R_blue1.PNG");
+		Pattern lady51=new Pattern("Images/Amazon_Clash/5R_lady11.PNG");
+		Pattern lady52=new Pattern("Images/Amazon_Clash/5R_lady21.PNG");
+		Pattern heart5=new Pattern("Images/Amazon_Clash/5R_heart1.PNG");
 
 		//comparing the balance before spin
-		//  Pattern balance=new Pattern("E:/Sikuli Images/Win/balance_beforeSpin_1_1.PNG");
 		Finder finder1 =new Finder(screen.capture().getImage());
 		String ht1 = finder1.find(balance);
 		double score1=20;                
@@ -97,7 +88,6 @@ public class AmazonClash_Web_BigWin_Option {
 		Assert.assertTrue(score1 > 97);
 
 		// Arrange the symbols to generate the wild symbols on all the reels
-
 		// Arrange 1st Reels
 		screen.click(tiger1);
 		Thread.sleep(1000);
@@ -127,7 +117,7 @@ public class AmazonClash_Web_BigWin_Option {
 		Thread.sleep(1000);
 		screen.click(leaf3);
 		Thread.sleep(1000);
-		screen.click(heart3);
+		screen.click(clove3);
 		Thread.sleep(1000);
 
 		// Arrange 4th Reels
@@ -152,14 +142,14 @@ public class AmazonClash_Web_BigWin_Option {
 
 		// Spin the reels
 		screen.click(spin);
-		Thread.sleep(1000);
+		Thread.sleep(4000);
 
 		// Big Win  Screen pop-up
 		screen.wait(BigWin, 10);
-		Thread.sleep(1000);
+		Thread.sleep(4000);
 
 		//Comparing the win amount after the big win
-
+		Thread.sleep(4000);
 		Finder finder4 =new Finder(screen.capture().getImage());
 		String ht4 = finder4.find(win_amt);
 		double score4=20;                
@@ -177,15 +167,13 @@ public class AmazonClash_Web_BigWin_Option {
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Winning symbols comparision: "+" "+score4 +"%");
-		Assert.assertTrue(score4 > 95);
-
+		Assert.assertTrue(score4 > 97);
 
 		//clicking on collect button
 		screen.click(collect);
 		Thread.sleep(2000);
 
 		//comparing the win amount should exists after spin
-		//  Pattern winA=new Pattern("E:/Sikuli Images/Win/win_1_1.PNG");
 		Finder finder2 =new Finder(screen.capture().getImage());
 		String ht2 = finder2.find(BalanceAfter);
 		double score2=20;                
@@ -205,8 +193,6 @@ public class AmazonClash_Web_BigWin_Option {
 		System.out.println("Win amount comparision after spin: "+" "+score2 +"%");
 		Assert.assertTrue(score2 > 97);
 		Thread.sleep(2000);
-
-
 	}
 
 	@Then("^Big Win screen should appear when five wild symbols appears on the screen in Amazon Clash game$")

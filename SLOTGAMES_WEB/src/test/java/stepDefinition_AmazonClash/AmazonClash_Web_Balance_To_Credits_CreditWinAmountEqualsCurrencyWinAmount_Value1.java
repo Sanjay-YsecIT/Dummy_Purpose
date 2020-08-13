@@ -33,27 +33,23 @@ public class AmazonClash_Web_Balance_To_Credits_CreditWinAmountEqualsCurrencyWin
 		balT.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("./Images/Amazon_Clash/Bet_place.PNG", 10);
-		//	Thread.sleep(15000);
-
-
-		Pattern credit=new Pattern("./Images/Amazon_Clash/credit_0.01.PNG");
-		Pattern betval=new Pattern("./Images/Amazon_Clash/betval1_1.PNG");
-		Pattern spin=new Pattern("./Images/Amazon_Clash/spin.PNG");
-		Pattern balance=new Pattern("./Images/Amazon_Clash/Reminingbal_299.80.PNG");
-		Pattern win_amt = new Pattern("./Images/Amazon_Clash/winamt_0.6.PNG");
-		Pattern collect=new Pattern("./Images/Amazon_Clash/collect.PNG");
+		screen.wait("Images/Amazon_Clash/Bet_place.PNG", 30);
+	
+		Pattern credit=new Pattern("Images/Amazon_Clash/credit_0.01.PNG");
+		Pattern bet=new Pattern("Images/Amazon_Clash/bet1.PNG");
+		Pattern betval=new Pattern("Images/Amazon_Clash/betval1_1.PNG");
+		Pattern spin=new Pattern("Images/Amazon_Clash/spin.PNG");
+		Pattern balance=new Pattern("Images/Amazon_Clash/Reminingbal_299.80.PNG");
+		Pattern win_amt = new Pattern("Images/Amazon_Clash/winamt_0.4.PNG");
+		Pattern collect=new Pattern("Images/Amazon_Clash/collect.PNG");
 
 		// credit values
 		Pattern win_cr = new Pattern("./Images/Amazon_Clash/cr_winamt1.PNG");
 		Pattern balance_cr=new Pattern("./Images/Amazon_Clash/cr_bal1.PNG");
 
-		//		win symbols
-		Pattern scatter=new Pattern("./Images/Amazon_Clash/3R_scatter.PNG");
 		Pattern tiger=new Pattern("./Images/Amazon_Clash/1R_tiger.PNG");
 
 		//comparing the credit value should be 0.01
-		// Pattern credit1=new Pattern("E:/Sikuli Images/Win/creditvalue1.png");
 		Finder finder =new Finder(screen.capture().getImage());
 		String ht = finder.find(credit);
 		double score=20;                
@@ -74,21 +70,16 @@ public class AmazonClash_Web_Balance_To_Credits_CreditWinAmountEqualsCurrencyWin
 		Assert.assertTrue(score > 97);
 
 		// WIN PATTERN COMBINATION 
-		screen.click(scatter);
-		Thread.sleep(2000);
-		screen.click(scatter);
-		Thread.sleep(2000);
-		screen.click(scatter);
-		Thread.sleep(2000);
 		screen.click(tiger);
+		Thread.sleep(2000);
+		screen.click(bet);
 		Thread.sleep(2000);
 		screen.click(betval);
 		Thread.sleep(2000);
 		screen.click(spin);
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 
 		//comparing the win amount should exists after spin
-		// Pattern winA=new Pattern("E:/Sikuli Images/Win/win_2_1.PNG");
 		Finder finder2 =new Finder(screen.capture().getImage());
 		String ht2 = finder2.find(win_amt);
 		double score2=20;                
@@ -113,10 +104,7 @@ public class AmazonClash_Web_Balance_To_Credits_CreditWinAmountEqualsCurrencyWin
 		screen.click(balance);
 		Thread.sleep(2000);
 
-
 		//comparing the win amount in credits
-		// Pattern balanceA=new Pattern("E:/Sikuli Images/Win/win_credit.PNG");
-
 		Finder finder3 =new Finder(screen.capture().getImage());
 		String ht3 = finder3.find(win_cr);
 		double score3=20;                
@@ -138,8 +126,6 @@ public class AmazonClash_Web_Balance_To_Credits_CreditWinAmountEqualsCurrencyWin
 		Thread.sleep(2000);
 
 		//Balance in credits 
-		//   Pattern symbol=new Pattern("E:/Sikuli Images/Win/balance_credits_2.PNG");
-
 		Finder finder4 =new Finder(screen.capture().getImage());
 		String ht4 = finder4.find(balance_cr);
 		double score4=20;                
@@ -164,8 +150,6 @@ public class AmazonClash_Web_Balance_To_Credits_CreditWinAmountEqualsCurrencyWin
 		Thread.sleep(2000);
 
 		//comparing the win amount in currency
-		//  Pattern winB=new Pattern("E:/Sikuli Images/Win/win_1_1.PNG");
-
 		Finder finder6 =new Finder(screen.capture().getImage());
 		String ht6 = finder6.find(win_amt);
 		double score6=20;                
@@ -183,10 +167,8 @@ public class AmazonClash_Web_Balance_To_Credits_CreditWinAmountEqualsCurrencyWin
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Win amount comparision in currency value equal to: "+" "+score6 +"%");
-		Assert.assertTrue(score6 > 80);
+		Assert.assertTrue(score6 > 97);
 		Thread.sleep(2000);
-
-
 		screen.click(collect);
 	}
 

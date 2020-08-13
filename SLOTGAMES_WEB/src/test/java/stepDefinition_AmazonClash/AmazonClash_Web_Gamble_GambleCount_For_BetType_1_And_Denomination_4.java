@@ -34,67 +34,57 @@ public class AmazonClash_Web_Gamble_GambleCount_For_BetType_1_And_Denomination_4
 		balT.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("./Images/Amazon_Clash/Bet_place.PNG", 10);
+		screen.wait("Images/Amazon_Clash/Bet_place.PNG", 30);
 		//	Thread.sleep(15000);
 
-		Pattern SPIN=new Pattern("./Images/Amazon_Clash/spin.PNG");                         // SPIN BUTTON
-		Pattern GAMBLE_COLLECT=new Pattern("./Images/Amazon_Clash/gb_collect.PNG");  // AMOUNT COLLECT ICON ON GAMBLE WINDOW          
-		Pattern GAMBLE_BTN=new Pattern("./Images/Amazon_Clash/gb_button.PNG");     // GAMBLE BUTTON TO SWITCH TO GAMBLE WINDOW
-		Pattern winBF=new Pattern("./Images/Amazon_Clash/gb_disable.PNG");         // GAMBLE DISABLE BUTTON 
-		Pattern betval=new Pattern("./Images/Amazon_Clash/betval1_4.PNG");
-	//	Pattern credit_inc = new Pattern("./Images/Amazon_Clash/credit_inc.PNG");
+		Pattern SPIN=new Pattern("Images/Amazon_Clash/spin.PNG");                       
+		Pattern GAMBLE_COLLECT=new Pattern("Images/Amazon_Clash/gb_collect.PNG");           
+		Pattern GAMBLE_BTN=new Pattern("Images/Amazon_Clash/gb_button.PNG");     
+		Pattern winBF=new Pattern("Images/Amazon_Clash/gb_disable.PNG");         
+		Pattern bet=new Pattern("Images/Amazon_Clash/bet1.PNG");
+		Pattern betval=new Pattern("Images/Amazon_Clash/betval1_4.PNG");
 
 		// IMAGES IN 1st REELS
-		Pattern tiger1=new Pattern("./Images/Amazon_Clash/1R_tiger.PNG");
-		Pattern blue1=new Pattern("./Images/Amazon_Clash/1R_blue.PNG");
-
+		Pattern tiger1=new Pattern("Images/Amazon_Clash/1R_tiger.PNG");
+		Pattern blue1=new Pattern("Images/Amazon_Clash/1R_blue.PNG");
 
 		// IMAGES IN 3rd REELS
-		Pattern scatter3=new Pattern("./Images/Amazon_Clash/3R_scatter.PNG");
-		Pattern heart3=new Pattern("./Images/Amazon_Clash/3R_heart.PNG");
-		Pattern leaf3=new Pattern("./Images/Amazon_Clash/3R_leaf3.PNG");
-
+		Pattern scatter3=new Pattern("Images/Amazon_Clash/3R_scatter.PNG");
+		Pattern heart3=new Pattern("Images/Amazon_Clash/3R_heart.PNG");
+		Pattern leaf3=new Pattern("Images/Amazon_Clash/3R_leaf.PNG");
 
 		// IMAGES IN 5th REELS
-		Pattern blue5=new Pattern("./Images/Amazon_Clash/5R_blue.PNG");
-		Pattern lady51=new Pattern("./Images/Amazon_Clash/5R_lady1.PNG");
-		Pattern lady52=new Pattern("./Images/Amazon_Clash/5R_lady2.PNG");
-		Pattern heart5=new Pattern("./Images/Amazon_Clash/5R_heart.PNG");
+		Pattern blue5=new Pattern("Images/Amazon_Clash/5R_blue.PNG");
+		Pattern lady51=new Pattern("Images/Amazon_Clash/5R_lady1.PNG");
+		Pattern lady52=new Pattern("Images/Amazon_Clash/5R_lady2.PNG");
+		Pattern heart5=new Pattern("Images/Amazon_Clash/5R_heart.PNG");
 
-
-
-
-		Pattern WIN_AMT1=new Pattern("./Images/Amazon_Clash/win_4.PNG");    // 1st WIN AMOUNT WITH GAMBLE ATTEMPTS 5
-		Pattern WIN_AMT2=new Pattern("./Images/Amazon_Clash/win_6.PNG");    // 2st WIN AMOUNT WITH GAMBLE ATTEMPTS 4
-		Pattern WIN_AMT3=new Pattern("./Images/Amazon_Clash/win_13.PNG");    // 3st WIN AMOUNT WITH GAMBLE ATTEMPTS 3
-		Pattern WIN_AMT4=new Pattern("./Images/Amazon_Clash/win_18.PNG");    // 4st WIN AMOUNT WITH GAMBLE ATTEMPTS 2
-		Pattern WIN_AMT5=new Pattern("./Images/Amazon_Clash/win_41.PNG");    // 5st WIN AMOUNT WITH GAMBLE ATTEMPTS 1
-		Pattern WIN_AMT6=new Pattern("./Images/Amazon_Clash/win_70.PNG");    // 6st WIN AMOUNT WITH GAMBLE ATTEMPTS 0
-
+		Pattern WIN_AMT1=new Pattern("Images/Amazon_Clash/win_4.PNG");   
+		Pattern WIN_AMT2=new Pattern("Images/Amazon_Clash/win_6.PNG");    
+		Pattern WIN_AMT3=new Pattern("Images/Amazon_Clash/win_13.PNG");    
+		Pattern WIN_AMT4=new Pattern("Images/Amazon_Clash/win_18.PNG");   
+		Pattern WIN_AMT5=new Pattern("Images/Amazon_Clash/win_41.PNG");    
+		Pattern WIN_AMT6=new Pattern("Images/Amazon_Clash/win_70.PNG");   
 
 		// ATTEMPTS LEFT
-		Pattern Attempt_5=new Pattern("./Images/Amazon_Clash/Attempt5.PNG");
-		Pattern Attempt_4=new Pattern("./Images/Amazon_Clash/Attempt4.PNG");
-		Pattern Attempt_3=new Pattern("./Images/Amazon_Clash/Attempt3.PNG");
-		Pattern Attempt_2=new Pattern("./Images/Amazon_Clash/Attempt2.PNG");
-		Pattern Attempt_1=new Pattern("./Images/Amazon_Clash/Attempt1.PNG");
-
-
-		// SET THE BET TYPE AS 0.01 AND DENOMIANTION AS 2
-		// AS AT INITIAL STAGE IT WILL BE SET DEFAULT
+		Pattern Attempt_5=new Pattern("Images/Amazon_Clash/Attempt5.PNG");
+		Pattern Attempt_4=new Pattern("Images/Amazon_Clash/Attempt4.PNG");
+		Pattern Attempt_3=new Pattern("Images/Amazon_Clash/Attempt3.PNG");
+		Pattern Attempt_2=new Pattern("Images/Amazon_Clash/Attempt2.PNG");
+		Pattern Attempt_1=new Pattern("Images/Amazon_Clash/Attempt1.PNG");
 
 		//Arranging the symbols to generate gamble count as 5
 		//Arranging the Second Reel
+		screen.click(bet);
+		Thread.sleep(1000);
 		screen.click(betval);
 		Thread.sleep(1000);
 		screen.click(tiger1);
 		Thread.sleep(1000);
 		screen.click(SPIN);
-		Thread.sleep(6000);
-
+		Thread.sleep(8000);
 
 		//comparing gamble count based on win amount
-		//    Pattern balance=new Pattern("E:/Sikuli Images/gamble/Win_1_1_1.PNG");
 		Finder finder1 =new Finder(screen.capture().getImage());
 		String ht1 = finder1.find(WIN_AMT1);
 		double score1=20;                
@@ -115,11 +105,9 @@ public class AmazonClash_Web_Gamble_GambleCount_For_BetType_1_And_Denomination_4
 		Assert.assertTrue(score1 > 97);
 
 		screen.click(GAMBLE_BTN);
-		Thread.sleep(3000);
-
+		Thread.sleep(2000);
 
 		//comparing the gamble count based on the win amount
-		// Pattern winA=new Pattern("E:/Sikuli Images/gamble/gambleCount.png");
 		Finder finder2 =new Finder(screen.capture().getImage());
 		String ht2 = finder2.find(Attempt_5);
 		double score2=20;                
@@ -137,11 +125,10 @@ public class AmazonClash_Web_Gamble_GambleCount_For_BetType_1_And_Denomination_4
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Gamble count comparision after Win: "+" "+score2 +"%");
-		Assert.assertTrue(score2 > 95);
-		Thread.sleep(5000);
+		Assert.assertTrue(score2 > 97);
 
 		screen.click(GAMBLE_COLLECT);
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 
 		//Arranging the symbols to generate gamble count as 4
 		screen.click(scatter3);
@@ -151,10 +138,9 @@ public class AmazonClash_Web_Gamble_GambleCount_For_BetType_1_And_Denomination_4
 		screen.click(scatter3);
 		Thread.sleep(1000);
 		screen.click(SPIN);
-		Thread.sleep(6000);
+		Thread.sleep(8000);
 
 		//comparing gamble count based on win amount
-		// Pattern balance1=new Pattern("E:/Sikuli Images/gamble/Win_1_1_2.PNG");
 		Finder finder11 =new Finder(screen.capture().getImage());
 		String ht11 = finder11.find(WIN_AMT2);
 		double score11=20;                
@@ -172,13 +158,12 @@ public class AmazonClash_Web_Gamble_GambleCount_For_BetType_1_And_Denomination_4
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Win amount comparision is successful and value equal to: "+" "+score11 +"%");
-		Assert.assertTrue(score11 > 90);
+		Assert.assertTrue(score11 > 97);
 
 		screen.click(GAMBLE_BTN);
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 
 		//comparing the gamble count based on the win amount
-		// Pattern winB=new Pattern("E:/Sikuli Images/gamble/gambleCount_2.png");
 		Finder finder22 =new Finder(screen.capture().getImage());
 		String ht22 = finder22.find(Attempt_4);
 		double score22=20;                
@@ -196,22 +181,18 @@ public class AmazonClash_Web_Gamble_GambleCount_For_BetType_1_And_Denomination_4
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Gamble count comparision after Win: "+" "+score22 +"%");
-		Assert.assertTrue(score22 > 95);
-		Thread.sleep(5000);
-
-
+		Assert.assertTrue(score22 > 97);
+		
 		screen.click(GAMBLE_COLLECT);
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 
 		//Arranging the symbols to generate gamble count as 3
-
 		screen.click(blue1);
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		screen.click(SPIN);
-		Thread.sleep(6000);
+		Thread.sleep(8000);
 
 		//comparing gamble count based on win amount
-		// Pattern Win3=new Pattern("E:/Sikuli Images/gamble/Win_1_1_3.PNG");
 		Finder finder12 =new Finder(screen.capture().getImage());
 		String ht12 = finder12.find(WIN_AMT3);
 		double score12=20;                
@@ -229,13 +210,12 @@ public class AmazonClash_Web_Gamble_GambleCount_For_BetType_1_And_Denomination_4
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Win amount comparision is successful and value equal to: "+" "+score12 +"%");
-		Assert.assertTrue(score12 > 90);
+		Assert.assertTrue(score12 > 97);
 
 		screen.click(GAMBLE_BTN);
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 
 		//comparing the gamble count based on the win amount
-		//Pattern winBC=new Pattern("E:/Sikuli Images/gamble/gambleCount_3.png");
 		Finder finder21 =new Finder(screen.capture().getImage());
 		String ht21 = finder21.find(Attempt_3);
 		double score21=20;                
@@ -253,20 +233,18 @@ public class AmazonClash_Web_Gamble_GambleCount_For_BetType_1_And_Denomination_4
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Gamble count comparision after Win: "+" "+score21 +"%");
-		Assert.assertTrue(score21 > 95);
-		Thread.sleep(5000);
+		Assert.assertTrue(score21 > 97);
 
 		screen.click(GAMBLE_COLLECT);
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 
 		//Arranging the symbols to generate gamble count as 2
 		screen.click(blue1);
 		Thread.sleep(1000);
 		screen.click(SPIN);
-		Thread.sleep(6000);
+		Thread.sleep(8000);
 
 		//comparing gamble count based on win amount
-		// Pattern Win4=new Pattern("E:/Sikuli Images/gamble/Win_1_1_4.PNG");
 		Finder finder13 =new Finder(screen.capture().getImage());
 		String ht13 = finder13.find(WIN_AMT4);
 		double score13=20;                
@@ -284,13 +262,12 @@ public class AmazonClash_Web_Gamble_GambleCount_For_BetType_1_And_Denomination_4
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Win amount comparision is successful and value equal to: "+" "+score13 +"%");
-		Assert.assertTrue(score13 > 90);
+		Assert.assertTrue(score13 > 97);
 
 		screen.click(GAMBLE_BTN);
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 
 		//comparing the gamble count based on the win amount
-		// Pattern winBD=new Pattern("E:/Sikuli Images/gamble/gambleCount_4.png");
 		Finder finder23 =new Finder(screen.capture().getImage());
 		String ht23 = finder23.find(Attempt_2);
 		double score23=20;                
@@ -308,12 +285,10 @@ public class AmazonClash_Web_Gamble_GambleCount_For_BetType_1_And_Denomination_4
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Gamble count comparision after Win: "+" "+score23 +"%");
-		Assert.assertTrue(score23 > 95);
-		Thread.sleep(5000);
-
-
+		Assert.assertTrue(score23 > 97);
+		
 		screen.click(GAMBLE_COLLECT);
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 
 		//Arranging the symbols to generate gamble count as 1
 		screen.click(heart3);
@@ -321,10 +296,9 @@ public class AmazonClash_Web_Gamble_GambleCount_For_BetType_1_And_Denomination_4
 		screen.click(heart3);
 		Thread.sleep(1000);
 		screen.click(SPIN);
-		Thread.sleep(6000);
+		Thread.sleep(8000);
 
 		//comparing gamble count based on win amount
-		//  Pattern Win33=new Pattern("E:/Sikuli Images/gamble/Win_1_1_5.PNG");
 		Finder finder123 =new Finder(screen.capture().getImage());
 		String ht123 = finder123.find(WIN_AMT5);
 		double score123=20;                
@@ -342,13 +316,12 @@ public class AmazonClash_Web_Gamble_GambleCount_For_BetType_1_And_Denomination_4
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Win amount comparision is successful and value equal to: "+" "+score123 +"%");
-		Assert.assertTrue(score123 > 90);
+		Assert.assertTrue(score123 > 97);
 
 		screen.click(GAMBLE_BTN);
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 
 		//comparing the gamble count based on the win amount
-		// Pattern winBDC=new Pattern("E:/Sikuli Images/gamble/gambleCount_5.png");
 		Finder finder25 =new Finder(screen.capture().getImage());
 		String ht25 = finder25.find(Attempt_1);
 		double score25=20;                
@@ -366,15 +339,12 @@ public class AmazonClash_Web_Gamble_GambleCount_For_BetType_1_And_Denomination_4
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Gamble count comparision after Win: "+" "+score25 +"%");
-		Assert.assertTrue(score25 > 95);
-		Thread.sleep(5000);
+		Assert.assertTrue(score25 > 97);
 
 		screen.click(GAMBLE_COLLECT);
-		Thread.sleep(3000);
-
+		Thread.sleep(2000);
 
 		//Arranging the symbols to generate win amount more than 70 and checking gamble link should be disabled
-
 		screen.click(leaf3);
 		Thread.sleep(1000);
 		screen.click(blue5);
@@ -386,10 +356,9 @@ public class AmazonClash_Web_Gamble_GambleCount_For_BetType_1_And_Denomination_4
 		screen.click(heart5);
 		Thread.sleep(1000);
 		screen.click(SPIN);
-		Thread.sleep(6000);
+		Thread.sleep(8000);
 
 		//comparing gamble count based on win amount
-		//  Pattern Win331=new Pattern("E:/Sikuli Images/gamble/Win_1_1_6.PNG");
 		Finder finder1231 =new Finder(screen.capture().getImage());
 		String ht1231 = finder1231.find(WIN_AMT6);
 		double score1231=20;                
@@ -407,9 +376,9 @@ public class AmazonClash_Web_Gamble_GambleCount_For_BetType_1_And_Denomination_4
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Win amount comparision is successful and value equal to: "+" "+score1231 +"%");
-		Assert.assertTrue(score1231 > 90);
-
-
+		Assert.assertTrue(score1231 > 97);
+		Thread.sleep(2000);
+		
 		//comparing the gamble count based on the win amount
 		Finder finder26 =new Finder(screen.capture().getImage());
 		String ht26 = finder26.find(winBF);
@@ -428,7 +397,7 @@ public class AmazonClash_Web_Gamble_GambleCount_For_BetType_1_And_Denomination_4
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Gamble link comparision after Win: "+" "+score26 +"%");
-		Assert.assertTrue(score26 > 95);
+		Assert.assertTrue(score26 > 97);
 	}
 
 	@Then("^Gamble count should be displayed based on win amount and max amount of the gamble configured on the game info page for bet type (\\d+)\\.(\\d+) and denomination TWO in Amazon Clash game$")

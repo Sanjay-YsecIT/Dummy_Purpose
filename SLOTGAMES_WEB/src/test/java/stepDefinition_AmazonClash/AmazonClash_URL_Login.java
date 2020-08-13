@@ -1,5 +1,7 @@
 package stepDefinition_AmazonClash;
 
+import java.util.Properties;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -13,14 +15,13 @@ public class AmazonClash_URL_Login {
 	private static WebDriver driver;
 	
 	@Before
-	public static void main(String[] args) throws InterruptedException {
+	public static void AmazonClash_URL_Login() throws InterruptedException {
 			
-		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver_win32/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://demo.ysecit.in:82/slotgames/slotsgame");
 		driver.manage().window().maximize();
 		Thread.sleep(3000);
-		
 		
 		driver.findElement(By.id("txtUserName")).sendKeys("5273290266");
 		Thread.sleep(2000);
@@ -32,8 +33,7 @@ public class AmazonClash_URL_Login {
 		Thread.sleep(2000);
 		System.out.println("Login to the game with valid credentials");
 		
-		
-		WebElement sub = driver.findElement(By.xpath("/html[1]/body[1]/div[3]/div[1]/ui-view[1]/section[1]/section[1]/div[1]/div[1]/div[2]/div[3]/ul[1]/li[8]/div[1]/div[1]"));
+		WebElement sub = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[1]/ui-view[1]/section[1]/section[1]/div[1]/div[1]/div[2]/div[3]/ul[1]/li[15]/div[1]/div[1]"));
 		JavascriptExecutor jse=(JavascriptExecutor)driver;
 		jse.executeScript("arguments[0].click();", sub);
 		Thread.sleep(5000);

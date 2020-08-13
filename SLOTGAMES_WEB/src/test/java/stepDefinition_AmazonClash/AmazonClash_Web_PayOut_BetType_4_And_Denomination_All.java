@@ -17,38 +17,31 @@ public class AmazonClash_Web_PayOut_BetType_4_And_Denomination_All {
 
 	WebDriver driver;
 	Screen screen = new Screen();
-	
+
 	@Given("^Chrome browser, valid URL, valid login details, Amazon Clash slot game, icon to open payout table, all symbols, max amount on each symbol like blue diamond, heart n etc, back button, bet type (\\d+)\\.(\\d+) and denomination values like (\\d+), (\\d+), (\\d+), (\\d+) & (\\d+) on web$")
 	public void chrome_browser_valid_URL_valid_login_details_Amazon_Clash_slot_game_icon_to_open_payout_table_all_symbols_max_amount_on_each_symbol_like_blue_diamond_heart_n_etc_back_button_bet_type_and_denomination_values_like_on_web(int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7) throws Throwable {
-	    
+
 		this.driver = AmazonClash_URL_Login.getDriver();
 	}
 
 	@When("^Open the Amazon Clash slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on icon to open payout table, check payout amount on each symbol like blue diamond, heart n etc, click on back button, select bet type as (\\d+)\\.(\\d+) & denomination  values like (\\d+), (\\d+), (\\d+), (\\d+) & (\\d+) and check payout amount on web$")
 	public void open_the_Amazon_Clash_slot_game_by_entering_the_valid_URL_in_browser_enter_the_valid_login_details_transfer_the_balance_click_on_icon_to_open_payout_table_check_payout_amount_on_each_symbol_like_blue_diamond_heart_n_etc_click_on_back_button_select_bet_type_as_denomination_values_like_and_check_payout_amount_on_web(int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7) throws Throwable {
-	   
+
 		WebElement balT = driver.findElement(By.id("transferInput"));
 		balT.clear();
 		Thread.sleep(1000);
 		balT.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("./Images/Amazon_Clash/Bet_place.PNG", 10);
-		//	Thread.sleep(15000);
-		
-		
-		Pattern credit1=new Pattern("./Images/Amazon_Clash/credit_0.5.PNG");
-		Pattern settings=new Pattern("./Images/Amazon_Clash/settings_icon.PNG");
-		Pattern info=new Pattern("./Images/Amazon_Clash/info_icon.PNG");
-		Pattern forward = new Pattern("./Images/Amazon_Clash/forward.PNG");
-		Pattern backward = new Pattern("./Images/Amazon_Clash/backward.PNG");
-		Pattern exit = new Pattern("./Images/Amazon_Clash/exit.PNG");
+		screen.wait("Images/Amazon_Clash/Bet_place.PNG", 30);
 
-		Pattern deno1=new Pattern("./Images/Amazon_Clash/betval4_1.PNG");
-		Pattern deno2=new Pattern("./Images/Amazon_Clash/betval4_2.PNG");
-		Pattern deno3=new Pattern("./Images/Amazon_Clash/betval4_3.PNG");
-		Pattern deno4=new Pattern("./Images/Amazon_Clash/betval4_4.PNG");
-		Pattern deno5=new Pattern("./Images/Amazon_Clash/betval4_5.PNG");
+		Pattern credit1=new Pattern("Images/Amazon_Clash/credit_0.5.PNG");
+		Pattern info=new Pattern("Images/Amazon_Clash/info_icon.PNG");
+		Pattern forward = new Pattern("Images/Amazon_Clash/forward.PNG");
+		Pattern backward = new Pattern("Images/Amazon_Clash/backward.PNG");
+		Pattern exit = new Pattern("Images/Amazon_Clash/exit.PNG");
+		Pattern bet_inc=new Pattern("Images/Amazon_Clash/bet_inc.PNG");
+		Pattern credit_inc=new Pattern("Images/Amazon_Clash/credit_inc.PNG");
 
 		Pattern pat1=new Pattern("./Images/Amazon_Clash/PO4_1.PNG");
 		Pattern pat11=new Pattern("./Images/Amazon_Clash/PO4_11.PNG");
@@ -61,8 +54,14 @@ public class AmazonClash_Web_PayOut_BetType_4_And_Denomination_All {
 		Pattern pat5=new Pattern("./Images/Amazon_Clash/PO4_5.PNG");
 		Pattern pat55=new Pattern("./Images/Amazon_Clash/PO4_55.PNG");
 
+		screen.click(credit_inc);
+		Thread.sleep(1000);
+		screen.click(credit_inc);
+		Thread.sleep(1000);
+		screen.click(credit_inc);
+		Thread.sleep(1000);
+
 		//comparing the credit value should be 0.5
-		// Pattern credit1=new Pattern("E:/Sikuli Images/payout/creditvalue1.png");
 		Finder finder =new Finder(screen.capture().getImage());
 		String ht = finder.find(credit1);
 		double score=20;                
@@ -82,20 +81,11 @@ public class AmazonClash_Web_PayOut_BetType_4_And_Denomination_All {
 		System.out.println("Comparision value equals to: "+" "+score +"%");
 		Assert.assertTrue(score > 97);
 
-
 		//Clicking on settings link and navigating to payout screen
-		screen.click(settings);
-		Thread.sleep(2000);
 		screen.click(info);
 		Thread.sleep(2000);
 
-
-		//Selecting the denomination as 0.5
-		screen.click(deno1);
-		Thread.sleep(2000);
-
 		//Comparing the max payout1 value for denomination 10
-		//   Pattern pat1=new Pattern("E:/Sikuli Images/payout/payout1_1.png");
 		Finder finder1 =new Finder(screen.capture().getImage());
 		String ht1 = finder1.find(pat1);
 		double score1=20;                
@@ -113,7 +103,7 @@ public class AmazonClash_Web_PayOut_BetType_4_And_Denomination_All {
 			System.out.println("Comparision failes. Test case failed");         
 		}
 		System.out.println("Comparing the max payout value for 10 denomination and comparision value equals to: "+" "+score1 +"%");
-		Assert.assertTrue(score1 > 95);
+		Assert.assertTrue(score1 > 97);
 		Thread.sleep(2000);
 
 		// click on forward button to move to next payout table and validate	
@@ -121,7 +111,6 @@ public class AmazonClash_Web_PayOut_BetType_4_And_Denomination_All {
 		Thread.sleep(2000);
 
 		//Comparing the max payout2 value for denomination 10
-		//   Pattern pat1=new Pattern("E:/Sikuli Images/payout/payout1_1.png");
 		Finder finder11 =new Finder(screen.capture().getImage());
 		String ht11 = finder11.find(pat11);
 		double score11=20;                
@@ -139,20 +128,18 @@ public class AmazonClash_Web_PayOut_BetType_4_And_Denomination_All {
 			System.out.println("Comparision failes. Test case failed");         
 		}
 		System.out.println("Comparing the max payout value for 10 denomination and comparision value equals to: "+" "+score11 +"%");
-		Assert.assertTrue(score11 > 95);
+		Assert.assertTrue(score11 > 97);
 		Thread.sleep(2000);
 
 		// click on backward button to move to previous payout table and validate	
 		screen.click(backward);
 		Thread.sleep(2000);
 
-
 		//Selecting the denomination as 20
-		screen.click(deno2);
-		Thread.sleep(2000);
+		screen.click(bet_inc);
+		Thread.sleep(1000);
 
 		//Comparing the max payout1 value for denomination 20
-		//   Pattern pat2=new Pattern("E:/Sikuli Images/payout/payout1_2.png");
 		Finder finder2 =new Finder(screen.capture().getImage());
 		String ht2 = finder2.find(pat2);
 		double score2=20;                
@@ -170,7 +157,7 @@ public class AmazonClash_Web_PayOut_BetType_4_And_Denomination_All {
 			System.out.println("Comparision failes. Test case failed");         
 		}
 		System.out.println("Comparing the max payout value for 20 denomination and comparision value equals to: "+" "+score2 +"%");
-		Assert.assertTrue(score2 > 95);
+		Assert.assertTrue(score2 > 97);
 		Thread.sleep(2000);
 
 		// click on forward button to move to next payout table and validate	
@@ -178,7 +165,6 @@ public class AmazonClash_Web_PayOut_BetType_4_And_Denomination_All {
 		Thread.sleep(2000);
 
 		//Comparing the max payout2 value for denomination 20
-		//   Pattern pat2=new Pattern("E:/Sikuli Images/payout/payout1_2.png");
 		Finder finder22 =new Finder(screen.capture().getImage());
 		String ht22 = finder22.find(pat22);
 		double score22=20;                
@@ -196,21 +182,18 @@ public class AmazonClash_Web_PayOut_BetType_4_And_Denomination_All {
 			System.out.println("Comparision failes. Test case failed");         
 		}
 		System.out.println("Comparing the max payout value for 20 denomination and comparision value equals to: "+" "+score22 +"%");
-		Assert.assertTrue(score22 > 95);
+		Assert.assertTrue(score22 > 97);
 		Thread.sleep(2000);
 
 		// click on backward button to move to previous payout table and validate	
 		screen.click(backward);
 		Thread.sleep(2000);
 
-
 		//Selecting the denomination as 50
-		screen.click(deno3);
-		Thread.sleep(2000);
-
+		screen.click(bet_inc);
+		Thread.sleep(1000);
 
 		//Comparing the max payout1 value for denomination 50
-		//  Pattern pat3=new Pattern("E:/Sikuli Images/payout/payout1_3.png");
 		Finder finder3 =new Finder(screen.capture().getImage());
 		String ht3 = finder3.find(pat3);
 		double score3=20;                
@@ -228,7 +211,7 @@ public class AmazonClash_Web_PayOut_BetType_4_And_Denomination_All {
 			System.out.println("Comparision failes. Test case failed");         
 		}
 		System.out.println("Comparing the max payout value for 50 denomination and comparision value equals to: "+" "+score3 +"%");
-		Assert.assertTrue(score3 > 95);
+		Assert.assertTrue(score3 > 97);
 		Thread.sleep(2000);
 
 		// click on forward button to move to next payout table and validate	
@@ -236,7 +219,6 @@ public class AmazonClash_Web_PayOut_BetType_4_And_Denomination_All {
 		Thread.sleep(2000);
 
 		//Comparing the max payout2 value for denomination 50
-		//  Pattern pat3=new Pattern("E:/Sikuli Images/payout/payout1_3.png");
 		Finder finder33 =new Finder(screen.capture().getImage());
 		String ht33 = finder33.find(pat33);
 		double score33=20;                
@@ -254,20 +236,18 @@ public class AmazonClash_Web_PayOut_BetType_4_And_Denomination_All {
 			System.out.println("Comparision failes. Test case failed");         
 		}
 		System.out.println("Comparing the max payout value for 50 denomination and comparision value equals to: "+" "+score33 +"%");
-		Assert.assertTrue(score33 > 95);
+		Assert.assertTrue(score33 > 97);
 		Thread.sleep(2000);
 
 		// click on backward button to move to previous payout table and validate	
 		screen.click(backward);
 		Thread.sleep(2000);
 
-
 		//Selecting the denomination as 100
-		screen.click(deno4);
-		Thread.sleep(2000);
+		screen.click(bet_inc);
+		Thread.sleep(1000);
 
 		//Comparing the max payout1 value for denomination 100
-		//   Pattern pat4=new Pattern("E:/Sikuli Images/payout/payout1_4.png");
 		Finder finder4 =new Finder(screen.capture().getImage());
 		String ht4 = finder4.find(pat4);
 		double score4=20;                
@@ -285,16 +265,14 @@ public class AmazonClash_Web_PayOut_BetType_4_And_Denomination_All {
 			System.out.println("Comparision failes. Test case failed");         
 		}
 		System.out.println("Comparing the max payout value for 100 denomination and comparision value equals to: "+" "+score4 +"%");
-		Assert.assertTrue(score4 > 95);
+		Assert.assertTrue(score4 > 97);
 		Thread.sleep(2000);
-
 
 		// click on forward button to move to next payout table and validate	
 		screen.click(forward);
 		Thread.sleep(2000);
 
 		//Comparing the max payout2 value for denomination 100
-		//   Pattern pat4=new Pattern("E:/Sikuli Images/payout/payout1_4.png");
 		Finder finder44 =new Finder(screen.capture().getImage());
 		String ht44 = finder44.find(pat44);
 		double score44=20;                
@@ -312,7 +290,7 @@ public class AmazonClash_Web_PayOut_BetType_4_And_Denomination_All {
 			System.out.println("Comparision failes. Test case failed");         
 		}
 		System.out.println("Comparing the max payout value for 100 denomination and comparision value equals to: "+" "+score44 +"%");
-		Assert.assertTrue(score44 > 95);
+		Assert.assertTrue(score44 > 97);
 		Thread.sleep(2000);
 
 		// click on backward button to move to previous payout table and validate	
@@ -320,11 +298,10 @@ public class AmazonClash_Web_PayOut_BetType_4_And_Denomination_All {
 		Thread.sleep(2000);
 
 		//Selecting the denomination as 200
-		screen.click(deno5);
-		Thread.sleep(2000);
+		screen.click(bet_inc);
+		Thread.sleep(1000);
 
 		//Comparing the max payout1 value for denomination 200
-		//   Pattern pat5=new Pattern("E:/Sikuli Images/payout/payout1_5.png");
 		Finder finder5 =new Finder(screen.capture().getImage());
 		String ht5 = finder5.find(pat5);
 		double score5=20;                
@@ -342,15 +319,14 @@ public class AmazonClash_Web_PayOut_BetType_4_And_Denomination_All {
 			System.out.println("Comparision failes. Test case failed");         
 		}
 		System.out.println("Comparing the max payout value for 200 denomination and comparision value equals to: "+" "+score5 +"%");
-		Assert.assertTrue(score5 > 95);
+		Assert.assertTrue(score5 > 97);
 		Thread.sleep(2000);
 
-		//		 click on forward button to move to next payout table and validate	
+		//click on forward button to move to next payout table and validate	
 		screen.click(forward);
 		Thread.sleep(2000);
 
 		//Comparing the max payout2 value for denomination 200
-		//   Pattern pat5=new Pattern("E:/Sikuli Images/payout/payout1_5.png");
 		Finder finder55 =new Finder(screen.capture().getImage());
 		String ht55 = finder55.find(pat55);
 		double score55=20;                
@@ -368,9 +344,8 @@ public class AmazonClash_Web_PayOut_BetType_4_And_Denomination_All {
 			System.out.println("Comparision failes. Test case failed");         
 		}
 		System.out.println("Comparing the max payout value for 200 denomination and comparision value equals to: "+" "+score55 +"%");
-		Assert.assertTrue(score55 > 95);
+		Assert.assertTrue(score55 > 97);
 		Thread.sleep(2000);
-
 
 		// click on exit button to move to gaming window	
 		screen.click(exit);
@@ -379,7 +354,7 @@ public class AmazonClash_Web_PayOut_BetType_4_And_Denomination_All {
 
 	@Then("^System should display the Payout max amount on each symbol like blue diamond, heart n etc and payout max amount should get changed whenever player changes the bet type to (\\d+)\\.(\\d+) and denomination values like (\\d+), (\\d+), (\\d+), (\\d+) & (\\d+) in Amazon Clash slot game on web$")
 	public void system_should_display_the_Payout_max_amount_on_each_symbol_like_blue_diamond_heart_n_etc_and_payout_max_amount_should_get_changed_whenever_player_changes_the_bet_type_to_and_denomination_values_like_in_Amazon_Clash_slot_game_on_web(int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7) throws Throwable {
-	   
+
 		Thread.sleep(3000);
 		driver.quit();
 	}

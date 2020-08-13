@@ -33,29 +33,25 @@ public class AmazonClash_Web_Balance_Deduction_AccordingToBetType2_5 {
 		balT.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("./Images/Amazon_Clash/Bet_place.PNG", 10);
-		//	Thread.sleep(15000);
+		screen.wait("Images/Amazon_Clash/Bet_place.PNG", 30);
 		
-		
-		Pattern credit=new Pattern("./Images/Amazon_Clash/credit_0.02.PNG");
-		Pattern betval=new Pattern("./Images/Amazon_Clash/betval2_5.PNG");
-		Pattern spin=new Pattern("./Images/Amazon_Clash/spin.PNG");
-		Pattern Afterspin_bal=new Pattern("./Images/Amazon_Clash/Reminingbal_292.PNG");
-		Pattern credit_inc=new Pattern("./Images/Amazon_Clash/credit_inc.PNG");
+		Pattern credit=new Pattern("Images/Amazon_Clash/credit_0.02.PNG");
+		Pattern bet=new Pattern("Images/Amazon_Clash/bet2.PNG");
+		Pattern betval=new Pattern("Images/Amazon_Clash/betval2_5.PNG");
+		Pattern spin=new Pattern("Images/Amazon_Clash/spin.PNG");
+		Pattern Afterspin_bal=new Pattern("Images/Amazon_Clash/Reminingbal_292.PNG");
+		Pattern credit_inc=new Pattern("Images/Amazon_Clash/credit_inc.PNG");
 
 		screen.click(credit_inc);
-		Thread.sleep(3000);
-		//clicking on Bet VALUE
+		Thread.sleep(1000);
+		screen.click(bet);
+		Thread.sleep(1000);
 		screen.click(betval);
-		Thread.sleep(3000);
-		//CLICKING ON Spin button
+		Thread.sleep(1000);
 		screen.click(spin);
 		Thread.sleep(4000);
 
-
 		//comparing the credit value should be 0.02
-		//   Pattern credit1=new Pattern("E:/Sikuli Images/Bet Values/creditvalue1.png");
-
 		Finder finder =new Finder(screen.capture().getImage());
 		String ht = finder.find(credit);
 		double score=20;                
@@ -75,10 +71,7 @@ public class AmazonClash_Web_Balance_Deduction_AccordingToBetType2_5 {
 		System.out.println("Credit comparision value equals to: "+" "+score +"%");
 		Assert.assertTrue(score > 97); 
 
-
 		//comparing the balance after spinning should be deducted by 8 value
-		//  Pattern pat=new Pattern("E:/Sikuli Images/Bet Values/balance.png");
-
 		Finder finder1 =new Finder(screen.capture().getImage());
 		String ht1 = finder1.find(Afterspin_bal);
 		double score1=20;                
@@ -96,7 +89,6 @@ public class AmazonClash_Web_Balance_Deduction_AccordingToBetType2_5 {
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Comparision value equals to: "+" "+score1 +"%");
-		//Assert.assertEquals(100.0,score );
 		Assert.assertTrue(score1 > 97);
 	}
 

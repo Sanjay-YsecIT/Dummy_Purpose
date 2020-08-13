@@ -33,12 +33,9 @@ public class AmazonClash_Web_Balance_Credits_Calculations_2 {
 		balT.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("./Images/Amazon_Clash/Bet_place.PNG", 10);
-		//	Thread.sleep(15000);
-
+		screen.wait("Images/Amazon_Clash/Bet_place.PNG", 30);
 
 		// images from the slot games
-
 		Pattern Ysi_bal=new Pattern("./Images/Amazon_Clash/bal_300.PNG");
 		Pattern creditValue=new Pattern("./Images/Amazon_Clash/credit_0.02.PNG");
 		Pattern Credit_bal=new Pattern("./Images/Amazon_Clash/cr_bal_15000.PNG");
@@ -46,11 +43,9 @@ public class AmazonClash_Web_Balance_Credits_Calculations_2 {
 		Pattern credit_inc=new Pattern("./Images/Amazon_Clash/credit_inc.PNG");
 
 		screen.click(credit_inc);
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 
 		//comparing the balance before converting into credits
-		// Pattern credit1=new Pattern("E:/Sikuli Images/credits/balance1.png");
-
 		Finder finder =new Finder(screen.capture().getImage());
 		String ht = finder.find(Ysi_bal);
 		double score=20;                
@@ -70,10 +65,7 @@ public class AmazonClash_Web_Balance_Credits_Calculations_2 {
 		System.out.println("Balance before converting into credits comparision is equals to: "+" "+score +"%");
 		Assert.assertTrue(score > 97);
 
-
 		//comparing the credit value
-		// Pattern cred=new Pattern("E:/Sikuli Images/credits/creditvalue1.PNG");
-
 		Finder finder1 =new Finder(screen.capture().getImage());
 		String ht1 = finder1.find(creditValue);
 		double score1=20;                
@@ -97,10 +89,7 @@ public class AmazonClash_Web_Balance_Credits_Calculations_2 {
 		screen.click(Ysi_bal);
 		Thread.sleep(1000);
 
-
 		//comparing the balance in credit
-		//   Pattern winA=new Pattern("E:/Sikuli Images/credits/credit1.PNG");
-
 		Finder finder2 =new Finder(screen.capture().getImage());
 		String ht2 = finder2.find(Credit_bal);
 		double score2=20;                
@@ -126,7 +115,6 @@ public class AmazonClash_Web_Balance_Credits_Calculations_2 {
 		Thread.sleep(1000);
 
 		//comparing the credits in currency
-		//  Pattern symbol=new Pattern("E:/Sikuli Images/credits/balance1.PNG");
 		Finder finder4 =new Finder(screen.capture().getImage());
 		String ht4 = finder4.find(new_Ysi_bal);
 		double score4=20;                

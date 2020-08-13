@@ -32,11 +32,9 @@ public class AmazonClash_Web_Transfer_Validation_ZeroBalance {
 		 balT.sendKeys("0");
 		 Thread.sleep(2000);
 		 driver.findElement(By.className("Transfer_Ok_but")).click();
-		 Thread.sleep(3000);
-		 
-		 
-		  //Comparing the amount which is transferring to the slot game
-	      Pattern credit1=new Pattern("./Images/Amazon_Clash/zero_amount_msg.PNG");
+		 Thread.sleep(2000);
+	
+	      Pattern credit1=new Pattern("Images/Amazon_Clash/zero_amount_msg.PNG");
 	      Finder finder =new Finder(screen.capture().getImage());
 	      String ht = finder.find(credit1);
 	      double score=20;                

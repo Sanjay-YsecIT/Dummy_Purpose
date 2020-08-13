@@ -23,26 +23,7 @@ public class FortySplendidHot_Web_Check_BetType_BetValue_DropDown1 {
 	@Given("^Chrome browser, valid URL, valid login details, FortySplendidHot slot game, bet type as (\\d+)\\.(\\d+) and bet value as (\\d+)\\.(\\d+),(\\d+)\\.(\\d+),(\\d+),(\\d+),(\\d+)$")
 	public void chrome_browser_valid_URL_valid_login_details_FortySplendidHot_slot_game_bet_type_as_and_bet_value_as(int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9) throws Throwable {
 	   
-		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.get("http://demo.ysecit.in:82/slotgames/slotsgame");
-		driver.manage().window().maximize();
-		Thread.sleep(3000);
-		
-		driver.findElement(By.id("txtUserName")).sendKeys("5273290266");
-		Thread.sleep(2000);
-
-		driver.findElement(By.xpath("//input[@placeholder='Password / Card Pin']")).sendKeys("mans@123");
-		Thread.sleep(2000);
-
-		driver.findElement(By.className("loginActive")).click();
-		Thread.sleep(2000);
-		System.out.println("Login to the game with valid credentials");
-		
-		WebElement sub = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[1]/ui-view[1]/section[1]/section[1]/div[1]/div[1]/div[2]/div[3]/ul[1]/li[31]/div[1]/div[1]"));
-		JavascriptExecutor jse=(JavascriptExecutor)driver;
-		jse.executeScript("arguments[0].click();", sub);
-		Thread.sleep(4000);
+		this.driver =  FortySplendidHot_Web_URL_Login.getDriver();
 	}
 
 	@When("^Open the FortySplendidHot slot game by entering the valid URL in browser, enter the valid login details, select the bet type as (\\d+)\\.(\\d+) and check the bet value$")
@@ -54,7 +35,8 @@ public class FortySplendidHot_Web_Check_BetType_BetValue_DropDown1 {
 		balT.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("Images/40Splendid_Hot/spin.PNG", 30);
+		//screen.wait("Images/40Splendid_Hot/spin.PNG", 30);
+		Thread.sleep(20000);
 		
 		Pattern credit=new Pattern("Images/40Splendid_Hot/credit_0.01.PNG");
 		Pattern bet1 = new Pattern("Images/40Splendid_Hot/bet1.PNG");

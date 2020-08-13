@@ -33,7 +33,7 @@ public class UltraHot_Web_Gamble_GambleAmount_DoubleThan_WinAmount {
 		balT.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("./Images/Ultra_Hot/UltraHot_logo.PNG", 10);
+		screen.wait("./Images/Ultra_Hot/UltraHot_logo.PNG", 30);
 		//	Thread.sleep(15000);
 
 		Pattern spin=new Pattern("./Images/Ultra_Hot/spin.PNG");

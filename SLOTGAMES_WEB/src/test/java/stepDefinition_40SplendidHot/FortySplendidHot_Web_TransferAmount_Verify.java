@@ -20,8 +20,8 @@ public class FortySplendidHot_Web_TransferAmount_Verify {
 	WebDriver driver;
 	Screen screen=new Screen();
 
-	@Given("^Chrome browser, valid URL, valid login details, (\\d+) Splendid Hot slot game, try now button and balance to play$")
-	public void chrome_browser_valid_URL_valid_login_details_Splendid_Hot_slot_game_try_now_button_and_balance_to_play(int arg1) throws Throwable {
+	@Given("^Chrome browser, valid URL, valid login details, FortySplendidHot game, balance, text field to transfer balance and Ok button$")
+	public void chrome_browser_valid_URL_valid_login_details_FortySplendidHot_game_balance_text_field_to_transfer_balance_and_Ok_button() throws Throwable {
 		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://demo.ysecit.in:82/slotgames/slotsgame");
@@ -38,14 +38,14 @@ public class FortySplendidHot_Web_TransferAmount_Verify {
 		Thread.sleep(2000);
 		System.out.println("Login to the game with valid credentials");
 
-		WebElement sub = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[1]/ui-view[1]/section[1]/section[1]/div[1]/div[1]/div[2]/div[3]/ul[1]/li[31]/div[1]/div[1]"));
+		WebElement sub = driver.findElement(By.xpath("/html/body/div[2]/div[1]/ui-view/section/section[1]/div/div/div[2]/div[3]/ul/li[32]/div[1]/div"));
 		JavascriptExecutor jse=(JavascriptExecutor)driver;
 		jse.executeScript("arguments[0].click();", sub);
 		Thread.sleep(4000);
 	}
 
-	@When("^Open the (\\d+) Splendid Hot slot game by entering the valid URL in browser, click on try now button$")
-	public void open_the_Splendid_Hot_slot_game_by_entering_the_valid_URL_in_browser_click_on_try_now_button(int arg1) throws Throwable {
+	@When("^Open the FortySplendidHot slot game by entering the valid URL in browser, enter the valid login details, click on Play button, enter the valid amount to transfer and click on Ok button$")
+	public void open_the_FortySplendidHot_slot_game_by_entering_the_valid_URL_in_browser_enter_the_valid_login_details_click_on_Play_button_enter_the_valid_amount_to_transfer_and_click_on_Ok_button() throws Throwable {
 		WebElement balT = driver.findElement(By.id("transferInput"));
 		balT.clear();
 		Thread.sleep(1000);
@@ -57,25 +57,25 @@ public class FortySplendidHot_Web_TransferAmount_Verify {
 		Pattern Aftertransfer=new Pattern("Images/40Splendid_Hot/aftertransfer_300.PNG");
 
 		//Comparing the amount which is transferring to the slot game
-		// Pattern credit1=new Pattern("E:/Sikuli Images/others/beforetransfer.png");
-		Finder finder =new Finder(screen.capture().getImage());
-		String ht = finder.find(Beforetransfer);
-		double score=20;                
-		System.out.println("the value of ht"+" "+ht);
-		if(finder.hasNext())
-		{
-			Match m=finder.next();
-			System.out.println("Match Found with: "+(m.getScore())*100+"%");
-			score=(m.getScore())*100;
-			System.out.println("Transfering the amount to the slot game and transfer is successfull.");
-			finder.destroy();  
-		}         
-		else    
-		{ 
-			System.out.println("Comparision failed. Test case failed");         
-		}
-		System.out.println("Transfering the amount to the slot game and comparision value equals to: "+" "+score +"%");
-		Assert.assertTrue(score > 90);
+//		// Pattern credit1=new Pattern("E:/Sikuli Images/others/beforetransfer.png");
+//		Finder finder =new Finder(screen.capture().getImage());
+//		String ht = finder.find(Beforetransfer);
+//		double score=20;                
+//		System.out.println("the value of ht"+" "+ht);
+//		if(finder.hasNext())
+//		{
+//			Match m=finder.next();
+//			System.out.println("Match Found with: "+(m.getScore())*100+"%");
+//			score=(m.getScore())*100;
+//			System.out.println("Transfering the amount to the slot game and transfer is successfull.");
+//			finder.destroy();  
+//		}         
+//		else    
+//		{ 
+//			System.out.println("Comparision failed. Test case failed");         
+//		}
+//		System.out.println("Transfering the amount to the slot game and comparision value equals to: "+" "+score +"%");
+//		Assert.assertTrue(score > 90);
 
 		driver.findElement(By.className("Transfer_Ok_but")).click();
 		screen.wait("Images/40Splendid_Hot/spin.PNG", 30);
@@ -103,8 +103,8 @@ public class FortySplendidHot_Web_TransferAmount_Verify {
 		Assert.assertTrue(score2 > 90);
 	}
 
-	@Then("^System should provide five thousand as balance on click on try now button in (\\d+) Splendid Hot slot game$")
-	public void system_should_provide_five_thousand_as_balance_on_click_on_try_now_button_in_Splendid_Hot_slot_game(int arg1) throws Throwable {
+	@Then("^The exact amount entered in the transfer page should transfer to FortySplendidHot game and same amount should get displayed on the balance section$")
+	public void the_exact_amount_entered_in_the_transfer_page_should_transfer_to_FortySplendidHot_game_and_same_amount_should_get_displayed_on_the_balance_section() throws Throwable {
 		Thread.sleep(3000);
 		driver.quit();
 	}

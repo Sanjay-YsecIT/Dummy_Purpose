@@ -39,7 +39,7 @@ public class FortySplendidHot_Web_Check_BetType_BetValue_DropDown3 {
 		Thread.sleep(2000);
 		System.out.println("Login to the game with valid credentials");
 
-		WebElement sub = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[1]/ui-view[1]/section[1]/section[1]/div[1]/div[1]/div[2]/div[3]/ul[1]/li[31]/div[1]/div[1]"));
+		WebElement sub = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[1]/ui-view[1]/section[1]/section[1]/div[1]/div[1]/div[2]/div[3]/ul[1]/li[32]/div[1]/div[1]"));
 		JavascriptExecutor jse=(JavascriptExecutor)driver;
 		jse.executeScript("arguments[0].click();", sub);
 		Thread.sleep(4000);
@@ -54,8 +54,8 @@ public class FortySplendidHot_Web_Check_BetType_BetValue_DropDown3 {
 		balT.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("Images/40Splendid_Hot/spin.PNG", 30);
-		//	Thread.sleep(15000);
+		//screen.wait("Images/40Splendid_Hot/spin.PNG", 30);
+		Thread.sleep(20000);
 
 		Pattern credit=new Pattern("Images/40Splendid_Hot/credit_0.03.PNG");
 		Pattern bet_val=new Pattern("Images/40Splendid_Hot/betvalues_0.03.PNG");

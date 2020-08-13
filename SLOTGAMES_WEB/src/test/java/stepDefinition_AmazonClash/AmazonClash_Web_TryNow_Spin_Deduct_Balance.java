@@ -21,26 +21,23 @@ public class AmazonClash_Web_TryNow_Spin_Deduct_Balance {
 	@Given("^Chrome browser, valid URL, valid login details, Amazon Clash slot game, try now button, balance to play and spin button$")
 	public void chrome_browser_valid_URL_valid_login_details_Amazon_Clash_slot_game_try_now_button_balance_to_play_and_spin_button() throws Throwable {
 
-		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver_win32/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "/Driver/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://demo.ysecit.in:82/slotgames/slotsgame");
 		driver.manage().window().maximize();
 		Thread.sleep(5000);
-		driver.findElement(By.xpath("//div[contains(@class,'N_slotgame_w')]//li[8]//div[2]//div[2]")).click();
-		screen.wait("./Images/Amazon_Clash/Bet_place.PNG", 10);
-		//	Thread.sleep(15000);
+		driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[1]/ui-view[1]/section[1]/section[1]/div[1]/div[1]/div[2]/div[3]/ul[1]/li[15]/div[2]/div[2]")).click();
+		screen.wait("Images/Amazon_Clash/Bet_place.PNG", 30);
 	}
 
 	@When("^Open the Amazon Clash slot game by entering the valid URL in browser, click on try now button and click on spin button$")
 	public void open_the_Amazon_Clash_slot_game_by_entering_the_valid_URL_in_browser_click_on_try_now_button_and_click_on_spin_button() throws Throwable {
 
-		Pattern Trynow_bal=new Pattern("./Images/Amazon_Clash/Try_now_bal.PNG");
-		Pattern BalAfterSpin=new Pattern("./Images/Amazon_Clash/TN_BalAfterspin.PNG");
-		Pattern Spin=new Pattern("./Images/Amazon_Clash/TN_Spin.PNG");
-
+		Pattern Trynow_bal=new Pattern("Images/Amazon_Clash/Try_now_bal.PNG");
+		Pattern BalAfterSpin=new Pattern("Images/Amazon_Clash/TN_BalAfterspin.PNG");
+		Pattern Spin=new Pattern("Images/Amazon_Clash/TN_Spin.PNG");
 
 		// Balance before spin
-		//  Pattern credit1=new Pattern("E:/Sikuli Images/others/zerobalance.png");
 		Finder finder =new Finder(screen.capture().getImage());
 		String ht = finder.find(Trynow_bal);
 		double score=20;                
@@ -63,9 +60,7 @@ public class AmazonClash_Web_TryNow_Spin_Deduct_Balance {
 		screen.click(Spin);
 		Thread.sleep(6000);
 
-
 		//Comparing the balance after spin
-		//  Pattern credit2=new Pattern("E:/Sikuli Images/TreasureBonanza/trybalance1.PNG");
 		Finder finder1 =new Finder(screen.capture().getImage());
 		String ht1 = finder1.find(BalAfterSpin);
 		double score1=20;                

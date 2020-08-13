@@ -33,32 +33,28 @@ public class AmazonClash_Web_Balance_To_Credits_CreditWinAmountEqualsCurrencyWin
 		balT.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("./Images/Amazon_Clash/Bet_place.PNG", 10);
-		//	Thread.sleep(15000);
+		screen.wait("Images/Amazon_Clash/Bet_place.PNG", 30);
 
-
-		Pattern credit=new Pattern("./Images/Amazon_Clash/credit_0.02.PNG");
-		Pattern betval=new Pattern("./Images/Amazon_Clash/betval2_1.PNG");
-		Pattern spin=new Pattern("./Images/Amazon_Clash/spin.PNG");
-		Pattern balance=new Pattern("./Images/Amazon_Clash/Reminingbal_299.60.PNG");
-		Pattern win_amt = new Pattern("./Images/Amazon_Clash/winamt_1.2.PNG");
-		Pattern collect=new Pattern("./Images/Amazon_Clash/collect.PNG");
-		Pattern credit_inc = new Pattern("./Images/Amazon_Clash/credit_inc.PNG");
+		Pattern credit=new Pattern("Images/Amazon_Clash/credit_0.02.PNG");
+		Pattern bet=new Pattern("Images/Amazon_Clash/bet2.PNG");
+		Pattern betval=new Pattern("Images/Amazon_Clash/betval2_1.PNG");
+		Pattern spin=new Pattern("Images/Amazon_Clash/spin.PNG");
+		Pattern balance=new Pattern("Images/Amazon_Clash/Reminingbal_299.60.PNG");
+		Pattern win_amt = new Pattern("Images/Amazon_Clash/winamt_0.8.PNG");
+		Pattern collect=new Pattern("Images/Amazon_Clash/collect.PNG");
+		Pattern credit_inc = new Pattern("Images/Amazon_Clash/credit_inc.PNG");
 
 		// credit values
 		Pattern win_cr = new Pattern("./Images/Amazon_Clash/cr_winamt1.PNG");
 		Pattern balance_cr=new Pattern("./Images/Amazon_Clash/cr_bal2.PNG");
 
-		//		win symbols
-		Pattern scatter=new Pattern("./Images/Amazon_Clash/3R_scatter.PNG");
+		// win symbols
 		Pattern tiger=new Pattern("./Images/Amazon_Clash/1R_tiger.PNG");
 
-		
 		screen.click(credit_inc);
-		Thread.sleep(2000);
-		
+		Thread.sleep(1000);
+
 		//comparing the credit value should be 0.02
-		// Pattern credit1=new Pattern("E:/Sikuli Images/Win/creditvalue1.png");
 		Finder finder =new Finder(screen.capture().getImage());
 		String ht = finder.find(credit);
 		double score=20;                
@@ -79,21 +75,16 @@ public class AmazonClash_Web_Balance_To_Credits_CreditWinAmountEqualsCurrencyWin
 		Assert.assertTrue(score > 97);
 
 		// WIN PATTERN COMBINATION 
-		screen.click(scatter);
-		Thread.sleep(2000);
-		screen.click(scatter);
-		Thread.sleep(2000);
-		screen.click(scatter);
-		Thread.sleep(2000);
 		screen.click(tiger);
-		Thread.sleep(2000);
+		Thread.sleep(1000);
+		screen.click(bet);
+		Thread.sleep(1000);
 		screen.click(betval);
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		screen.click(spin);
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 
 		//comparing the win amount should exists after spin
-		// Pattern winA=new Pattern("E:/Sikuli Images/Win/win_2_1.PNG");
 		Finder finder2 =new Finder(screen.capture().getImage());
 		String ht2 = finder2.find(win_amt);
 		double score2=20;                
@@ -116,12 +107,9 @@ public class AmazonClash_Web_Balance_To_Credits_CreditWinAmountEqualsCurrencyWin
 
 		//clicking on balance button to convert amount into to credits
 		screen.click(balance);
-		Thread.sleep(2000);
-
+		Thread.sleep(1000);
 
 		//comparing the win amount in credits
-		// Pattern balanceA=new Pattern("E:/Sikuli Images/Win/win_credit.PNG");
-
 		Finder finder3 =new Finder(screen.capture().getImage());
 		String ht3 = finder3.find(win_cr);
 		double score3=20;                
@@ -140,11 +128,9 @@ public class AmazonClash_Web_Balance_To_Credits_CreditWinAmountEqualsCurrencyWin
 		}
 		System.out.println("Win amount in credits comparision value equal to: "+" "+score3 +"%");
 		Assert.assertTrue(score3 > 97);
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 
 		//Balance in credits 
-		//   Pattern symbol=new Pattern("E:/Sikuli Images/Win/balance_credits_2.PNG");
-
 		Finder finder4 =new Finder(screen.capture().getImage());
 		String ht4 = finder4.find(balance_cr);
 		double score4=20;                
@@ -166,11 +152,9 @@ public class AmazonClash_Web_Balance_To_Credits_CreditWinAmountEqualsCurrencyWin
 
 		//clicking on balance button to convert credits into to amount in currency
 		screen.click(balance_cr);
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 
 		//comparing the win amount in currency
-		//  Pattern winB=new Pattern("E:/Sikuli Images/Win/win_1_1.PNG");
-
 		Finder finder6 =new Finder(screen.capture().getImage());
 		String ht6 = finder6.find(win_amt);
 		double score6=20;                
@@ -188,16 +172,13 @@ public class AmazonClash_Web_Balance_To_Credits_CreditWinAmountEqualsCurrencyWin
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Win amount comparision in currency value equal to: "+" "+score6 +"%");
-		Assert.assertTrue(score6 > 80);
+		Assert.assertTrue(score6 > 97);
 		Thread.sleep(2000);
-
-
 		screen.click(collect);
 	}
 
 	@Then("^Win amount in credit multiplied by denomination drop down value two is equal to win amount in currency in Amazon Clash slot game$")
 	public void win_amount_in_credit_multiplied_by_denomination_drop_down_value_two_is_equal_to_win_amount_in_currency_in_Amazon_Clash_slot_game() throws Throwable {
-
 		Thread.sleep(3000);
 		driver.quit();
 	}

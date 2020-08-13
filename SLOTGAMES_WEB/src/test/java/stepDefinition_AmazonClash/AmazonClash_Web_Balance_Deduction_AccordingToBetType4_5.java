@@ -33,35 +33,52 @@ public class AmazonClash_Web_Balance_Deduction_AccordingToBetType4_5 {
 		balT.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("./Images/Amazon_Clash/Bet_place.PNG", 10);
+		screen.wait("Images/Amazon_Clash/Bet_place.PNG", 30);
 		//	Thread.sleep(15000);
 
+		Pattern credit=new Pattern("Images/Amazon_Clash/credit_0.5.PNG");
+		Pattern betval=new Pattern("Images/Amazon_Clash/betval4_5.PNG");
+		Pattern bet=new Pattern("Images/Amazon_Clash/bet4.PNG");
+		Pattern spin=new Pattern("Images/Amazon_Clash/spin.PNG");
+		Pattern Afterspin_bal=new Pattern("Images/Amazon_Clash/Reminingbal_100.PNG");
+		Pattern credit_inc=new Pattern("Images/Amazon_Clash/credit_inc.PNG");
+		Pattern balance=new Pattern("Images/Amazon_Clash/bal_300.PNG");
 
-		Pattern credit=new Pattern("./Images/Amazon_Clash/credit_0.5.PNG");
-		Pattern betval=new Pattern("./Images/Amazon_Clash/betval4_5.PNG");
-		Pattern spin=new Pattern("./Images/Amazon_Clash/spin.PNG");
-		Pattern Afterspin_bal=new Pattern("./Images/Amazon_Clash/Reminingbal_100.PNG");
-		Pattern credit_inc=new Pattern("./Images/Amazon_Clash/credit_inc.PNG");
-
-
+		//comparing the balance before spin
+		Finder finder1 =new Finder(screen.capture().getImage());
+		String ht1 = finder1.find(balance);
+		double score1=20;                
+		System.out.println("the value of ht1"+" "+ht1);
+		if(finder1.hasNext())
+		{
+			Match m1=finder1.next();
+			System.out.println("Match Found with: "+(m1.getScore())*100+"%");
+			score1=(m1.getScore())*100;
+			System.out.println("Balance comparision before spin completed successfully.");
+			finder1.destroy();  
+		}         
+		else    
+		{ 
+			System.out.println("Comparision failed. Test case failed");         
+		}
+		System.out.println("Balance comparision before spin: "+" "+score1 +"%");
+		Assert.assertTrue(score1 > 97);
 
 		screen.click(credit_inc);
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		screen.click(credit_inc);
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		screen.click(credit_inc);
+		Thread.sleep(1000);
+		screen.click(bet);
 		Thread.sleep(3000);
-		//clicking on Bet VALUE
 		screen.click(betval);
 		Thread.sleep(3000);
 		//CLICKING ON Spin button
 		screen.click(spin);
 		Thread.sleep(4000);
 
-
 		//comparing the credit value should be 0.5
-		//   Pattern credit1=new Pattern("E:/Sikuli Images/Bet Values/creditvalue1.png");
-
 		Finder finder =new Finder(screen.capture().getImage());
 		String ht = finder.find(credit);
 		double score=20;                
@@ -83,27 +100,24 @@ public class AmazonClash_Web_Balance_Deduction_AccordingToBetType4_5 {
 
 
 		//comparing the balance after spinning should be deducted by 200 value
-		//  Pattern pat=new Pattern("E:/Sikuli Images/Bet Values/balance.png");
-
-		Finder finder1 =new Finder(screen.capture().getImage());
-		String ht1 = finder1.find(Afterspin_bal);
-		double score1=20;                
-		System.out.println("the value of ht"+" "+ht1);
-		if(finder1.hasNext())
+		Finder finder11 =new Finder(screen.capture().getImage());
+		String ht11 = finder11.find(Afterspin_bal);
+		double score11=20;                
+		System.out.println("the value of ht11"+" "+ht11);
+		if(finder11.hasNext())
 		{
-			Match m1=finder1.next();
-			System.out.println("Match Found with: "+(m1.getScore())*100+"%");
-			score1=(m1.getScore())*100;
+			Match m11=finder11.next();
+			System.out.println("Match Found with: "+(m11.getScore())*100+"%");
+			score11=(m11.getScore())*100;
 			System.out.println("Comparision happened successfully. Test case passed");
-			finder1.destroy();  
+			finder11.destroy();  
 		}         
 		else    
 		{ 
 			System.out.println("Comparision failed. Test case failed");         
 		}
-		System.out.println("Comparision value equals to: "+" "+score1 +"%");
-		//Assert.assertEquals(100.0,score );
-		Assert.assertTrue(score1 > 97);
+		System.out.println("Comparision value equals to: "+" "+score11 +"%");
+		Assert.assertTrue(score11 > 97);
 	}
 
 	@Then("^Balance should get deducted by two hundred as bet type is selected as (\\d+)\\.(\\d+) in Amazon Clash game$")

@@ -33,23 +33,23 @@ public class UltraHot_Web_Gamble_ColorWinAmount_AddedTo_Balance {
 		balT.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("./Images/Ultra_Hot/UltraHot_logo.PNG", 10);
+		screen.wait("Images/Ultra_Hot/Bet_Place.PNG", 30);
 		//	Thread.sleep(15000);
 
-		Pattern balance=new Pattern("./Images/Ultra_Hot/bal_300.PNG");
-		Pattern spin=new Pattern("./Images/Ultra_Hot/spin.PNG");
-		Pattern win_amt = new Pattern("./Images/Ultra_Hot/winamt_1.2.PNG");
-		Pattern gb_collect=new Pattern("./Images/Ultra_Hot/gb_collect.PNG");
-		Pattern gamble_btn=new Pattern("./Images/Ultra_Hot/gb_button.PNG");
-		Pattern black_btn=new Pattern("./Images/Ultra_Hot/gb_black_btn.PNG");
-		Pattern gb_win=new Pattern("./Images/Ultra_Hot/gb_win.PNG");
-		Pattern gb_lose=new Pattern("./Images/Ultra_Hot/gb_loose.PNG");
-		Pattern win_bal=new Pattern("./Images/Ultra_Hot/gb_winamt_add.PNG");
-		Pattern lose_bal=new Pattern("./Images/Ultra_Hot/Reminingbal_299.85.PNG");
+		Pattern balance=new Pattern("Images/Ultra_Hot/bal_300.PNG");
+		Pattern spin=new Pattern("Images/Ultra_Hot/spin.PNG");
+		Pattern win_amt = new Pattern("Images/Ultra_Hot/winamt_1.2.PNG");
+		Pattern gb_collect=new Pattern("Images/Ultra_Hot/gb_collect.PNG");
+		Pattern gamble_btn=new Pattern("Images/Ultra_Hot/gb_button.PNG");
+		Pattern black_btn=new Pattern("Images/Ultra_Hot/gb_black_btn.PNG");
+		Pattern gb_win=new Pattern("Images/Ultra_Hot/gb_win.PNG");
+		Pattern gb_lose=new Pattern("Images/Ultra_Hot/gb_loose.PNG");
+		Pattern win_bal=new Pattern("Images/Ultra_Hot/gb_winamt_add.PNG");
+		Pattern lose_bal=new Pattern("Images/Ultra_Hot/Reminingbal_299.85.PNG");
 
 		// 3rd Reels symbols
-		Pattern lemon3=new Pattern("./Images/Ultra_Hot/3R_lemon.PNG");
-		Pattern cherry3=new Pattern("./Images/Ultra_Hot/3R_cherry.PNG");
+		Pattern lemon3=new Pattern("Images/Ultra_Hot/3R_lemon.PNG");
+		Pattern cherry3=new Pattern("Images/Ultra_Hot/3R_cherry.PNG");
 
 		//comparing the balance before Win
 		Finder finder1 =new Finder(screen.capture().getImage());
@@ -73,20 +73,19 @@ public class UltraHot_Web_Gamble_ColorWinAmount_AddedTo_Balance {
 
 		// WIN PATTERN COMBINATION 
 		screen.click(cherry3);
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		screen.click(cherry3);
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		screen.click(lemon3);
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		screen.click(lemon3);
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		screen.click(lemon3);
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		screen.click(spin);
-		Thread.sleep(4000);
+		Thread.sleep(6000);
 
 		//comparing the win amount should exists after spin
-		//   Pattern winA=new Pattern("E:/Sikuli Images/gamble/win.PNG");
 		Finder finder2 =new Finder(screen.capture().getImage());
 		String ht2 = finder2.find(win_amt);
 		double score2=20;                
@@ -104,8 +103,8 @@ public class UltraHot_Web_Gamble_ColorWinAmount_AddedTo_Balance {
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Win amount comparision after spin: "+" "+score2 +"%");
-		Assert.assertTrue(score2 > 97);
-		Thread.sleep(5000);
+		Assert.assertTrue(score2 > 95);
+		Thread.sleep(2000);
 
 		//Clicking on gamble button
 		screen.click(gamble_btn);
@@ -140,9 +139,8 @@ public class UltraHot_Web_Gamble_ColorWinAmount_AddedTo_Balance {
 			Thread.sleep(3000);
 
 			screen.click(gb_collect);
-			Thread.sleep(4000);
+			Thread.sleep(2000);
 
-			//  Pattern bal=new Pattern("E:/Sikuli Images/gamble/balance_afterWin.PNG");
 			Finder finder6 =new Finder(screen.capture().getImage());
 			String ht6 = finder6.find(win_bal);
 			double score6=20;                
@@ -165,28 +163,26 @@ public class UltraHot_Web_Gamble_ColorWinAmount_AddedTo_Balance {
 		}
 		else
 		{
-			// Pattern gambleStatus=new Pattern("E:/Sikuli Images/gamble/lose.PNG");
-			Finder finder3 =new Finder(screen.capture().getImage());
-			String ht3 = finder3.find(gb_lose);
-			double score3=20;                
-			System.out.println("the value of ht3"+" "+ht3);
-			if(finder3.hasNext())
+			Finder finder31 =new Finder(screen.capture().getImage());
+			String ht31 = finder31.find(gb_lose);
+			double score31=20;                
+			System.out.println("the value of ht31"+" "+ht31);
+			if(finder31.hasNext())
 			{
-				Match m3=finder3.next();
-				System.out.println("Match Found with: "+(m3.getScore())*100+"%");
-				score3=(m3.getScore())*100;
+				Match m31=finder31.next();
+				System.out.println("Match Found with: "+(m31.getScore())*100+"%");
+				score31=(m31.getScore())*100;
 				System.out.println("Gamble Lose.");
-				finder3.destroy();  
+				finder31.destroy();  
 			}         
 			else    
 			{ 
 				System.out.println("Comparision failed. Test case failed");         
 			}
-			System.out.println("Gamble lose comparision: "+" "+score3 +"%");
-			Assert.assertTrue(score3 > 80);
-			Thread.sleep(4000);
+			System.out.println("Gamble lose comparision: "+" "+score31 +"%");
+			Assert.assertTrue(score31 > 97);
+			Thread.sleep(2000);
 
-			//  Pattern Abalance=new Pattern("E:/Sikuli Images/gamble/balance_afterLose.PNG");
 			Finder finder11 =new Finder(screen.capture().getImage());
 			String ht11 = finder11.find(lose_bal);
 			double score11=20;                
@@ -204,7 +200,7 @@ public class UltraHot_Web_Gamble_ColorWinAmount_AddedTo_Balance {
 				System.out.println("Comparision failed. Test case failed");         
 			}
 			System.out.println("Balance comparision after lose: "+" "+score11 +"%");
-			Assert.assertTrue(score1 > 97);
+			Assert.assertTrue(score11 > 97);
 		}
 	}
 

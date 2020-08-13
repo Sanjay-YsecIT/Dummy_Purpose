@@ -1,7 +1,9 @@
 package stepDefinition_AmazonClash;
 
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.sikuli.script.Finder;
 import org.sikuli.script.Match;
 import org.sikuli.script.Pattern;
@@ -25,22 +27,24 @@ public class AmazonClash_Web_Gamble_WinAmount_SameAs_GambleAmount {
 	@When("^Open the Amazon Clash slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on spin button till player wins, click on gamble button and check the gamble amount on web$")
 	public void open_the_Amazon_Clash_slot_game_by_entering_the_valid_URL_in_browser_enter_the_valid_login_details_transfer_the_balance_click_on_spin_button_till_player_wins_click_on_gamble_button_and_check_the_gamble_amount_on_web() throws Throwable {
 
-		//Pattern credit=new Pattern("./Images/Emerald_Dice/credit_0.01.PNG");
-		Pattern betval=new Pattern("./Images/Amazon_Clash/betval1_1.PNG");
-		Pattern spin=new Pattern("./Images/Amazon_Clash/spin.PNG");
-		Pattern balance=new Pattern("./Images/Amazon_Clash/bal_300.PNG");
-		Pattern win_amt = new Pattern("./Images/Amazon_Clash/winamt_0.6.PNG");
-		Pattern gamble_btn=new Pattern("./Images/Amazon_Clash/gb_button.PNG");
-		Pattern gb_collect=new Pattern("./Images/Amazon_Clash/gb_collect.PNG");
-		Pattern gb_amt_display=new Pattern("/Images/Amazon_Clash/gb_amt.PNG");
+		WebElement balT = driver.findElement(By.id("transferInput"));
+		balT.clear();
+		Thread.sleep(1000);
+		balT.sendKeys("300");
+		Thread.sleep(2000);
+		driver.findElement(By.className("Transfer_Ok_but")).click();
+		screen.wait("Images/Amazon_Clash/Bet_place.PNG", 30);
+		
+		Pattern spin=new Pattern("Images/Amazon_Clash/spin.PNG");
+		Pattern balance=new Pattern("Images/Amazon_Clash/bal_300.PNG");
+		Pattern win_amt = new Pattern("Images/Amazon_Clash/winamt_0.4.PNG");
+		Pattern gamble_btn=new Pattern("Images/Amazon_Clash/gb_button.PNG");
+		Pattern gb_collect=new Pattern("Images/Amazon_Clash/gb_collect.PNG");
+		Pattern gb_amt_display=new Pattern("Images/Amazon_Clash/gb_amt.PNG");
 
-		// win symbols
-		Pattern scatter=new Pattern("./Images/Amazon_Clash/3R_scatter.PNG");
-		Pattern tiger=new Pattern("./Images/Amazon_Clash/1R_tiger.PNG");
-
+		Pattern tiger=new Pattern("Images/Amazon_Clash/1R_tiger.PNG");
 
 		//comparing the balance before Win
-
 		Finder finder1 =new Finder(screen.capture().getImage());
 		String ht1 = finder1.find(balance);
 		double score1=20;                
@@ -61,22 +65,12 @@ public class AmazonClash_Web_Gamble_WinAmount_SameAs_GambleAmount {
 		Assert.assertTrue(score1 > 97);
 
 		// WIN PATTERN COMBINATION 
-		screen.click(betval);
-		Thread.sleep(2000);
-		screen.click(scatter);
-		Thread.sleep(2000);
-		screen.click(scatter);
-		Thread.sleep(2000);
-		screen.click(scatter);
-		Thread.sleep(2000);
 		screen.click(tiger);
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		screen.click(spin);
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 
 		//comparing the win amount should exists after spin
-		//   Pattern winA=new Pattern("E:/Sikuli Images/gamble/win.PNG");
-
 		Finder finder2 =new Finder(screen.capture().getImage());
 		String ht2 = finder2.find(win_amt);
 		double score2=20;                
@@ -86,7 +80,7 @@ public class AmazonClash_Web_Gamble_WinAmount_SameAs_GambleAmount {
 			Match m2=finder2.next();
 			System.out.println("Match Found with: "+(m2.getScore())*100+"%");
 			score2=(m2.getScore())*100;
-			System.out.println("Win amount comparision completed successfully. Win amount is 0.60 YSI");
+			System.out.println("Win amount comparision completed successfully. Win amount is 0.40 YSI");
 			finder2.destroy();  
 		}         
 		else    
@@ -101,10 +95,7 @@ public class AmazonClash_Web_Gamble_WinAmount_SameAs_GambleAmount {
 		screen.click(gamble_btn);
 		Thread.sleep(2000);
 
-
 		//comparing the Gamble win amount should be same as win amount
-		//Pattern winB=new Pattern("E:/Sikuli Images/gamble/Gamblewin.PNG");
-
 		Finder finder3 =new Finder(screen.capture().getImage());
 		String ht3 = finder3.find(gb_amt_display);
 		double score3=20;                
@@ -114,7 +105,7 @@ public class AmazonClash_Web_Gamble_WinAmount_SameAs_GambleAmount {
 			Match m3=finder3.next();
 			System.out.println("Match Found with: "+(m3.getScore())*100+"%");
 			score3=(m3.getScore())*100;
-			System.out.println("Gamble Win amount comparision completed successfully. Gamble Win amount is 0.60 YSI");
+			System.out.println("Gamble Win amount comparision completed successfully. Gamble Win amount is 0.40 YSI");
 			finder3.destroy();  
 		}         
 		else    
@@ -123,8 +114,7 @@ public class AmazonClash_Web_Gamble_WinAmount_SameAs_GambleAmount {
 		}
 		System.out.println("Gamble Win amount comparision value equals to: "+" "+score3 +"%");
 		Assert.assertTrue(score3 > 97);
-		Thread.sleep(3000);
-
+		Thread.sleep(2000);
 		screen.click(gb_collect);
 	}
 

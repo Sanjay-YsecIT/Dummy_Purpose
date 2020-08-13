@@ -13,10 +13,10 @@
     
 #                       Auto spin option with 10spin feature testing
 
-    Scenario: Check whether system performing ten spins after selecting ten option in the auto spin drop down of the Ultra Hot slot game
-    Given Chrome browser, valid URL, valid login details, Ultra Hot  slot game, balance, spin button, auto spin button, ten spins option and number of spins left message
-    When Open the Ultra Hot  slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on ten spin option under auto spin drop down and check the number of spins left message
-    Then Number of spin left should start from 9 to 1 after clicking ten spins option and should perform 10 spins from 9 to 1 Ultra Hot slot game
+#    Scenario: Check whether system performing ten spins after selecting ten option in the auto spin drop down of the Ultra Hot slot game
+#    Given Chrome browser, valid URL, valid login details, Ultra Hot  slot game, balance, spin button, auto spin button, ten spins option and number of spins left message
+#    When Open the Ultra Hot  slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on ten spin option under auto spin drop down and check the number of spins left message
+#    Then Number of spin left should start from 9 to 1 after clicking ten spins option and should perform 10 spins from 9 to 1 Ultra Hot slot game
     
     
 #                     Auto spin option with 20spin feature testing
@@ -327,10 +327,10 @@
  
  #	           Validation on Gamble to win amount is double than win amount
 
-#	Scenario: Checking Gamble to Win amount should be double than gamble amount in gamble page of Ultra Hot game 
-#    Given Chrome browser, valid URL, valid login details, Ultra Hot game, balance, spin button, win amount, gamble button, gamble amount and gamble to win amount
-#    When Open the Ultra Hot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on Ultra Hot slot game, click on spin button till player wins, click on gamble button and check the gamble to win amount
-#    Then Gamble To Win amount should be double than Gamble amount in the gamble page of the Ultra Hot game
+	Scenario: Checking Gamble to Win amount should be double than gamble amount in gamble page of Ultra Hot game 
+    Given Chrome browser, valid URL, valid login details, Ultra Hot game, balance, spin button, win amount, gamble button, gamble amount and gamble to win amount
+    When Open the Ultra Hot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on Ultra Hot slot game, click on spin button till player wins, click on gamble button and check the gamble to win amount
+    Then Gamble To Win amount should be double than Gamble amount in the gamble page of the Ultra Hot game
 
 
 #	             Whether Gamble win amount is getting added to the main balance (red btn)

@@ -33,30 +33,24 @@ public class AmazonClash_Web_Gamble_SuitWinAmount_AddedTo_Balance {
 		balT.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("./Images/Amazon_Clash/Bet_place.PNG", 10);
-		//	Thread.sleep(15000);
+		screen.wait("Images/Amazon_Clash/Bet_place.PNG", 30);
+		
+		Pattern bet=new Pattern("Images/Amazon_Clash/bet1.PNG");
+		Pattern betval=new Pattern("Images/Amazon_Clash/betval1_1.PNG");
+		Pattern spin=new Pattern("Images/Amazon_Clash/spin.PNG");
+		Pattern balance=new Pattern("Images/Amazon_Clash/bal_300.PNG");
+		Pattern win_amt = new Pattern("Images/Amazon_Clash/winamt_0.4.PNG");
+		Pattern suit_heart=new Pattern("Images/Amazon_Clash/suit_heart.PNG");
+		Pattern gamble_btn=new Pattern("Images/Amazon_Clash/gb_button.PNG");
+		Pattern gb_win=new Pattern("Images/Amazon_Clash/gb_win.PNG");
+		Pattern gb_collect=new Pattern("Images/Amazon_Clash/gb_collect.PNG");
+		Pattern win_bal=new Pattern("Images/Amazon_Clash/suit_winamt_add.PNG");
+		Pattern gb_lose=new Pattern("Images/Amazon_Clash/gb_loose.PNG");
+		Pattern lose_bal=new Pattern("Images/Amazon_Clash/Reminingbal_299.80.PNG");
 
-
-		Pattern betval=new Pattern("./Images/Amazon_Clash/betval1_1.PNG");
-		Pattern spin=new Pattern("./Images/Amazon_Clash/spin.PNG");
-		Pattern balance=new Pattern("./Images/Amazon_Clash/bal_300.PNG");
-		Pattern win_amt = new Pattern("./Images/Amazon_Clash/winamt_0.6.PNG");
-		Pattern suit_heart=new Pattern("./Images/Amazon_Clash/suit_heart.PNG");
-		Pattern gamble_btn=new Pattern("./Images/Amazon_Clash/gb_button.PNG");
-		Pattern gb_win=new Pattern("./Images/Amazon_Clash/gb_win.PNG");
-		Pattern gb_collect=new Pattern("./Images/Amazon_Clash/gb_collect.PNG");
-		Pattern win_bal=new Pattern("./Images/Amazon_Clash/suit_winamt_add.PNG");
-		Pattern gb_lose=new Pattern("./Images/Amazon_Clash/gb_loose.PNG");
-		Pattern lose_bal=new Pattern("./Images/Amazon_Clash/Reminingbal_299.80.PNG");
-
-
-		// win symbols
-		Pattern scatter=new Pattern("./Images/Amazon_Clash/3R_scatter.PNG");
 		Pattern tiger=new Pattern("./Images/Amazon_Clash/1R_tiger.PNG");
 
-
 		//comparing the balance before Win
-
 		Finder finder1 =new Finder(screen.capture().getImage());
 		String ht1 = finder1.find(balance);
 		double score1=20;                
@@ -77,22 +71,16 @@ public class AmazonClash_Web_Gamble_SuitWinAmount_AddedTo_Balance {
 		Assert.assertTrue(score1 > 97);
 
 		// WIN PATTERN COMBINATION 
+		screen.click(bet);
+		Thread.sleep(1000);
 		screen.click(betval);
-		Thread.sleep(2000);
-		screen.click(scatter);
-		Thread.sleep(2000);
-		screen.click(scatter);
-		Thread.sleep(2000);
-		screen.click(scatter);
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		screen.click(tiger);
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		screen.click(spin);
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 
 		//comparing the win amount should exists after spin
-		//   Pattern winA=new Pattern("E:/Sikuli Images/gamble/win.PNG");
-
 		Finder finder2 =new Finder(screen.capture().getImage());
 		String ht2 = finder2.find(win_amt);
 		double score2=20;                
@@ -111,7 +99,6 @@ public class AmazonClash_Web_Gamble_SuitWinAmount_AddedTo_Balance {
 		}
 		System.out.println("Win amount comparision after spin: "+" "+score2 +"%");
 		Assert.assertTrue(score2 > 97);
-		Thread.sleep(5000);
 
 		//Clicking on gamble button
 		screen.click(gamble_btn);
@@ -120,8 +107,6 @@ public class AmazonClash_Web_Gamble_SuitWinAmount_AddedTo_Balance {
 		//Clicking on Red button
 		screen.click(suit_heart);
 		Thread.sleep(2000);
-
-		//comparing the balance amount after spin
 
 		if  (screen.exists(gb_win) != null)
 		{
@@ -144,12 +129,9 @@ public class AmazonClash_Web_Gamble_SuitWinAmount_AddedTo_Balance {
 			}
 			System.out.println("Gamble win comparision: "+" "+score3 +"%");
 			Assert.assertTrue(score3 > 97);			  
-			Thread.sleep(3000);
-
+			
 			screen.click(gb_collect);
-			Thread.sleep(4000);
-
-			//  Pattern bal=new Pattern("E:/Sikuli Images/gamble/balance_afterWin.PNG");
+			Thread.sleep(2000);
 
 			Finder finder6 =new Finder(screen.capture().getImage());
 			String ht6 = finder6.find(win_bal);
@@ -173,28 +155,25 @@ public class AmazonClash_Web_Gamble_SuitWinAmount_AddedTo_Balance {
 		}
 		else
 		{
-			// Pattern gambleStatus=new Pattern("E:/Sikuli Images/gamble/lose.PNG");
-			Finder finder3 =new Finder(screen.capture().getImage());
-			String ht3 = finder3.find(gb_lose);
-			double score3=20;                
-			System.out.println("the value of ht3"+" "+ht3);
-			if(finder3.hasNext())
+			Finder finder31 =new Finder(screen.capture().getImage());
+			String ht31 = finder31.find(gb_lose);
+			double score31=20;                
+			System.out.println("the value of ht31"+" "+ht31);
+			if(finder31.hasNext())
 			{
-				Match m3=finder3.next();
-				System.out.println("Match Found with: "+(m3.getScore())*100+"%");
-				score3=(m3.getScore())*100;
+				Match m31=finder31.next();
+				System.out.println("Match Found with: "+(m31.getScore())*100+"%");
+				score31=(m31.getScore())*100;
 				System.out.println("Gamble Lose.");
-				finder3.destroy();  
+				finder31.destroy();  
 			}         
 			else    
 			{ 
 				System.out.println("Comparision failed. Test case failed");         
 			}
-			System.out.println("Gamble lose comparision: "+" "+score3 +"%");
-			Assert.assertTrue(score3 > 80);
-			Thread.sleep(4000);
-
-			//  Pattern Abalance=new Pattern("E:/Sikuli Images/gamble/balance_afterLose.PNG");
+			System.out.println("Gamble lose comparision: "+" "+score31 +"%");
+			Assert.assertTrue(score31 > 97);
+			Thread.sleep(2000);
 
 			Finder finder11 =new Finder(screen.capture().getImage());
 			String ht11 = finder11.find(lose_bal);
