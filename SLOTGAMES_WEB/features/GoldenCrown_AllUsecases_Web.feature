@@ -493,11 +493,37 @@ Feature: Test all the functionalities of Golden Crown Slot Game
 #	Then  Big Win screen should appear when five scatter-dollar symbols appears on the screen in Golden Crown game
    
    
-   	Scenario: Check whether resume feature is enabled in Gamble screen of Golden Crown game
-	Given Chrome browser, valid URL, valid login details, Golden Crown slot game, bet type, denomination, balance, win symbols, spin button, Gamble screen, kill button.
-	When Open the Golden Crown slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, select bet type & denomination, click on spin button till win appears and gamble screen in switched and click on red button and close the browser and login to the game
-	Then  Resume feature should enabled and land on the gamble screen of Golden Crown game
+#   	Scenario: Check whether resume feature is enabled in Gamble screen of Golden Crown game
+#	Given Chrome browser, valid URL, valid login details, Golden Crown slot game, bet type, denomination, balance, win symbols, spin button, Gamble screen, kill button.
+#	When Open the Golden Crown slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, select bet type & denomination, click on spin button till win appears and gamble screen in switched and click on red button and close the browser and login to the game
+#	Then  Resume feature should enabled and land on the gamble screen of Golden Crown game
    
+
+#		Scenario: Check bet value, credit value, home button, info button, play button behavior during autoplay in golden crown slot game
+#    Given Chrome browser, valid URL, valid login details, Golden Crown slot game, balance, spin button, auto spin button, auto spins option and check for buttons behavior & functionality
+#    When Open the Golden Crown slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on auto spin option under auto spin drop down and check behavior of different buttons in different scenarios
+#    Then Bet value & Credit value buttons should not be clickable
+#		And Home & Info buttons should not be clickable
+#		And Spin button should not visible & Stop button should be visible and clickable
+#		And Spin button should be visble after clicking on stop button
+
+
+#	Scenario: Check bet & credit value buttons behavior after navigating from gamble page during autoplay and check win amount getting added to balance in golden crown slot game
+#    Given Chrome browser, valid URL, valid login details, Golden Crown slot game, balance, spin button, auto spin button, auto spins option and check for buttons behavior & functionality after navigating from gamble page
+#    When Open the Golden Crown slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on auto spin option under auto spin drop down and check behavior of different buttons after navigating from gamble page
+#    Then Bet value & Credit value buttons should not be clickable after navigating from gamble page
+#	And Win amount should get added to the balance during autoplay
+#	And Insufficiant balance should be displayed when there is no balance during autoplay
+
+
+
+		Scenario: Increase/decrease the credit values and check whether values are getting changed and check same scenarios for bet values in golden crown slot game
+    Given Chrome browser, valid URL, valid login details, Golden Crown slot game, balance, credit values, bet values and plus & minus icon
+    When Open the Golden Crown slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on plus & minus icon to change the credit values, check values are changed and repeat the same scenarios for bet values
+    Then Credit value get changed whenever plus icon is clicked or whenever credit values are increased
+		And Bet value get changed whenever plus icon is clicked or whenever Bet values are increased
+		And Credit value get changed whenever plus icon is clicked or whenever credit values are decreased
+		And Bet value get changed whenever plus icon is clicked or whenever Bet values are decreased
 
 
 

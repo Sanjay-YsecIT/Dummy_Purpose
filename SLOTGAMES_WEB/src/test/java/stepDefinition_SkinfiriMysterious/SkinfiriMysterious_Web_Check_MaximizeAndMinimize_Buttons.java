@@ -21,112 +21,86 @@ public class SkinfiriMysterious_Web_Check_MaximizeAndMinimize_Buttons {
 
 	WebDriver driver;
 	Screen screen = new Screen();
-	
+
 	@Given("^Chrome browser, valid URL, valid login details, Skinfiri Mysterious slot game, maximize button and minimize button$")
 	public void chrome_browser_valid_URL_valid_login_details_Skinfiri_Mysterious_slot_game_maximize_button_and_minimize_button() throws Throwable {
-	   
+
 		this.driver = SkinfiriMysterious_URL_Login.getDriver();
-		
-		
 	}
 
 	@When("^Open the Skinfiri Mysterious slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on maximize button and click on minimize button$")
 	public void open_the_Skinfiri_Mysterious_slot_game_by_entering_the_valid_URL_in_browser_enter_the_valid_login_details_transfer_the_balance_click_on_maximize_button_and_click_on_minimize_button() throws Throwable {
-	   
+
 		WebElement balT = driver.findElement(By.id("transferInput"));
 		balT.clear();
 		Thread.sleep(1000);
 		balT.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("./Images/Skinfiri_Mysterious/Bet_place.PNG", 10);
-		//	Thread.sleep(15000);
-		
-//		
-//		WebElement frame = driver.findElement(By.xpath("//*[@id='iframeSlotGame']"));
-//		File sct = frame.getScreenshotAs(OutputType.FILE);
-//		File DestSrc = new File("./ScreenShots/scrsht/Max_min.png");
-//		FileUtils.copyFile(sct, DestSrc);
-		
-		
-		Pattern url=new Pattern("./Images/Skinfiri_Mysterious/url.PNG");
-		Pattern settings=new Pattern("./Images/Skinfiri_Mysterious/settings_icon.PNG");
-		Pattern min=new Pattern("./Images/Skinfiri_Mysterious/minimize_icon.PNG");
-		Pattern max=new Pattern("./Images/Skinfiri_Mysterious/expand_icon.PNG");
-		
-		
-		 //Clicking on setting icon and then clicking on maximize icon 
-		 screen.click(settings);
-		 Thread.sleep(3000);
-		 screen.click(max);
-		 Thread.sleep(3000);
-		 
-		 
-		 
-		  //if the screen is maximized, comparing URL bar should not be visible
-		 
-	    //  Pattern credit1=new Pattern("E:/Sikuli Images/others/url.png");
-	      Finder finder =new Finder(screen.capture().getImage());
-	      String ht = finder.find(url);
-	      double score=20;                
-	      System.out.println("the value of ht"+" "+ht);
-		  if(finder.hasNext())
-		  {
-		  Match m=finder.next();
-		  System.out.println("Match Found with: "+(m.getScore())*100+"%");
-		  score=(m.getScore())*100;
-		  System.out.println("If the screen is maximized, url bar should not be visible and comparisin successfull.");
-		  finder.destroy();  
-		  }         
-		  else    
-		  { 
-		  System.out.println("Comparision failed. Test case failed");         
-		  }
-		  System.out.println("If the screen is maximized, url bar should not be visible and comparisin value equals to: "+" "+score +"%");
-		  Assert.assertFalse(score > 97);
-		  
-		 //Clicking on minimize icon 
-//		 screen.click(settings);
-//		 Thread.sleep(3000);
-		 screen.click(min);
-		 Thread.sleep(3000);
-		 
-		 
-		 
-		 //if the screen is minimized, comparing URL bar should  be visible
-		 
-	     // Pattern winA=new Pattern("E:/Sikuli Images/others/url.PNG");
-		 
-	      Finder finder2 =new Finder(screen.capture().getImage());
-	      String ht2 = finder2.find(url);
-	      double score2=20;                
-	      System.out.println("the value of ht2"+" "+ht2);
-		  if(finder2.hasNext())
-		  {
-		  Match m2=finder2.next();
-		  System.out.println("Match Found with: "+(m2.getScore())*100+"%");
-		  score2=(m2.getScore())*100;
-		  System.out.println("URl bar should be visible if the bar is minimized and comparision successfull.");
-		  finder2.destroy();  
-		  }         
-		  else    
-		  { 
-		  System.out.println("Comparision failed. Test case failed");         
-		  }
-		  System.out.println("URl bar should be visible if the bar is minimized and comparision value is equal to: "+" "+score2 +"%");
-		  Assert.assertTrue(score2 > 85);
-		  Thread.sleep(2000);
-		
+		screen.wait("Images/Skinfiri_Mysterious/Bet_place.PNG", 30);
+
+		Pattern url=new Pattern("Images/Skinfiri_Mysterious/url.PNG");
+		Pattern min=new Pattern("Images/Skinfiri_Mysterious/minimize_icon.PNG");
+		Pattern max=new Pattern("Images/Skinfiri_Mysterious/expand_icon.PNG");
+
+		//Clicking on setting icon and then clicking on maximize icon 
+		screen.click(max);
+		Thread.sleep(3000);
+
+		//if the screen is maximized, comparing URL bar should not be visible
+		Finder finder =new Finder(screen.capture().getImage());
+		String ht = finder.find(url);
+		double score=20;                
+		System.out.println("the value of ht"+" "+ht);
+		if(finder.hasNext())
+		{
+			Match m=finder.next();
+			System.out.println("Match Found with: "+(m.getScore())*100+"%");
+			score=(m.getScore())*100;
+			System.out.println("If the screen is maximized, url bar should not be visible and comparisin successfull.");
+			finder.destroy();  
+		}         
+		else    
+		{ 
+			System.out.println("Comparision failed. Test case failed");         
+		}
+		System.out.println("If the screen is maximized, url bar should not be visible and comparisin value equals to: "+" "+score +"%");
+		Assert.assertFalse(score > 97);
+
+		//Clicking on minimize icon 
+		screen.click(min);
+		Thread.sleep(3000);
+
+		//if the screen is minimized, comparing URL bar should  be visible
+		Finder finder2 =new Finder(screen.capture().getImage());
+		String ht2 = finder2.find(url);
+		double score2=20;                
+		System.out.println("the value of ht2"+" "+ht2);
+		if(finder2.hasNext())
+		{
+			Match m2=finder2.next();
+			System.out.println("Match Found with: "+(m2.getScore())*100+"%");
+			score2=(m2.getScore())*100;
+			System.out.println("URl bar should be visible if the bar is minimized and comparision successfull.");
+			finder2.destroy();  
+		}         
+		else    
+		{ 
+			System.out.println("Comparision failed. Test case failed");         
+		}
+		System.out.println("URl bar should be visible if the bar is minimized and comparision value is equal to: "+" "+score2 +"%");
+		Assert.assertTrue(score2 > 79);
+		Thread.sleep(2000);
 	}
 
 	@Then("^Full screen should be displayed after clicking on maximize button and minimized screen should be displayed after clicking on minimize button in Skinfiri Mysterious slot game$")
 	public void full_screen_should_be_displayed_after_clicking_on_maximize_button_and_minimized_screen_should_be_displayed_after_clicking_on_minimize_button_in_Skinfiri_Mysterious_slot_game() throws Throwable {
-	    
+
 		Thread.sleep(3000);
-		 driver.quit();
+		driver.quit();
 	}
 
-		
-	
+
+
 
 }

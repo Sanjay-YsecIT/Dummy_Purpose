@@ -24,44 +24,33 @@ public class SkinfiriMysterious_Web_PayOut_BetType_3_And_Denomination_All {
 		this.driver = SkinfiriMysterious_URL_Login.getDriver();
 	}
 
-	@When("^Open the Skinfiri Mysterious slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on icon to open payout table, check payout amount on each symbol like orange, cherry n etc, click on back button, select bet type as (\\d+)\\.(\\d+) & all denomination  values and check payout amount on web$")
-	public void open_the_Skinfiri_Mysterious_slot_game_by_entering_the_valid_URL_in_browser_enter_the_valid_login_details_transfer_the_balance_click_on_icon_to_open_payout_table_check_payout_amount_on_each_symbol_like_orange_cherry_n_etc_click_on_back_button_select_bet_type_as_all_denomination_values_and_check_payout_amount_on_web(int arg1, int arg2) throws Throwable {
-
+	@When("^Open the Skinfiri Mysterious slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on icon to open payout table, check payout amount on each symbol like eye, seven n etc, click on back button, select bet type as (\\d+)\\.(\\d+) & all denomination  values and check payout amount on web$")
+	public void open_the_Skinfiri_Mysterious_slot_game_by_entering_the_valid_URL_in_browser_enter_the_valid_login_details_transfer_the_balance_click_on_icon_to_open_payout_table_check_payout_amount_on_each_symbol_like_eye_seven_n_etc_click_on_back_button_select_bet_type_as_all_denomination_values_and_check_payout_amount_on_web(int arg1, int arg2) throws Throwable {
 		WebElement balT = driver.findElement(By.id("transferInput"));
 		balT.clear();
 		Thread.sleep(1000);
 		balT.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("./Images/Skinfiri_Mysterious/Bet_place.PNG", 10);
-		//	Thread.sleep(15000);
+		screen.wait("Images/Skinfiri_Mysterious/Bet_place.PNG", 30);
 
-		Pattern credit1=new Pattern("./Images/Skinfiri_Mysterious/0.05_credit.PNG");
-		Pattern settings=new Pattern("./Images/Skinfiri_Mysterious/settings_icon.PNG");
-		Pattern info=new Pattern("./Images/Skinfiri_Mysterious/info_icon.PNG");
-		Pattern credit_inc=new Pattern("./Images/Skinfiri_Mysterious/credit_incremental.PNG");
+		Pattern credit1=new Pattern("Images/Skinfiri_Mysterious/0.05_credit.PNG");
+		Pattern info=new Pattern("Images/Skinfiri_Mysterious/info_icon.PNG");
+		Pattern credit_inc=new Pattern("Images/Skinfiri_Mysterious/credit_inc.PNG");
+		Pattern bet_inc=new Pattern("Images/Skinfiri_Mysterious/bet_inc.PNG");
 
-		Pattern deno1=new Pattern("./Images/Skinfiri_Mysterious/betvalue3_1.PNG");
-		Pattern deno2=new Pattern("./Images/Skinfiri_Mysterious/betvalue3_2.PNG");
-		Pattern deno3=new Pattern("./Images/Skinfiri_Mysterious/betvalue3_3.PNG");
-		Pattern deno4=new Pattern("./Images/Skinfiri_Mysterious/betvalue3_4.PNG");
-		Pattern deno5=new Pattern("./Images/Skinfiri_Mysterious/betvalue3_5.PNG");
+		Pattern pat1=new Pattern("Images/Skinfiri_Mysterious/PO05_1.PNG");
+		Pattern pat2=new Pattern("Images/Skinfiri_Mysterious/PO05_2.PNG");
+		Pattern pat3=new Pattern("Images/Skinfiri_Mysterious/PO05_5.PNG");
+		Pattern pat4=new Pattern("Images/Skinfiri_Mysterious/PO05_10.PNG");
+		Pattern pat5=new Pattern("Images/Skinfiri_Mysterious/PO05_20.PNG");
 
-		Pattern pat1=new Pattern("./Images/Skinfiri_Mysterious/PO05_1.PNG");
-		Pattern pat2=new Pattern("./Images/Skinfiri_Mysterious/PO05_2.PNG");
-		Pattern pat3=new Pattern("./Images/Skinfiri_Mysterious/PO05_5.PNG");
-		Pattern pat4=new Pattern("./Images/Skinfiri_Mysterious/PO05_10.PNG");
-		Pattern pat5=new Pattern("./Images/Skinfiri_Mysterious/PO05_20.PNG");
-
-
-		//     incrementing the credit value from 0.01 to 0.05
 		screen.click(credit_inc);
 		Thread.sleep(2000);
 		screen.click(credit_inc);
 		Thread.sleep(2000);
 
 		//comparing the credit value should be 0.05
-		// Pattern credit1=new Pattern("E:/Sikuli Images/payout/creditvalue1.png");
 		Finder finder =new Finder(screen.capture().getImage());
 		String ht = finder.find(credit1);
 		double score=20;                
@@ -81,20 +70,10 @@ public class SkinfiriMysterious_Web_PayOut_BetType_3_And_Denomination_All {
 		System.out.println("Comparision value equals to: "+" "+score +"%");
 		Assert.assertTrue(score > 97);
 
-
-		//Clicking on settings link and navigating to payout screen
-		screen.click(settings);
-		Thread.sleep(2000);
 		screen.click(info);
 		Thread.sleep(2000);
 
-		//Selecting the denomination as 1
-		screen.click(deno1);
-		Thread.sleep(2000);
-
-
 		//Comparing the max payout value for denomination 1
-		//   Pattern pat1=new Pattern("E:/Sikuli Images/payout/payout1_1.png");
 		Finder finder1 =new Finder(screen.capture().getImage());
 		String ht1 = finder1.find(pat1);
 		double score1=20;                
@@ -116,11 +95,10 @@ public class SkinfiriMysterious_Web_PayOut_BetType_3_And_Denomination_All {
 		Thread.sleep(2000);
 
 		//Selecting the denomination as 2
-		screen.click(deno2);
+		screen.click(bet_inc);
 		Thread.sleep(2000);
 
 		//Comparing the max payout value for denomination 2
-		//   Pattern pat2=new Pattern("E:/Sikuli Images/payout/payout1_2.png");
 		Finder finder2 =new Finder(screen.capture().getImage());
 		String ht2 = finder2.find(pat2);
 		double score2=20;                
@@ -142,12 +120,10 @@ public class SkinfiriMysterious_Web_PayOut_BetType_3_And_Denomination_All {
 		Thread.sleep(2000);
 
 		//Selecting the denomination as 5
-		screen.click(deno3);
+		screen.click(bet_inc);
 		Thread.sleep(2000);
 
-
 		//Comparing the max payout value for denomination 5
-		//  Pattern pat3=new Pattern("E:/Sikuli Images/payout/payout1_3.png");
 		Finder finder3 =new Finder(screen.capture().getImage());
 		String ht3 = finder3.find(pat3);
 		double score3=20;                
@@ -169,11 +145,10 @@ public class SkinfiriMysterious_Web_PayOut_BetType_3_And_Denomination_All {
 		Thread.sleep(2000);
 
 		//Selecting the denomination as 10
-		screen.click(deno4);
+		screen.click(bet_inc);
 		Thread.sleep(2000);
 
 		//Comparing the max payout value for denomination 10
-		//   Pattern pat4=new Pattern("E:/Sikuli Images/payout/payout1_4.png");
 		Finder finder4 =new Finder(screen.capture().getImage());
 		String ht4 = finder4.find(pat4);
 		double score4=20;                
@@ -195,11 +170,10 @@ public class SkinfiriMysterious_Web_PayOut_BetType_3_And_Denomination_All {
 		Thread.sleep(2000);
 
 		//Selecting the denomination as 20
-		screen.click(deno5);
+		screen.click(bet_inc);
 		Thread.sleep(2000);
 
 		//Comparing the max payout value for denomination 20
-		//   Pattern pat5=new Pattern("E:/Sikuli Images/payout/payout1_5.png");
 		Finder finder5 =new Finder(screen.capture().getImage());
 		String ht5 = finder5.find(pat5);
 		double score5=20;                
@@ -219,13 +193,10 @@ public class SkinfiriMysterious_Web_PayOut_BetType_3_And_Denomination_All {
 		System.out.println("Comparing the max payout value for 20 denomination and comparision value equals to: "+" "+score5 +"%");
 		Assert.assertTrue(score5 > 95);
 		Thread.sleep(2000);
-
-
 	}
 
-	@Then("^System should display the Payout max amount on each symbol like orange, cherry n etc and payout max amount should get changed whenever player changes the bet type to (\\d+)\\.(\\d+) and all denomination values in Skinfiri Mysterious slot game on web$")
-	public void system_should_display_the_Payout_max_amount_on_each_symbol_like_orange_cherry_n_etc_and_payout_max_amount_should_get_changed_whenever_player_changes_the_bet_type_to_and_all_denomination_values_in_Skinfiri_Mysterious_slot_game_on_web(int arg1, int arg2) throws Throwable {
-
+	@Then("^System should display the Payout max amount on each symbol like cross, owl n etc and payout max amount should get changed whenever player changes the bet type to (\\d+)\\.(\\d+) and all denomination values in Skinfiri Mysterious slot game on web$")
+	public void system_should_display_the_Payout_max_amount_on_each_symbol_like_cross_owl_n_etc_and_payout_max_amount_should_get_changed_whenever_player_changes_the_bet_type_to_and_all_denomination_values_in_Skinfiri_Mysterious_slot_game_on_web(int arg1, int arg2) throws Throwable {
 		Thread.sleep(3000);
 		driver.quit();
 	}

@@ -4,6 +4,8 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.sikuli.script.Finder;
 import org.sikuli.script.Match;
 import org.sikuli.script.Pattern;
@@ -26,15 +28,15 @@ public class AmazonClash_Web_AutoSpin_TwentySpins {
 
 	@When("^Open the Amazon Clash slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on twenty spin option under auto spin drop down and check the number of spins left message$")
 	public void open_the_Amazon_Clash_slot_game_by_entering_the_valid_URL_in_browser_enter_the_valid_login_details_transfer_the_balance_click_on_twenty_spin_option_under_auto_spin_drop_down_and_check_the_number_of_spins_left_message() throws Throwable {
-
-		WebElement balT = driver.findElement(By.id("transferInput"));
-		balT.clear();
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		WebElement TransferInput =	wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("transferInput")));
+		TransferInput.clear();
 		Thread.sleep(1000);
-		balT.sendKeys("300");
+		TransferInput.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
 		screen.wait("Images/Amazon_Clash/Bet_place.PNG", 30);
-		
+
 		Pattern autoplay=new Pattern("Images/Amazon_Clash/autoplay.PNG");
 		Pattern autospin_20=new Pattern("Images/Amazon_Clash/20spin.PNG");  
 
@@ -179,7 +181,7 @@ public class AmazonClash_Web_AutoSpin_TwentySpins {
 		}
 		System.out.println("Comparision value equals to: "+" "+score5 +"%");
 		Assert.assertTrue(score5 > 97);
-		
+
 		//comparing the number of 7spins left message
 		screen.wait(pat8, 5);
 		Finder finder8 =new Finder(screen.capture().getImage());

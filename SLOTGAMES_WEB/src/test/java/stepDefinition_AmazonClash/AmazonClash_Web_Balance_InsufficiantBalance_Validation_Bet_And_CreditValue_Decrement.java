@@ -127,7 +127,6 @@ public class AmazonClash_Web_Balance_InsufficiantBalance_Validation_Bet_And_Cred
 		Thread.sleep(1000);
 		screen.click(spin);
 		Thread.sleep(5000);
-
 	}
 
 	@Then("^Player should be blocked from playing the game when there is less balance in the account and reducing the credit and bet types player is enable to continue slot game in Amazon Clash game$")

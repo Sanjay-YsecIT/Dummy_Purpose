@@ -567,8 +567,7 @@ Feature: Test all the functionalities of Amazon Clash SLOT Game
 #   	Scenario: Check whether resume feature is enabled in freespin screen of Amazon Clash slot game
 #	Given Chrome browser, valid URL, valid login details, Amazon Clash slot slot game, bet type, denomination, balance, win symbols, spin button, freespin screen, new browser.
 #	When Open the Amazon Clash slot slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, select bet type & denomination, click on spin button till scatter win appears and freespin screen is switched and close the browser and again login to the game with new browser
-#	Then  Resume feature should enabled and land on the freespin screen of Amazon Clash slot game
-   
+#	Then  Resume feature should enabled and land on the freespin screen of Amazon Clash slot game  
  
     #	        According to credit type, credit values has to be generated respectively
 	
@@ -588,10 +587,10 @@ Feature: Test all the functionalities of Amazon Clash SLOT Game
  	 #	       Using Play now button launching the Amazon Clash Slot game
 	 
    	
-	 Scenario: Check whether PlayNow button is enabling to launch the game in a seperate browser tab and balance is added to the Amazon Clash slot game 
-    Given Chrome browser, valid URL, valid login details, Amazon Clash slot game, Play Now button and balance to play
-    When Open the Amazon Clash slot game by entering the valid URL in browser, click on Play Now button
-    Then System should enable to launch the game in seperate browser tab and balance is added to the game in Amazon Clash slot game
+#	 Scenario: Check whether PlayNow button is enabling to launch the game in a seperate browser tab and balance is added to the Amazon Clash slot game 
+#    Given Chrome browser, valid URL, valid login details, Amazon Clash slot game, Play Now button and balance to play
+#    When Open the Amazon Clash slot game by entering the valid URL in browser, click on Play Now button
+#    Then System should enable to launch the game in seperate browser tab and balance is added to the game in Amazon Clash slot game
  
  
  

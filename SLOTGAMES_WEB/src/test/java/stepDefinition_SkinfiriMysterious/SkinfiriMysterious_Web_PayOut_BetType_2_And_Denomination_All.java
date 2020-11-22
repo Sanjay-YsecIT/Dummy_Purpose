@@ -33,35 +33,23 @@ public class SkinfiriMysterious_Web_PayOut_BetType_2_And_Denomination_All {
 		balT.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("./Images/Skinfiri_Mysterious/Bet_place.PNG", 10);
-		//	Thread.sleep(15000);
+		screen.wait("Images/Skinfiri_Mysterious/Bet_place.PNG", 30);
 
+		Pattern credit1=new Pattern("Images/Skinfiri_Mysterious/0.02_credit.PNG");
+		Pattern info=new Pattern("Images/Skinfiri_Mysterious/info_icon.PNG");
+		Pattern credit_inc=new Pattern("Images/Skinfiri_Mysterious/credit_inc.PNG");
+		Pattern bet_inc=new Pattern("Images/Skinfiri_Mysterious/bet_inc.PNG");
 
+		Pattern pat1=new Pattern("Images/Skinfiri_Mysterious/PO02_0.4.PNG");
+		Pattern pat2=new Pattern("Images/Skinfiri_Mysterious/PO02_0.8.PNG");
+		Pattern pat3=new Pattern("Images/Skinfiri_Mysterious/PO02_2.PNG");
+		Pattern pat4=new Pattern("Images/Skinfiri_Mysterious/PO02_4.PNG");
+		Pattern pat5=new Pattern("Images/Skinfiri_Mysterious/PO02_8.PNG");
 
-		Pattern credit1=new Pattern("./Images/Skinfiri_Mysterious/0.02_credit.PNG");
-		Pattern settings=new Pattern("./Images/Skinfiri_Mysterious/settings_icon.PNG");
-		Pattern info=new Pattern("./Images/Skinfiri_Mysterious/info_icon.PNG");
-		Pattern credit_inc=new Pattern("./Images/Skinfiri_Mysterious/credit_incremental.PNG");
-
-		Pattern deno1=new Pattern("./Images/Skinfiri_Mysterious/betvalue2_1.PNG");
-		Pattern deno2=new Pattern("./Images/Skinfiri_Mysterious/betvalue2_2.PNG");
-		Pattern deno3=new Pattern("./Images/Skinfiri_Mysterious/betvalue2_3.PNG");
-		Pattern deno4=new Pattern("./Images/Skinfiri_Mysterious/betvalue2_4.PNG");
-		Pattern deno5=new Pattern("./Images/Skinfiri_Mysterious/betvalue2_5.PNG");
-
-		Pattern pat1=new Pattern("./Images/Skinfiri_Mysterious/PO02_0.4.PNG");
-		Pattern pat2=new Pattern("./Images/Skinfiri_Mysterious/PO02_0.8.PNG");
-		Pattern pat3=new Pattern("./Images/Skinfiri_Mysterious/PO02_2.PNG");
-		Pattern pat4=new Pattern("./Images/Skinfiri_Mysterious/PO02_4.PNG");
-		Pattern pat5=new Pattern("./Images/Skinfiri_Mysterious/PO02_8.PNG");
-
-
-		//     incrementing the credit value from 0.01 to 0.02
 		screen.click(credit_inc);
 		Thread.sleep(2000);
 
 		//comparing the credit value should be 0.02
-		// Pattern credit1=new Pattern("E:/Sikuli Images/payout/creditvalue1.png");
 		Finder finder =new Finder(screen.capture().getImage());
 		String ht = finder.find(credit1);
 		double score=20;                
@@ -81,21 +69,10 @@ public class SkinfiriMysterious_Web_PayOut_BetType_2_And_Denomination_All {
 		System.out.println("Comparision value equals to: "+" "+score +"%");
 		Assert.assertTrue(score > 97);
 
-
-		//Clicking on settings link and navigating to payout screen
-		screen.click(settings);
-		Thread.sleep(2000);
 		screen.click(info);
 		Thread.sleep(2000);
 
-
-		//Selecting the denomination as 0.04
-		screen.click(deno1);
-		Thread.sleep(2000);
-
-
 		//Comparing the max payout value for denomination 0.4
-		//   Pattern pat1=new Pattern("E:/Sikuli Images/payout/payout1_1.png");
 		Finder finder1 =new Finder(screen.capture().getImage());
 		String ht1 = finder1.find(pat1);
 		double score1=20;                
@@ -117,11 +94,10 @@ public class SkinfiriMysterious_Web_PayOut_BetType_2_And_Denomination_All {
 		Thread.sleep(2000);
 
 		//Selecting the denomination as 0.8
-		screen.click(deno2);
+		screen.click(bet_inc);
 		Thread.sleep(2000);
 
 		//Comparing the max payout value for denomination 0.8
-		//   Pattern pat2=new Pattern("E:/Sikuli Images/payout/payout1_2.png");
 		Finder finder2 =new Finder(screen.capture().getImage());
 		String ht2 = finder2.find(pat2);
 		double score2=20;                
@@ -143,12 +119,10 @@ public class SkinfiriMysterious_Web_PayOut_BetType_2_And_Denomination_All {
 		Thread.sleep(2000);
 
 		//Selecting the denomination as 2
-		screen.click(deno3);
+		screen.click(bet_inc);
 		Thread.sleep(2000);
 
-
 		//Comparing the max payout value for denomination 2
-		//  Pattern pat3=new Pattern("E:/Sikuli Images/payout/payout1_3.png");
 		Finder finder3 =new Finder(screen.capture().getImage());
 		String ht3 = finder3.find(pat3);
 		double score3=20;                
@@ -170,11 +144,10 @@ public class SkinfiriMysterious_Web_PayOut_BetType_2_And_Denomination_All {
 		Thread.sleep(2000);
 
 		//Selecting the denomination as 4
-		screen.click(deno4);
+		screen.click(bet_inc);
 		Thread.sleep(2000);
 
 		//Comparing the max payout value for denomination 4
-		//   Pattern pat4=new Pattern("E:/Sikuli Images/payout/payout1_4.png");
 		Finder finder4 =new Finder(screen.capture().getImage());
 		String ht4 = finder4.find(pat4);
 		double score4=20;                
@@ -196,11 +169,10 @@ public class SkinfiriMysterious_Web_PayOut_BetType_2_And_Denomination_All {
 		Thread.sleep(2000);
 
 		//Selecting the denomination as 8
-		screen.click(deno5);
+		screen.click(bet_inc);
 		Thread.sleep(2000);
 
 		//Comparing the max payout value for denomination 8
-		//   Pattern pat5=new Pattern("E:/Sikuli Images/payout/payout1_5.png");
 		Finder finder5 =new Finder(screen.capture().getImage());
 		String ht5 = finder5.find(pat5);
 		double score5=20;                

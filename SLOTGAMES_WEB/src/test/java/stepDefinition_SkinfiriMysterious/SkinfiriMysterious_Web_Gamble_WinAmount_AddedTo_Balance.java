@@ -1,11 +1,7 @@
 package stepDefinition_SkinfiriMysterious;
 
-import java.io.File;
-
-import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.sikuli.script.Finder;
@@ -21,8 +17,6 @@ public class SkinfiriMysterious_Web_Gamble_WinAmount_AddedTo_Balance {
 
 	WebDriver driver;
 	Screen screen=new Screen();
-
-
 	@Given("^Chrome browser, valid URL, valid login details, Skinfiri Mysterious slot game, balance, spin button, win amount, gamble button, gamble amount, red button, black button and gamble status$")
 	public void chrome_browser_valid_URL_valid_login_details_Skinfiri_Mysterious_slot_game_balance_spin_button_win_amount_gamble_button_gamble_amount_red_button_black_button_and_gamble_status() throws Throwable {
 
@@ -38,35 +32,23 @@ public class SkinfiriMysterious_Web_Gamble_WinAmount_AddedTo_Balance {
 		balT.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("./Images/Skinfiri_Mysterious/Bet_place.PNG", 10);
-		//	Thread.sleep(15000);
-//
-//		WebElement frame = driver.findElement(By.xpath("//*[@id='iframeSlotGame']"));
-//		File sct = frame.getScreenshotAs(OutputType.FILE);
-//		File DestSrc = new File("./ScreenShots/scrsht/gamble_win_before.png");
-//		FileUtils.copyFile(sct, DestSrc);
-//		Thread.sleep(15000);
+		screen.wait("Images/Skinfiri_Mysterious/Bet_place.PNG", 30);
 
-		Pattern SPIN=new Pattern("./Images/Skinfiri_Mysterious/Spin.PNG");
-		//	Pattern collect=new Pattern("./Images/10Spins/collect_image.PNG");
-		Pattern BALANCE=new Pattern("./Images/Skinfiri_Mysterious/bal_300.PNG");
-		Pattern EYE=new Pattern("./Images/Skinfiri_Mysterious/EYE.PNG");
-		Pattern SKULL=new Pattern("./Images/Skinfiri_Mysterious/SKULL.PNG");
-		Pattern CROW=new Pattern("./Images/Skinfiri_Mysterious/CROW.PNG");
-		//	Pattern WIN_PATTERN=new Pattern("./Images/10Spins/WIN_PATTERN.PNG");
-		Pattern DENO_4=new Pattern("./Images/Skinfiri_Mysterious/deno_4.PNG");
-		Pattern WIN_AMT=new Pattern("./Images/Skinfiri_Mysterious/win_amt_8.PNG");
-		Pattern RED_GAMBLE_BTN=new Pattern("./Images/Skinfiri_Mysterious/red_gamble_button.PNG");
-		//	Pattern BLACK_GAMBLE_BTN=new Pattern("./Images/GAMBLE_WIN_AMT/black_gamble_button.PNG");
-		Pattern GAMBLE_BTN=new Pattern("./Images/Skinfiri_Mysterious/gamble_icon.PNG");
-		Pattern WIN_GAMBLE=new Pattern("./Images/Skinfiri_Mysterious/win_gamble.PNG");
-		Pattern GAMBLE_COLLECT=new Pattern("./Images/Skinfiri_Mysterious/collect_image_gamble.PNG");
-		Pattern BAL_AFTERWIN=new Pattern("./Images/Skinfiri_Mysterious/bal_after_gambleamt_add.PNG");
-		Pattern LOOSE_GAMBLE=new Pattern("./Images/Skinfiri_Mysterious/lose_gamble.PNG");
-		Pattern BAL_GAMBLELOOSE=new Pattern("./Images/Skinfiri_Mysterious/bal_afterspin_296.PNG");
+		Pattern SPIN=new Pattern("Images/Skinfiri_Mysterious/Spin.PNG");
+		Pattern BALANCE=new Pattern("Images/Skinfiri_Mysterious/bal_300.PNG");
+		Pattern EYE=new Pattern("Images/Skinfiri_Mysterious/EYE.PNG");
+		Pattern SKULL=new Pattern("Images/Skinfiri_Mysterious/SKULL.PNG");
+		Pattern CROW=new Pattern("Images/Skinfiri_Mysterious/CROW.PNG");
+		Pattern WIN_AMT=new Pattern("Images/Skinfiri_Mysterious/win_amt_0.4.PNG");
+		Pattern RED_GAMBLE_BTN=new Pattern("Images/Skinfiri_Mysterious/red_gamble_button.PNG");
+		Pattern GAMBLE_BTN=new Pattern("Images/Skinfiri_Mysterious/gamble_icon.PNG");
+		Pattern WIN_GAMBLE=new Pattern("Images/Skinfiri_Mysterious/win_gamble.PNG");
+		Pattern GAMBLE_COLLECT=new Pattern("Images/Skinfiri_Mysterious/collect_image_gamble.PNG");
+		Pattern BAL_AFTERWIN=new Pattern("Images/Skinfiri_Mysterious/bal_after_gambleamt_add.PNG");
+		Pattern LOOSE_GAMBLE=new Pattern("Images/Skinfiri_Mysterious/lose_gamble.PNG");
+		Pattern BAL_GAMBLELOOSE=new Pattern("Images/Skinfiri_Mysterious/Reminingbal_299.80.PNG");
 
 		//comparing the balance before Win
-
 		Finder finder1 =new Finder(screen.capture().getImage());
 		String ht1 = finder1.find(BALANCE);
 		double score1=20;                
@@ -86,27 +68,15 @@ public class SkinfiriMysterious_Web_Gamble_WinAmount_AddedTo_Balance {
 		System.out.println("Balance comparision before spin: "+" "+score1 +"%");
 		Assert.assertTrue(score1 > 97);
 
-
 		// WIN PATTERN COMBINATION 
-
 		screen.click(EYE);
 		Thread.sleep(2000);
 		screen.click(SKULL);
 		Thread.sleep(2000);
 		screen.click(CROW);
 		Thread.sleep(2000);
-
-
-		//Selecting denominations as 4
-		screen.click(DENO_4);
-		Thread.sleep(2000);
-		//Clicking on Spin button
 		screen.click(SPIN);
-		Thread.sleep(5000);
-
-
-		//comparing the win amount should exists after spin
-		//   Pattern winA=new Pattern("E:/Sikuli Images/gamble/win.PNG");
+		Thread.sleep(9000);
 
 		Finder finder2 =new Finder(screen.capture().getImage());
 		String ht2 = finder2.find(WIN_AMT);
@@ -117,7 +87,7 @@ public class SkinfiriMysterious_Web_Gamble_WinAmount_AddedTo_Balance {
 			Match m2=finder2.next();
 			System.out.println("Match Found with: "+(m2.getScore())*100+"%");
 			score2=(m2.getScore())*100;
-			System.out.println("Win amount comparision completed successfully. Win amount is 16.00 YSI");
+			System.out.println("Win amount comparision completed successfully. Win amount is 0.40 YSI");
 			finder2.destroy();  
 		}         
 		else    
@@ -126,9 +96,6 @@ public class SkinfiriMysterious_Web_Gamble_WinAmount_AddedTo_Balance {
 		}
 		System.out.println("Win amount comparision after spin: "+" "+score2 +"%");
 		Assert.assertTrue(score2 > 97);
-		Thread.sleep(5000);
-
-
 
 		//Clicking on gamble button
 		screen.click(GAMBLE_BTN);
@@ -136,10 +103,7 @@ public class SkinfiriMysterious_Web_Gamble_WinAmount_AddedTo_Balance {
 
 		//Clicking on Red button
 		screen.click(RED_GAMBLE_BTN);
-		Thread.sleep(2000);
-
-
-		//comparing the balance amount after spin
+		Thread.sleep(1000);
 
 		if  (screen.exists(WIN_GAMBLE) != null)
 		{
@@ -161,13 +125,11 @@ public class SkinfiriMysterious_Web_Gamble_WinAmount_AddedTo_Balance {
 				System.out.println("Comparision failed. Test case failed");         
 			}
 			System.out.println("Gamble win comparision: "+" "+score3 +"%");
-			Assert.assertTrue(score3 > 97);			  
-			Thread.sleep(3000);
+			Assert.assertTrue(score3 > 90);			  
+			Thread.sleep(1000);
 
 			screen.click(GAMBLE_COLLECT);
-			Thread.sleep(4000);
-
-			//  Pattern bal=new Pattern("E:/Sikuli Images/gamble/balance_afterWin.PNG");
+			Thread.sleep(2000);
 
 			Finder finder6 =new Finder(screen.capture().getImage());
 			String ht6 = finder6.find(BAL_AFTERWIN);
@@ -191,7 +153,7 @@ public class SkinfiriMysterious_Web_Gamble_WinAmount_AddedTo_Balance {
 		}
 		else
 		{
-			// Pattern gambleStatus=new Pattern("E:/Sikuli Images/gamble/lose.PNG");
+			System.out.println("inside gamble loose");
 			Finder finder3 =new Finder(screen.capture().getImage());
 			String ht3 = finder3.find(LOOSE_GAMBLE);
 			double score3=20;                
@@ -209,10 +171,8 @@ public class SkinfiriMysterious_Web_Gamble_WinAmount_AddedTo_Balance {
 				System.out.println("Comparision failed. Test case failed");         
 			}
 			System.out.println("Gamble lose comparision: "+" "+score3 +"%");
-			Assert.assertTrue(score3 > 80);
-			Thread.sleep(4000);
-
-			//  Pattern Abalance=new Pattern("E:/Sikuli Images/gamble/balance_afterLose.PNG");
+			Assert.assertTrue(score3 > 90);
+			Thread.sleep(3000);
 
 			Finder finder11 =new Finder(screen.capture().getImage());
 			String ht11 = finder11.find(BAL_GAMBLELOOSE);
@@ -223,7 +183,7 @@ public class SkinfiriMysterious_Web_Gamble_WinAmount_AddedTo_Balance {
 				Match m11=finder11.next();
 				System.out.println("Match Found with: "+(m11.getScore())*100+"%");
 				score11=(m11.getScore())*100;
-				System.out.println("Balance After losing in gamble. Balance is 296 YSI");
+				System.out.println("Balance After losing in gamble. Balance is 299.80 YSI");
 				finder11.destroy();  
 			}         
 			else    
@@ -231,16 +191,8 @@ public class SkinfiriMysterious_Web_Gamble_WinAmount_AddedTo_Balance {
 				System.out.println("Comparision failed. Test case failed");         
 			}
 			System.out.println("Balance comparision after lose: "+" "+score11 +"%");
-			Assert.assertTrue(score1 > 97);
-
+			Assert.assertTrue(score11 > 97);
 		}
-		WebElement frame1 = driver.findElement(By.xpath("//*[@id='iframeSlotGame']"));
-		File sct1 = frame1.getScreenshotAs(OutputType.FILE);
-		File DestSrc1 = new File("./ScreenShots/scrsht/gamble_win_after.png");
-		FileUtils.copyFile(sct1, DestSrc1);
-		Thread.sleep(15000);
-
-
 	}
 
 	@Then("^Gamble Win amount should get added to main balance after status displayed as WIN and gamble page should get closed in Skinfiri Mysterious slot game$")

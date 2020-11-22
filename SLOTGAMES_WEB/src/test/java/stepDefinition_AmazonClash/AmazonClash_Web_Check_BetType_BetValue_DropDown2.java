@@ -33,7 +33,7 @@ public class AmazonClash_Web_Check_BetType_BetValue_DropDown2 {
 		balT.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("Images/Amazon_Clash/Bet_place.PNG", 40);
+		screen.wait("Images/Amazon_Clash/Bet_place.PNG", 30);
 		
 		Pattern credit=new Pattern("Images/Amazon_Clash/credit_0.02.PNG");
 		Pattern bet=new Pattern("Images/Amazon_Clash/bet2.PNG");

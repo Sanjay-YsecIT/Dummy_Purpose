@@ -33,18 +33,13 @@ public class SkinfiriMysterious_Web_Check_BetType_BetValue_DropDown1 {
 		balT.sendKeys("300");
 		Thread.sleep(2000);
 		driver.findElement(By.className("Transfer_Ok_but")).click();
-		screen.wait("./Images/Skinfiri_Mysterious/Bet_place.PNG", 10);
-		//	Thread.sleep(15000);
-		Thread.sleep(15000);
-
-		Pattern credit=new Pattern("./Images/Skinfiri_Mysterious/0.01_credit.PNG");
-		Pattern bet_val=new Pattern("./Images/Skinfiri_Mysterious/betvalue_0.01.PNG");
+		screen.wait("Images/Skinfiri_Mysterious/Bet_place.PNG", 30);
 		
-
-
+		Pattern credit=new Pattern("Images/Skinfiri_Mysterious/0.01_credit.PNG");
+		Pattern bet_val=new Pattern("Images/Skinfiri_Mysterious/betvalue_0.01.PNG");
+		Pattern bet=new Pattern("Images/Skinfiri_Mysterious/bet1.PNG");
 
 		//comparing the credit value should be 0.01
-		// Pattern credit1=new Pattern("E:/Sikuli Images/Bet Values/creditvalue1.png");
 		Finder finder =new Finder(screen.capture().getImage());
 		String ht = finder.find(credit);
 		double score=20;                
@@ -64,10 +59,10 @@ public class SkinfiriMysterious_Web_Check_BetType_BetValue_DropDown1 {
 		System.out.println("Credit comparision value equals to: "+" "+score +"%");
 		Assert.assertTrue(score > 97);
 
-
-
+		screen.click(bet);
+		Thread.sleep(2000);
+		
 		//comparing the available denomination values
-	//	Pattern pat=new Pattern("E:/Sikuli Images/Bet Values/dropdown1.png");
 		Finder finder1 =new Finder(screen.capture().getImage());
 		String ht1 = finder1.find(bet_val);
 		double score1=20;                
@@ -85,16 +80,12 @@ public class SkinfiriMysterious_Web_Check_BetType_BetValue_DropDown1 {
 			System.out.println("Comparision failes. Test case failed");         
 		}
 		System.out.println("Comparision value equals to: "+" "+score1 +"%");
-		Assert.assertTrue(score1 > 95);
-
-
+		Assert.assertTrue(score1 > 97);
 	}
 
 	@Then("^Bet value should get changed (\\d+)\\.(\\d+),(\\d+)\\.(\\d+),(\\d+),(\\d+),(\\d+) if the bet type selected as (\\d+)\\.(\\d+) from the drop down in Skinfiri Mysterious slot game$")
 	public void bet_value_should_get_changed_if_the_bet_type_selected_as_from_the_drop_down_in_Skinfiri_Mysterious_slot_game(int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9) throws Throwable {
-
-		
-		 Thread.sleep(3000);
-		 driver.quit();
+		Thread.sleep(3000);
+		driver.quit();
 	}
 }
