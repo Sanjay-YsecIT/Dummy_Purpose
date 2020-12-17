@@ -159,6 +159,11 @@ public class GummyLand_Web_Balance_Check_WinAmount_AddedToBalance {
 		}
 		System.out.println("Winning symbols comparision: "+" "+score4 +"%");
 		Assert.assertTrue(score4 > 90);
+		
+		
+		//SPIN FOR NEXT ITTERATIONS
+		screen.click(spin);
+		Thread.sleep(4000);
 	}
 
 	@Then("^Win amount should get added to the balance after win and balance should get added with win amount$")

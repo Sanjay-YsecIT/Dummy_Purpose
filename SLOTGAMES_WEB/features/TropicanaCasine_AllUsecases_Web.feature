@@ -487,7 +487,7 @@
 #	Scenario: Check whether HUD buttons are active during gamble in Tropicana Casine slot game
 #    Given Chrome browser, valid URL, valid login details, Tropicana Casine slot game, spin, gamble link, gamble page, HUD buttons
 #    When Open the Tropicana Casine slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, spin the reels and access to gamble and click on HUD buttons present on the screen
-#    Then All HUD buttons should be inactive upon click shoudn't perform any action in  game
+#    Then All HUD buttons should be inactive upon click shoudn't perform any action in game
 	
 	
 	

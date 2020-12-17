@@ -46,7 +46,7 @@ public class HappyFruits_Web_ManualSpin_Validations_ButtonsBehavior {
 		Pattern disable_lines=new Pattern("Images/Happy_Fruits/disable_lines.PNG");
 		Pattern disable_turbo=new Pattern("Images/Happy_Fruits/disable_turbo.PNG");
 		Pattern disable_betvalue_click=new Pattern("Images/Happy_Fruits/disable_betvalue_click.PNG");
-		Pattern bet=new Pattern("Images/Happy_Fruits/bet1.PNG");
+		Pattern bet=new Pattern("Images/Happy_Fruits/bet_dropdown1.PNG");
 		Pattern disable_autoplay=new Pattern("Images/Happy_Fruits/disable_autoplay.PNG");
 		Pattern autolist=new Pattern("Images/Happy_Fruits/autolist.PNG");
 		Pattern credit1=new Pattern("Images/Happy_Fruits/credit1.PNG");
@@ -331,7 +331,7 @@ public class HappyFruits_Web_ManualSpin_Validations_ButtonsBehavior {
 			Match m5=finder5.next();
 			System.out.println("Match Found with: "+(m5.getScore())*100+"%");
 			score5=(m5.getScore())*100;
-			System.out.println("Test case6: After clicking on Bet button, credit value selected is 0.2");
+			System.out.println("Test case6: After clicking on Bet button, bet dropdowns is not present");
 			finder5.destroy();  
 		}         
 		else    
@@ -339,7 +339,7 @@ public class HappyFruits_Web_ManualSpin_Validations_ButtonsBehavior {
 			System.out.println("Comparision failed. Test case failed");         
 		}
 		System.out.println("Testcase: 6 comparision value equals to: "+" "+score5 +"%");
-		Assert.assertTrue(score5 > 97);
+		Assert.assertFalse(score5 > 97);
 		Thread.sleep(2000);
 
 		//if win is triggered in the interval

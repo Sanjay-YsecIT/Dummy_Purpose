@@ -286,8 +286,242 @@ Feature: Test all the functionalities of GummyLand Slot Game
 #    Then Verify the bet values are in assigned fields in ascending order in Gummy Land slot game	
 	
 	
-	Scenario: Check whether incrementing and decrementing the creditvalue, balance is equal to balance in creditform multplies by denomination respectively in Gummy Land slot game 
-    Given Chrome browser, valid URL, valid login details, Gummy Land slot game, increment, decrement and balance, balance in credit form, creditvalues
-    When Open the Gummy Land slot game by entering the valid URL in browser, enter the valid login details, inc and dec credit balance and verify the balance in credit form and verify the balance
-    Then Credit balance for all credit values should be same as balance multiplies by credit value are assigned respectively in Gummy Land slot game 
+#	Scenario: Check whether incrementing and decrementing the creditvalue, balance is equal to balance in creditform multplies by denomination respectively in Gummy Land slot game 
+#    Given Chrome browser, valid URL, valid login details, Gummy Land slot game, increment, decrement and balance, balance in credit form, creditvalues
+#    When Open the Gummy Land slot game by entering the valid URL in browser, enter the valid login details, inc and dec credit balance and verify the balance in credit form and verify the balance
+#    Then Credit balance for all credit values should be same as balance multiplies by credit value are assigned respectively in Gummy Land slot game 
  
+
+ 
+#	 Scenario: Check whether Session expired message displayed for long duration inactive game state in Gummy Land slot game
+#    Given Chrome browser, valid URL, valid login details, Gummy Land slot game, balance, transfer button
+#    When Open the Gummy Land slot game by entering the valid URL in browser, enter the valid login details, transfer the amount, idle the game session for about 22mins
+#    Then Session Expired message should display and user has to start new session for game play in Gummy Land slot game
+    
+    
+#    Scenario: Check whether user able to play the game when there is insufficient balance in account in Gummy Landslot game
+#    Given Chrome browser, valid URL, valid login details,Gummy Land slot game, balance, spin button and insufficient alert message
+#    When Open the Gummy Land slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on spin button till balance less than bet value and check the validation message
+#    Then Player should be blocked from playing the game when there is less balance in the account in Gummy Land slot game
+#    Then Decrease the credit and bet value and again start the spin in Gummy Land slot game
+	
+	
+	
+#	Scenario: Check bet & credit value buttons behavior after navigating from gamble page during autoplay and check win amount getting added to balance in Gummy Land slot game
+#    Given Chrome browser, valid URL, valid login details, Gummy Land slot game, balance, spin button, auto spin button, auto spins option and check for buttons behavior & functionality after navigating from gamble page
+#    When Open the Gummy Land slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on auto spin option under auto spin drop down and check behavior of different buttons after navigating from gamble page
+#    Then Bet value & Credit value buttons should be clickable after navigating from gamble page when autospin is stopped in Gummy Land slot game
+#	And Win amount should get added to the balance during autoplay
+ 
+ 
+#	 Scenario: Check whether multiple tabs switching and reload is allowed in Gummy Land slot game
+#    Given Chrome browser, valid URL, valid login details, Gummy Land slot game, balance, transfer button, spin button, multiple tabs and reload option
+#    When Open the Gummy Land slot game by entering the valid URL in browser, enter the valid login details, transfer the amount, click on autospin and switch between tabs and again reload the game
+#    Then Switching between tabs should be allowed and reloading the game resulting in ending game session and shouldn't resume the Gummy Land slot game
+  
+  
+  
+# 	Scenario: Check whether error messages is displayed on network interruptions and upon good network connection Autospin is continued in Gummy Land slot game 
+#    Given Chrome browser, valid URL, valid login details, Gummy Land slot game, balance, Autospin button, netwok turnOFF and ON, network messages 
+#    When Open the Gummy Land slot game by entering the valid URL in browser, enter the valid login details, and launch the game, Autospin is turned ON and turn OFF netwok and check for valid message. and turn on netwok for Auto spin is continued
+#    Then User is addressed with valid error message 'No Internet' for network interruptions during Autospin in Gummy Land slot game 
+#    Then User is addressed with valid error message 'Disconnected from Server' for longer duration network interruptions during Autospin feature in Gummy Land slot game 
+  
+  
+  
+#    Scenario: Check whether user able to play Autospin feature game when there is insufficient balance in account in Gummy Land slot game
+#    Given Chrome browser, valid URL, valid login details, Gummy Land slot game, balance, AutoSpin button, validation message, maxbet button, credit decrement button
+#    When Open the Gummy Land slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, select maxbet, click on Autospin button till balance turns to zero and check the validation message and decrement the denomination and again spin the reels
+#    Then Check for the game buttons during the insufficient alert message in the Gummy Land slot game
+#    Then Player should be blocked from playing the game when there is no balance in the account and after decrementing credit and trigger autospin in Gummy Land slot game
+	
+	
+#	Scenario: Check bet value, credit value, home button, info button, play button behavior during autoplay in Gummy Land slot game
+#    Given Chrome browser, valid URL, valid login details, Gummy Land slot game, balance, spin button, auto spin button, auto spins option and check for buttons behavior & functionality
+#    When Open the Gummy Land slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on auto spin option under auto spin drop down and check behavior of different buttons in different scenarios
+#    Then Bet value & Credit value buttons should not be clickable
+#		And Home & Info buttons should not be clickable
+#		And Spin button should not visible & Stop button should be visible and clickable
+#		And Spin button should be visble after clicking on stop button
+ 
+ 
+#	Scenario: Check whether the max payout amount for each symbol as per the bet type 0.02 and all the denominations in Gummy Land slot game on Web
+#    Given Chrome browser, valid URL, valid login details, Gummy Land slot game, icon to open payout table, all symbols, max amount on each symbol, back button, bet type 0.02 and all denomination values 
+#    When Open the Gummy Land slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on icon to open payout table, check payout amount on each symbol, click on back button, select bet type as 0.02 & all denomination  values and check payout amount
+#    Then System should display the Payout max amount on each symbol and payout max amount should get changed whenever player changes the bet type to 0.02 and denomination values in Gummy Land slot game on Web
+	
+#	Scenario: Check whether the max payout amount for each symbol as per the bet type 0.05 and all the denominations in Gummy Land slot game on Web
+#    Given Chrome browser, valid URL, valid login details, Gummy Land slot game, icon to open payout table, all symbols, max amount on each symbol, back button, bet type 0.05 and  denomination values like 0.5, 1, 2.5, 5 & 10
+#    When Open the Gummy Land slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on icon to open payout table, check payout amount on each symbol, click on back button, select bet type as 0.05 & denomination  values like 0.5, 1, 2.5, 5 & 10 and check payout amount
+#    Then System should display the Payout max amount on each symbol and payout max amount should get changed whenever player changes the bet type to 0.05 and denomination values like 0.5, 1, 2.5, 5 & 10 in Gummy Land slot game on Web
+#	
+#	 Scenario: Check whether the max payout amount for each symbol like donuts, teddy as per the bet type 0.1 and all denomination values in Gummy Land slot game on Web
+#    Given Chrome browser, valid URL, valid login details, Gummy Land slot game, icon to open payout table, all symbols, max amount on each symbol like donuts, teddy n etc, back button, bet type 0.1 and all denomination values on web
+#    When Open the Gummy Land slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on icon to open payout table, check payout amount on each symbol like donuts, teddy n etc, click on back button, select bet type as 0.1 & all denomination values and check payout amount on web
+#    Then System should display the Payout max amount on each symbol like donuts, teddy etc and payout max amount should get changed whenever player changes the bet type to 0.1 and all denomination values in Gummy Land slot game on web
+#	
+#	Scenario: Check whether the max payout amount for each symbol like orange candy, stick candy as per the bet type 0.5 and all denomination values in Gummy Land slot game on Web
+#    Given Chrome browser, valid URL, valid login details, Gummy Land slot game, icon to open payout table, all symbols, max amount on each symbol like sorange candy, stick candy n etc, back button, bet type 0.5 and denomination values like 5, 10, 25, 50 & 100 on web
+#    When Open the Gummy Land slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on icon to open payout table, check payout amount on each symbol like spade, lady n etc, click on back button, select bet type as 0.5 & denomination  values like 5, 10, 25, 50 & 100 and check payout amount on web
+#    Then System should display the Payout max amount on each symbol like orange candy, stick candy n etc and payout max amount should get changed whenever player changes the bet type to 0.5 and denomination values like 5, 10, 25, 50 & 100 in Gummy Land slot game on web
+   
+ 
+ 
+#    Scenario: Check HUD Buttons color font and alignment in Gummy Land slot game
+#    Given Chrome browser, valid URL, valid login details, Gummy Land slot game, HUD buttons
+#	When Open the Gummy Land slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, launch the game
+#	Then Verify all the text button letter case
+#	Then Verify colors of bet and credit buttons
+#    Then Verify the functionality of hide and unhide button
+#    Then Verify the alignment of spin button
+#    Then Verify the color of turbo button 'ON' and 'OFF' state
+#    Then Verify the color of spin and stop button
+   
+ 
+#    Scenario: Check whether info page is navigating forward and backward, exit button for the Gummy Land slot game
+#    Given Chrome browser, valid URL, valid login details, Gummy Land slot game, balance, info icon, navigation icon, exit icon, payout, paylines, wild, scatter, wheelspin, freespin, gamble and jackpot window
+#    When Open the Gummy Land slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on settings and info icon and validate the forward and backward button.
+#    Then forward ,backward and exit button of info page should perform in Gummy Land slot game
+	
+	
+#     Scenario: Select the max bet option, do the spin and check whether balance is deducting according to the changed bet type in Gummy Land slot game
+#    Given Chrome browser, valid URL, valid login details, Gummy Land slot game, max bet option, balance and spin button
+#    When Open the Gummy Land slot game by entering the valid URL in browser, enter the valid login details, select the bet type as maxbet, click on spin button and check the balance
+#    Then Balance should get deducted by max credit and betvalue combinationas per the game specification in Gummy Land game
+  
+  
+  
+#	Scenario: Navigate to home screen from Gummy Land slot game
+#    Given Chrome browser, valid URL, valid login details, Gummy Land slot game, game screen and home button
+#    When Open the Gummy Land slot game by entering the valid URL in browser,enter the valid login details, transfer the balance and click on home button
+#    Then System should take the player to Home page after clicking on home button from Gummy Land slot game	
+ 
+ 
+#	 Scenario: Check whether system is providing balance in try now feature of Gummy Land slot game
+#    Given Chrome browser, valid URL, valid login details, Gummy Land slot game, try now button and balance to play
+#    When Open the Gummy Land slot game by entering the valid URL in browser, click on try now button
+#    Then System should provide five thousand as balance on click on try now button in Gummy Land slot game
+		
+	
+#	Scenario: Check whether amount is deducting from the balance after clicking on spin button in try now page of Gummy Land slot game
+#    Given Chrome browser, valid URL, valid login details, Gummy Land slot game, try now button, balance to play and spin button
+#    When Open the Gummy Land slot game by entering the valid URL in browser, click on try now button and click on spin button
+#    Then Amount should get deducted from balance on click on spin button in try now page of Gummy Land slot game
+ 
+ 
+#	Scenario: Check bet value, credit value, home button, info button, play button, gamble link (active/disable) behavior during manual spin in Gummy Land slot game
+#    Given Chrome browser, valid URL, valid login details, Gummy Land slot game, balance, spin button, spin button and check for buttons behavior & functionality
+#    When Open the Gummy Land slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on spin option and check behavior of different buttons in different scenarios
+#    Then Bet value & Credit value buttons should not be clickable under spin condition in Gummy Land slot game
+#	And Home, Info and Turbo buttons should not be clickable on screen under spin condition in Gummy Land slot game
+#	And Spin button should be disabled during reel spin in Gummy Land slot game
+#	And Spin button should be visible after reel spin stops and if  win is triggered clicking on collect button in Gummy Land slot game
+#	And Gamble button behaviour under win triggered and disabled when next spin starts in Gummy Land slot game
+ 
+ 
+# 	Scenario: Check whether error messages is displayed on network interruptions and upon good network connection resume to game session in Gummy Land slot game 
+#    Given Chrome browser, valid URL, valid login details, Gummy Land slot game, balance, spin button, netwok turnOFF and ON, network messages 
+#    When Open the Gummy Land slot game by entering the valid URL in browser, enter the valid login details, and launch the game, spin and turn OFF netwok and check for valid message and turn on netwok for manual spin is continued
+#    Then User is addressed with valid error message 'No Internet' for network interruptions in Gummy Land slot game 
+#    Then User is addressed with valid error message 'Disconnected from Server' for longer duration network interruptions in Gummy Land slot game 
+  
+  
+ 
+#    Scenario: Check the functionality of maximize and minimize button in Gummy Land slot game
+#    Given Chrome browser, valid URL, valid login details, Gummy Land slot game, maximize button and minimize button
+#    When Open the Gummy Land slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on maximize button and click on minimize button
+#    Then Full screen should be displayed after clicking on maximize button and minimized screen should be displayed after clicking on minimize button in Gummy Land slot game
+ 
+
+#    Scenario: Check user instruction messages before and after spin in Gummy Land slot game
+#    Given Chrome browser, valid URL, valid login details, Gummy Land slot game, balance, spin button and user instruction message
+#	When Open the Gummy Land slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on spin button and check the user instruction messages
+#	Then User instruction message 'Please place your bet' should be displayed before spin button is clicked
+#	Then User instruction message 'Good Luck' should be displayed after spin button is clicked in Gummy Land slot game
+ 
+ 
+#	Scenario: Check whether HUD buttons are active during gamble in Gummy Land slot game
+#    Given Chrome browser, valid URL, valid login details, Gummy Land slot game, spin, gamble link, gamble page, HUD buttons
+#    When Open the Gummy Land slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, spin the reels and access to gamble and click on HUD buttons present on the screen
+#    Then All HUD buttons should be inactive upon click shoudn't perform any action in Gummy Land slot game
+
+
+# 	Scenario: Check whether resume feature is enabled in Gamble screen of Gummy Land slot game
+#	Given Chrome browser, valid URL, valid login details, Gummy Land slot game, bet type, denomination, balance, win symbols, spin button, Gamble screen, new browser.
+#	When Open the Gummy Land slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, select bet type & denomination, click on spin button till win appears and gamble screen in switched and click on red button and close the browser and again login to the game with new browser
+#	Then  Resume feature should be enabled and land on the gamble screen of Gummy Land slot game
+#	Then Verify the Gamble attempts, gamble amount and user is able to play left over attempts and collect the win amount in Gummy Land slot game
+  
+#    Scenario: Check whether resume feature is enabled in Gamble screen just by navigating of Gummy Land slot game
+#	Given Chrome browser, valid URL, valid login details, Gummy Land slot game, bet type, denomination, balance, win symbols, spin button, Gamble screen, new browser, gamble attempts.
+#	When Open the Gummy Land slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, select bet type & denomination, click on spin button till win appears and gamble screen in switched and close the browser and again login to the game with new browser
+#	Then  Resume feature should not be enabled and land on the game screen in Gummy Land slot game
+  
+#    Scenario: Check whether resume feature is enabled in Gamble screen and collect the win amount in Gummy Land slot game
+#	Given Chrome browser, valid URL, valid login details, Gummy Land slotGummy Land slot game, bet type, denomination, balance, win symbols, spin button, Gamble screen, collect, new browser
+#	When Open the Gummy Land slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, select bet type & denomination, click on spin button till win appears and gamble screen in switched and close the browser and again login to the game with new browser window
+#	Then  Resume feature should be enabled and land on the game screen and collect the win amount in Gummy Land slot game
+#    Then Verify the reload option after gamble win in Gummy Land slot game
+  
+
+  
+#	Scenario: Check whether gamble count is displaying as per the max amount configured on the info page for bet type 0.02 & denomination 0.2 in Gummy Land slot game
+#    Given Chrome browser, valid URL, valid login details, Gummy Land slot game, bet type as 0.02, denomination as 0.2, balance , spin button, win amount, gamble button, gamble amount, game info page and gamble count
+#    When Open the Gummy Land slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on Gummy Land slot game, select bet type as 0.02 & denomination as 0.2, click on spin button till user wins, click on gamble button and check the gamble count
+#    Then Gamble count should be displayed based on win amount and gamble max amount configured on the info page for bet type 0.02 & denomination 0.2 in Gummy Land game
+	
+	
+#	Scenario: Check whether gamble count is displaying as per the max amount configured on the info page for bet type 0.02 and denomination 0.4 in Gummy Land slot game
+#    Given Chrome browser, valid URL, valid login details, Gummy Land slot game, transfer button, bet type as 0.02, denomination as 0.4, balance, spin button, win amount, gamble button, gamble amount, game info page and gamble count in gamble page
+#    When Open the Gummy Land slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on Gummy Land slot game, transfer amount to slot game, select bet type as 0.02 & denomination as 0.4, click on spin button till player wins, click on gamble button and check the gamble count in gamble page
+#    Then Gamble count should be displayed based on winning amount and gamble max amount configured on the game info page for bet type 0.02 & denomination 0.4 in Gummy Land slot game
+	
+	
+#	Scenario: Check whether gamble count is displaying as per the max amount configured on the info page for bet type 0.02 & denomination ONE in Gummy Land slot game
+#    Given Gummy Land slot game, bet type as 0.02, denomination as ONE, balance, spin button, win amount, gamble button, gamble amount, game info page and gamble count in gamble page of slot game
+#    When Open the Gummy Land slot game by entering the valid URL in browser, enter the valid login details, enter the amount, transfer the balance, click on Gummy Land slot game, select bet type as 0.02 & denomination as ONE, click on spin button till player wins, click on gamble button and check the gamble count in gamble page of slot game
+#    Then Gamble count should be displayed on gamble page of Gummy Land slot game based on win amount and gamble max amount configured on the game info page for bet type 0.02 & denomination ONE in Gummy Land slot game
+	
+	
+#	Scenario: Check whether gamble count is displaying as per the max amount configured on the info page for bet type 0.02 & denomination TWO in Gummy Land slot game
+#    Given Chrome browser, valid URL, valid login details, Gummy Land slot game, amount to transfer, transfer button, bet type as 0.02, denomination as TWO, balance, spin button, win amount, gamble button, gamble amount, game info page and gamble count
+#    When Open the Gummy Land slot game by entering the valid URL in browser, enter the valid login details, enter the amount, transfer the balance, click on Gummy Land slot game, transfer the amount, select bet type as 0.02 & denomination as TWO, click on spin button till player wins, click on gamble button and check the gamble count
+#    Then Gamble count should be displayed based on win amount and max amount of the gamble configured on the game info page for bet type 0.02 and denomination TWO in Gummy Land slot game
+	
+	
+#	Scenario: Check whether gamble count is displaying as per the max amount configured on the info page for bet type 0.02 & denomination FOUR in Gummy Land game
+#    Given Chrome browser, valid URL, valid login details, Gummy Land slot game, bet type as 0.02, denomination as FOUR, balance, spin button, win amount, gamble button, gamble amount, game info page and gamble count
+#    When Open the Gummy Land slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on Gummy Land slot game, select bet type as 0.02 & denomination as FOUR, click on spin button till player wins, click on gamble button and check the gamble count
+#    Then Gamble count should be displayed based on win amount and gamble max amount configured on the game info page for bet type 0.02 & denomination FOUR in Gummy Land slot game
+  
+  
+#	Scenario: Check whether on winning and losing the gamble on last gamble count in Gummy Land slot game
+#    Given Chrome browser, valid URL, valid login details, Gummy Land slot game, bet type as 0.01, denomination as 0.2, balance, spin button, win amount, gamble button, gamble amount, red button, win amount field in main page
+#    When Open the Gummy Land slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, click on Gummy Land slot game, select bet type as 0.01 & denomination as 0.2, click on spin button till user wins, click on gamble button and pay gamble with last gamble count 
+#    Then Gamble page should terminate and win amount should be added to main balance in Gummy Land slot game
+  
+  
+#	Scenario: Check whether Big win is triggering on, when 4 teddy symbol appears on the screen in Gummy Land slot game
+#	Given Chrome browser, valid URL, valid login details, Gummy Land slot game, bet type, denomination, balance, teddy symbols, spin button, Big win window and win amount
+#	When Open the Gummy Land slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, select bet type & denomination, click on spin button till the teddy symbol appears on all the four reels and big win screen appears and big win amount added to the balance
+#	Then  Big Win screen should appear when four teddy symbols appears on the screen in Gummy Land slot game
+  
+  
+#	Scenario: Check whether wild is triggering on, when 1,2 and 3 wild symbol appears on the reels and win amount is multiplied as per wilds on the reels and 4 wild symbol wont yield to any win amount appearing on the screen in Gummy Land slot game
+#	Given Chrome browser, valid URL, valid login details, Gummy Land slot game, bet type, denomination, balance, wild symbols, spin button and wild win amounts
+#	When Open the Gummy Land slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, select bet type & denomination, click on spin button till the wild symbol appears on all the reels and win amount added to the balance
+#	Then  Reel win should multiplied by TWO as no of wild symbols equals ONE on the screen in Gummy Land slot game
+#	And  Reel win should multiplied by FOUR as no of wild symbols equals TWO on the screen in Gummy Land slot game
+#	And  Reel win should multiplied by EIGHT as no of wild symbols equals THREE on the screen in Gummy Land slot game    
+
+  
+  
+#	Scenario: Check whether max wilds is triggering on 1,2 and 4th reels or 2,3 and 4th reels combination appearing on the screen in Gummy Land slot game
+#	Given Chrome browser, valid URL, valid login details, Gummy Land slot game, bet type, denomination, balance, wild symbols and spin button 
+#	When Open the Gummy Land slot game by entering the valid URL in browser, enter the valid login details, transfer the balance, select bet type & denomination, click on spin button till the wild symbol appears on defined pattern
+#	Then Wild win combination verified for 1,2 and 4th reel combinations in Gummy Land slot game
+#	And  Wild win combination verified for 2,3 and 4th reel combinations in Gummy Land slot game
+#	And  Wild win combination verified for 1,2,3 and 4th reel combinations and verify for the 3rd reel wild disappearing in Gummy Land slot game 
+ 
+  
+  

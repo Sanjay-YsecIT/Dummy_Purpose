@@ -1,5 +1,0 @@
-package stepDefinition_BrownieHot;
-
-public class BrownieHot_Web_Check_CreditType_CreditValue_For_Incremental_Decremental_Values {
-
-}
